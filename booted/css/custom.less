@@ -1,0 +1,184 @@
+body {
+    background: {color:Background} url('{image:Background}') top left fixed repeat;
+    margin: 0;
+    padding: 0;
+    font-family: {font:Body};
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+a img:hover {
+    border: none;
+    box-shadow: 0px 0px 4px 2px rgba(0.0,0.0,0.0,.75);
+}
+
+.navbar-inner
+{
+    border-radius: 0px;
+}
+
+.label
+{
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0,0,0, .25);
+    font-size: 1em;
+    margin-right: 5px;
+    border-radius: 0px;
+}
+
+//override bootstrap's so then we don't get weird sizing
+blockquote p
+{
+    font-size: 1em;
+}
+
+.dropdown-menu
+{
+    border-radius: 0px;
+    margin-top: -6px;
+    border-bottom: 2px solid {color:Glow};
+    opacity: 0.0;
+
+    & li > a:hover, & li > a:active
+    {
+        background-color: {color:Glow};
+        background-image: -moz-linear-gradient(top, {color:GlowGradient}, {color:Glow});
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from({color:GlowGradient}), to( {color:Glow}));
+        background-image: -webkit-linear-gradient(top, {color:GlowGradient},  {color:Glow});
+        background-image: -o-linear-gradient(top, {color:GlowGradient},  {color:Glow});
+        background-image: linear-gradient(to bottom, {color:GlowGradient}, {color:Glow});
+        background-repeat: repeat-x;
+    }
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: {color:Title};
+    color: {color:TitleText};
+    text-shadow: 0px 0px 10px rgba(1.0,1.0,1.0, 1.0);
+    letter-spacing: -1px; 
+
+    & #title {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 100px;
+        font-family: {font:Title};
+        font-weight: bold;
+        position: absolute;
+        font-size: 23px;
+    }
+
+    & #description {
+        position:absolute;
+        margin-left: 100px;
+        margin-right: 80px;
+        width: 80%;
+        font-size: 14px;
+        top: 16px;
+        letter-spacing:0px;
+    }
+
+    & #avatar {
+        position: relative;
+        top: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        width: 80px;
+        height: 80px;
+        background: url('{PortraitURL-128}');
+        background-size: contain;
+    }
+}
+
+#float{
+    position: relative;
+    width: 100%;
+    height: 32px;
+    background: #000;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,.5);
+    z-index: 1;
+}
+
+#wrapper {
+    width: 845px;
+    margin: auto auto;
+    box-shadow: 0px 0px 5px 10px rgba(0,0,0,.65); 
+    z-index: 0;
+
+    & #license {
+        padding-top: 15px;
+        text-align: center;
+        color: #fff;
+        background: #000;
+        font-family: sans-serif;
+        font-size: .75em;
+    }
+
+    & #content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    
+        & #searchresults {
+            color: #fff;
+            padding: 10px 12px 12px 10px;
+            margin: 0 0 0 0;
+            font-family: {font:Title};
+            font-size: 20px;
+            background: #000;
+            background: linear-gradient(to bottom, #222 0%, #000 100%);
+            border-bottom: 8px solid #f00;
+
+            & .search_query {
+                font-weight: bold;
+
+                &:before { content:'“'; }
+                &:after { content:'”'; }
+            }
+        }
+
+        & #navigation {
+            text-align: right;
+            height:2px;
+            background-color: #000;
+            padding-bottom: 35px;
+            text-transform: lowercase;
+
+            & a {
+                background-color: #fff;
+                color: {color:Background};
+                padding: 5px 10px;
+                text-decoration: none;
+                margin-left: 25px;
+
+                &:hover, &:active {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+
+            &.jump_pagination {
+                & a {
+                    margin: 0 0 0 4px;
+                }
+
+                & .current_page {
+                    color: #fff;
+                    background-color: #000;
+                    border: 2px solid #fff;
+                    padding: 3px 8px;
+                    margin: 0 0 0 4px;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

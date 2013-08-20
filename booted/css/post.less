@@ -1,0 +1,462 @@
+.post
+{
+    font-family: {font:Body};
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    margin: 0px;
+    border: 0px;
+    border-radius: 0px;
+
+    .btn {
+        background-color: #000;
+        height: 2px;
+    }
+
+    & img {
+        max-width: 500px;
+    }
+
+    & a {
+        color: #6e7173;
+        text-decoration: none;
+    }
+
+    //glowing sidebars that appear on hover over
+    & .activeind {
+            width: 845px;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            border-left: 8px solid #f00;
+            border-right: 8px solid #f00;
+            opacity: 0.0;
+            pointer-events:none;
+    }
+
+    //post information header
+    & .panel-heading {
+        font-size: 0.95em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: center;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        margin: 0px;
+        margin-bottom: 12px;
+        display: inherit;
+        border: 0px;
+
+        & .notecount {
+            position: absolute;
+            line-height: 24px;
+            top: 15px;
+            left: 15px;
+            padding: 10px 10px 10px 10px;
+            background-color: #000;
+            color: #fff;
+            border: 1px none;
+            opacity: .65;
+            font-size: .90em;
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,.5);
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+
+            &:hover{ opacity: 1.0; }
+        }
+    }
+
+    
+    //side controls attached to each post
+    & .btn-group-vertical {
+        position: absolute;
+        text-align: left;
+        left: 845px;
+        top: 0px;
+        background: none;
+
+        & a.btn {
+            background-color: #000;
+            width: 44px;
+            margin-bottom: 6px;
+            border: 0px none;
+            padding: 10px 10px;
+                
+            font-size: .90em;;
+            line-height: 24px;
+            color: #fff;
+            opacity: .65;
+             
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,.5);
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+
+            overflow: hidden;
+            
+            &:hover, &:active {
+                opacity: 1.0;
+            }
+
+            & #reblog {
+                background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -498px -270px transparent; 
+                width: 24px;
+                height: 20px;
+                margin-left: 1px;
+                margin-right: 12px;
+                float: left;    
+            }
+
+            & #comment {
+                background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -500px -242px transparent; 
+                height: 20px;
+                width: 24px;
+                margin-left: 3px;
+                margin-right: 12px;
+                float: left;
+            }
+
+            & #perm {
+                background: url("http://i.imgur.com/6m5S7.png") no-repeat scroll transparent; 
+                height: 20px;
+                width: 24px;
+                margin-left: 2px;
+                margin-right: 12px;
+                float: left;
+            }
+        }
+    }
+
+    & .media {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    //block that contains the copied post data
+    & .quote {
+        color: {color:Background};
+        font-weight: bold;
+        padding: 20px 20px 5px 20px;
+
+        & .bg {
+            font-family: georgia, serif;
+            font-size: 150px;
+            color: {color:Background};
+            opacity: 0.2;
+            filter: alpha(opacity=20);
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+            position: absolute;
+            top: 136px;
+            left: 10px;
+        }
+
+        &.short {
+            font-size: 33px;
+            line-height: 35px;
+        }
+
+        &.medium {
+            font-size: 25px;
+            line-height: 28px;
+        }
+
+        &.long {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &, & .source {
+            & *:first-child {
+                margin-top: 0px;
+            }
+            & *:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    //copy container of your post's data
+    & .copy {
+        color: #6e7173;
+        padding: 10px;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: plain;
+        
+        & a {
+            color: #6e7173;
+            text-decoration: underline;
+        }
+
+        & p {
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+
+        & > p:first-child {
+            margin-top: 0;
+        }
+
+        & pre {
+            margin: 10px 0px 10px 0px;
+            padding: 10px;
+            background-color: #e6e6e6;
+            font: normal 11px Courier, monospace;
+            overflow: auto;
+        }
+
+        & img {
+            max-width: 100%;
+        }
+
+        & blockquote {
+            margin: 10px 0px 10px 10px;
+            padding-left: 15px;
+            border-left: solid 4px #dcdcdc;
+
+            & blockquote {
+                border-left: solid 4px #cccccc;
+
+                & blockquote {
+                    border-left: solid 4px #bcbcbc;
+
+                    & blockquote {
+                        border-left: solid 4px #acacac;
+
+                        & blockquote {
+                            border-left: solid 4px #9c9c9c;
+
+                            & blockquote {
+                                 border-left: solid 4px #8c8c8c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //audio post stuff
+    & {
+        & .audio {
+            background: #eaeaea;
+            float: left;
+            padding: 7px;
+            margin-bottom: 10px;
+
+            & .player {
+                float: left;
+
+                & .audio_player embed {
+                    border: 1px solid #c8c8c8;
+                }
+            }
+
+            & .meta {
+                padding: 8px 13px;
+                height: 13px;
+                float: left;
+                color: #666;
+                font-family: {font:Accent};
+                font-size: 11px;
+                text-transform: lowercase;
+
+                & a {
+                    color: #666;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+        & .album_art
+        {
+            text-align: center;
+            & img {
+                margin-bottom:10px;
+            }
+        }
+    }
+
+    //question post data
+    & {
+        //question bubble
+        & .question {
+            color: #494949;
+            font-size: 16px;
+            font-weight: bold;
+            background: #f1f1f1;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            margin: 0 0 15px 0;
+            padding: 15px 20px;
+            position: relative;
+
+            & .nipple {
+                width: 13px;
+                height: 7px;
+                background: #f1f1f1 url('http://assets.tumblr.com/themes/redux/ask-mask.png');
+                position: absolute;
+                bottom: -7px;
+                left: 30px;
+            }
+        }
+
+        & .asker_container {
+            margin: 0 0 20px 24px;
+
+            & img {
+                margin: 0 12px -7px 0;
+            }
+
+            & a.asker {
+                color: {color:Body};
+            }
+        }
+    }
+
+    //text post information
+    & {
+        & .title {
+            color: #494949;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 10px 0 10px;
+        }
+    }
+
+    //chat posts
+    & .chat {
+        background-color: #fff;
+        border-left: 10px solid #000;
+        margin: 10px 10px 0 10px;
+        font-size: 14px;
+
+        & .lines {
+            margin-left: 1px;
+
+            & .line {
+                background-color: #eaeaea;
+                color: #494949;
+                margin-bottom: 1px;
+                padding: 3px 5px;
+
+                &.even {
+                    background-color: #dedddd;
+                }
+            }
+        }
+    }
+
+    //link posts
+    & .link {
+        margin: 4px 0 2px 0;
+        font-size: 16px;
+        line-height: 25px;
+
+        & a {
+            background-color: {color:Background};
+            color: #fff;
+            padding: 5px 5px 5px 5px;
+
+            &:hover {
+                opacity: 0.9;
+                filter: alpha(opacity=90);
+                -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+            }
+        }
+    }
+
+    //footer full of information, such as tags and source
+    & .footer {
+        background: #000;
+        font-family: {font:Accent};
+        font-size: 11px;
+        color: #fff;
+        margin-top: 0px;
+        margin-left: -10px;
+        margin-right: 10px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-shadow: 6px 6px 0px 0px rgba(0,0,0,.4);
+
+        & .tags {
+            & a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &
+        }
+    }
+
+    & .notecontainer {
+        background: #eaeaea;
+        font-family: {font:Accent};
+        font-size: 11px;
+        color: #666;
+        margin-top: 10px;
+        margin-bottom: -10px;
+
+        & a {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        & ol.notes {
+            padding: 0px 0 10px 0;
+            list-style-type: none;
+            font-size: 11px;
+
+            & li.note {
+                padding: 10px 10px 0 10px;
+
+                & img.avatar {
+                    vertical-align: -4px;
+                    margin-right: 10px;
+                    width: 16px;
+                    height: 16px;
+                }
+
+                & span.action {
+                    font-weight: normal;
+                }
+
+                & .answer_content {
+                    font-weight: normal;
+                }
+
+                & blockquote {
+                    border-left: 2px solid #666;
+                    padding: 4px 10px;
+                    margin: 10px 0px 0px 25px;
+
+                    & a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    //disqus support
+    & {
+        & #disqus_thread {
+            border-top: 1px solid #E6E6E6;
+            margin: 20px 0 0 0;
+            padding: 25px 0 0 0;
+        }
+
+        & .post .caption a.disquscomments {
+            font-size: 12px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+    }
+}               
