@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+
+/////////   BBBBBBBBBBBB  ////////////////////////       ////////////////       //////                 
+//////////     B  BBBBBBB  //////////////////////  TTT  ////////////////  DDD  ///////
+////////////  B  B    BBBB  ////////////////////  TT  /////////////////  DD   ////////  
+//////       B  B    BBBB         //             TT            ///      DD   /////////
+//////  BBBBBBBBBBBBB      OO0OO     OOOOO   TTTTTTTT    EEEEE     DDDDDD  ///////////
+///////   B  B   BBBB    OOO  OOO  OOO  OOO   TT       EE   EEE  DD   DD  ////////////
+///////  B  B     BBBB  OOO  OOO  OOO  OOO   TT       EEEEEEEE  DD   DD  /////////////
+///     B  B    BBBBB  OOO  OOO  OOO  OOO   TT  TTT  EE        DD   DD  //////////////
+//  BBBBBBBBBBBBB       OOOOO     OOOOO     TTTTT     EEEEEEE   DDDDDD   /////////////
+
+/////////  44    44  ///  M    ///////////////////  bb     ll  ///////////////////////
+////////  44    44  ///   MM                        bb     ll       //////////////////
+///////  44444444  ///  MMMMMM   uu    uu  mm   mm  bb     ll  rrr   /////////////////
+//////        44  /////   MM     uu    uu mmmm mmmm bbbbbb ll rr rr  /////////////////
+///////////  44  ///////  MM  M  uuu  uuu mm mmm mm bb  bb ll rr     /////////////////
+//////////  44  /////////  MMM     uuuu   mm     mm bbbbbb ll rr  ////////////////////
+      
+      By Nicholas Hydock 2012
+
+    ************************************************************************
+    PLEASE DO NOT MODIFY THIS HEADER, PLEASE GIVE CREDIT WHERE CREDIT IS DUE
+    ************************************************************************
+
+    Booted is a heavily modified version of Tumblr's classic default theme
+        asdf .  
+
+    This theme adds custom stylings in addition to Twitter's Bootstrap 
+    CSS/HTML/JS library found at
+       
+        http://twbs.github.io/bootstrap
+
+    Thanks to Booted, you now have access to all of Bootstrap's abilities,
+    as well as JQuery to continue building this theme to your own liking.
+
+    Plenty of additional options have been added for Tumblr through the 
+    use of meta tags, that are particularly useful for those who wish to 
+    advertise common tags of theirs, addition blogs.  And for the artists 
+    of tumblr, there's an option and menu for handling commissions with 
+    ease, and Livestream channel linking with Airtime updating.
+
+    I designed this theme around things that I personally do a lot of with 
+    my blogs and though that other's might like to have in theirs.
+
+    Be sure to check out the source for Booted and more at
+        http://github.com/nhydock/tumblr-themes
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <!-- DEFAULT VARIABLES -->
+    <meta name="color:Background" content="#3b627e" />
+    <meta name="color:Title" content="#000" />
+    <meta name="color:TitleText" content="#fff" />
+    <meta name="color:Glow" content="#c00" />
+    <meta name="color:GlowGradient" content="#700" />
+    
+    <meta name="font:Title" content="Arial" />
+    <meta name="font:Body" content="Arial" />
+    <meta name="font:Accent" content="Lucida Sans" />
+    
+    <meta name="if:Show Tags" content="1" />
+    <meta name="if:Show Commissions" content="1" />
+    <meta name="if:Show Album Art on Audio Posts" content="1" />
+    <meta name="if:Enable Jump Pagination" content="0" />
+    
+    <meta name="if:Commissions Open" content="1" />
+    <meta name="text:Payment Link" content="#" />
+    <meta name="text:Commissions Page" content="/commissions" />
+    
+    <meta name="text:Disqus Shortname" content="" />
+    <meta name="image:Background" content="" />
+    
+    <meta name="if:Show Popular Tags" content="1" />
+    <meta name="text:Popular Tags" content="funny" />
+    <meta name="if:Show Other Blogs" content="1" />
+    <meta name="text:Blogs" content="Home:#" />
+    <meta name="text:AskBlog" content="/ask" />
+    
+    <meta name="text:Livestream" content="" />
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <link href="http://twbs.github.io/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    
+    <link href="css/custom.css" rel="stylesheet">
+   
+    <style type="text/css">{CustomCSS}</style>
+</head>
+
+<!-- Javascript sources -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hover-dropdown.min.js"></script>
+    <script src="js/fx.js"></script>
+    
+<!-- Javascript sources -->
+
+<body>
+    <div id="header">
+        <a href="/"><div id="avatar"></div></a>
+        <div id="title">
+            {Title}
+        </div>
+        <div id="description">
+            {Description}
+        </div>
+    </div>
+    <div class="navbar navbar-inverse" style="margin-bottom:0px; z-index:1; position:relative; border-radius: 0px;" id="controls">
+        <div class="container pull-left" style="width: 100%; margin-left: 10px;">
+        
+            <a class="navbar-brand" href="#" onClick="reset();">
+              {Title}    
+            </a>
+            
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+            	  <li id="about" style="display:none">
+                    <a href="/about">About</a>  
+                  </li>
+                  {block:ifShowPopularTags}
+    			  <li class="dropdown">
+        			<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="true">Tags</a>
+                    <ul class="dropdown-menu" role="menu" aria-labeledby="tags" id="TagMenu">
+                    </ul>
+                  </li>
+                  {/block:ifShowPopularTags}
+                  {block:ifShowOtherBlogs}
+    			  <li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="0">Blogs</a>
+    				<ul class="dropdown-menu" role="menu" aria-labeledby="blogs" id="BlogMenu">
+    				</ul>
+    			  </li>
+                  {/block:ifShowOtherBlogs}
+                  <li><a href={text:AskBlog}>Ask Me A Question</a></li>
+                  {block:ifShowCommissions}
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="0">Commissions:
+                    {block:IfCommissionsOpen}
+                    <font color="#0F0" style="text-shadow: 0px 0px 2px;">Open</font>
+                    {/block:IfCommissionsOpen}
+                    {block:IfNotCommissionsOpen}
+                    <font color="#F00" style="text-shadow: 0px 0px 2px;">Closed</font>
+                    {/block:IfNotCommissionsOpen}</a>
+    			    <ul class="dropdown-menu" role="menu" aria-labeledby="blogs">
+        			    {block:IfCommissionsOpen}
+                    	<li><a href="{text:Commissions Page}">Commission Info</a></li>
+                        <li><a href="{text:Payment Link}">Payment</a></li>
+                        {/block:IfCommissionsOpen}
+                        <li><a href="/active/">Active Commissions</a></li>
+        		   	</ul>
+                  </li>
+                  {/block:ifShowCommissions}
+                  <li id="livestream" style="display:None;">
+                    <a href="http://justin.tv/{text:Livestream}">Livestream: 
+                  </li>
+    			</ul>
+		    </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    
+    <div id="wrapper" style="position:relative;z-index:0;">
+      
+        <div id="content">
+            
+            {block:SearchPage}
+                {block:SearchResults}
+                    <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
+                {/block:SearchResults}
+                
+                {block:NoSearchResults}
+                    <div id="searchresults">{lang:No search results for SearchQuery 2}</div>
+                {/block:NoSearchResults}
+            {/block:SearchPage}
+            
+            {block:Posts}
+                <div class="post panel">
+                    <div class="btn-group-vertical">
+                        <a href='{ShortURL}' class="btn">
+                            <span id="perm">
+                            </span>
+                            <font size=2>Permalink</font>
+                        </a>  
+                        <a href="{ReblogURL}" class="btn">
+                            <span id="reblog">
+                            </span>
+                            <font size=2>Reblog</font>
+                        </a>
+                        {block:IfDisqusShortname} 
+                        <a href="{Permalink}#disqus_thread" class="btn">
+                            <div id="comment"></div>
+                            <font size=2>Disqus Comments</font>
+                        </a>
+                        {/block:IfDisqusShortname}
+                    </div>
+
+                    <div class="panel-heading">
+                        {block:NoteCount}
+                        <a href="{Permalink}#notes">
+                            <div class="notecount">
+                                <b>
+                                    <font size=2>{NoteCount} Notes</font>
+                                </b>
+                            </div>
+                        </a>
+                        {/block:NoteCount}
+                        
+                        <b>
+                            {Month} {DayOfMonth}, {Year}
+                        </b>
+                        <br/>
+                        <font size=1>
+                            <i>({TimeAgo})</i>
+                        </font>
+                        <p/>
+                        <img src="http://upload.wikimedia.org/wikipedia/commons/9/9e/Decorative_text_divider_3.svg"/>
+                    </div>
+
+                    {block:Photo}
+                        <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+                            {LinkCloseTag}
+                        </div>
+                        {block:Caption}
+                            <div class="copy">
+                                {Caption}
+                            </div>
+                        {/block:Caption}
+                    {/block:Photo}
+                    
+                    {block:Video}
+                        <div class="media">
+                            {Video-500}
+                        </div>
+                        {block:Caption}
+                            <div class="copy">
+                                {Caption}
+                            </div>
+                        {/block:Caption}
+                    {/block:Video}
+                    
+                    {block:Audio}
+                        
+                        {block:AudioEmbed}
+                            {AudioEmbed}
+                        {/block:AudioEmbed}
+                        
+                        {block:AudioPlayer}
+                            {block:IfShowAlbumArtOnAudioPosts}
+                                {block:AlbumArt}
+                                    <div class="album_art">
+                                        <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}"/>
+                                    </div>
+                                {/block:AlbumArt}
+                            {/block:IfShowAlbumArtOnAudioPosts}
+                        
+                            <div class="audio">
+                                <div class="player">{AudioPlayerWhite}</div>
+                                <div class="meta">{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
+                                <div class="clear"></div>
+                            </div>
+                        {/block:AudioPlayer}
+                        
+                        <div class="clear"></div>
+                        
+                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+                        
+                    {/block:Audio}
+                    
+                    {block:Quote}
+                        <div class="quote {Length}">{Quote}
+                            <div class="copy">
+                                <div class="bg">“</div>
+                                {block:Source}
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td valign="top" style="width:20px;">&mdash;</td>
+                                            <td valign="top" class="quote_source">
+                                                {Source}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                {/block:Source}
+                            </div>
+                        </div>
+                    {/block:Quote}
+                        
+                    {block:Text}
+                        {block:Title}
+                            <div class="title">
+                                {Title}
+                            </div>
+                        {/block:Title}
+                        <div class="copy">
+                            {Body}
+                        </div>
+                    {/block:Text}
+                    
+                    {block:Answer}
+                        <div class="question">
+                            <div class="nipple"></div>
+                            {Question}
+                        </div>
+                        <div class="asker_container">
+                            <img src="{AskerPortraitURL-24}">
+                                {Asker}
+                        </div>
+                        <div class="copy">
+                            {Answer}
+                        </div>
+                    {/block:Answer}
+                    
+                    {block:Chat}
+                        {block:Title}<div class="title">{Title}</div>{/block:Title}
+                        <div class="chat">
+                            <div class="lines">
+                                {block:Lines}
+                                    <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
+                                {/block:Lines}
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div style="height:10px;"></div>
+                    {/block:Chat}
+                    
+                    {block:Link}
+                        <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
+                        {block:Description}<div class="copy">{Description}</div>{/block:Description}
+                    {/block:Link}
+                    
+                    <div class="footer">
+                        {block:IfShowTags}
+                            {block:HasTags}
+                                <div class="tags">
+                                    {lang:Tagged}: 
+                                        {block:Tags}
+                                        <a href="{TagURL}" class="label">
+                                            {Tag}
+                                        </a>
+                                        {/block:Tags}
+                                </div>
+                            {/block:HasTags}
+                        {/block:IfShowTags}
+                        
+                        {block:ContentSource}
+                            <a href="{SourceURL}">
+                                {lang:Source}:
+                                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+                                {block:NoSourceLogo}<span class="label label-info">{SourceTitle}</span>{/block:NoSourceLogo}
+                        </a>
+                        {/block:ContentSource}
+                        
+                        <div class="clear"></div>
+                    </div>
+                    <div class="activeind"></div>
+
+                    {block:IfDisqusShortname}{block:Permalink}
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+                    {/block:Permalink}{/block:IfDisqusShortname}
+            
+                    {block:PostNotes}
+                        <div class="notecontainer">
+                            {PostNotes}
+                        </div>
+                    {/block:PostNotes}
+
+                </div>
+                    
+                <div class="bottom"></div>
+            {/block:Posts}
+            
+            {block:Pagination}
+                <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
+                    {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
+                    
+                    {block:IfEnableJumpPagination}
+                        {block:JumpPagination length="5"}
+                            {block:CurrentPage}
+                                <span class="current_page">{PageNumber}</span>
+                            {/block:CurrentPage}
+                            
+                            {block:JumpPage}
+                                <a class="jump_page" href="{URL}">{PageNumber}</a>
+                            {/block:JumpPage}
+                            
+                        {/block:JumpPagination}
+                    {/block:IfEnableJumpPagination}
+                    
+                    {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
+                </div>
+            {/block:Pagination}
+            
+            <div id="license">
+            </div>
+        </div>
+        
+    </div>
+    
+    {block:IfDisqusShortname}
+        <script type="text/javascript">
+            //<![CDATA[
+            (function() {
+                var links = document.getElementsByTagName('a');
+                var query = '?';
+                for(var i = 0; i < links.length; i++) {
+                    if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                    }
+                }
+                document.write('<script charset="utf-8" type="text/javascript" src="https://dl-web.dropbox.com/get/weblayout/disqus_comments.js?w=94647765' + query + '"></' + 'script>');
+            })();
+            //]]>
+        </script>
+    {/block:IfDisqusShortname}
+    
+    {block:Twitter}
+        <script type="text/javascript" src="/tweets.js"></script>
+    {/block:Twitter}
+    
+
+</body>
+
+<script type="text/javascript">
+  $(document).scroll(refresh);
+  $(document).ready(setup);
+
+  //inject your own licensing label at the bottom of your blog
+  $("#license").load("license.html");
+</script>
+
+</html>
