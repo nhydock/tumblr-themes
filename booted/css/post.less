@@ -1,6 +1,12 @@
+//set all LESS variables up here for use
+@BodyFont : "Arial";
+@AccentFont : "Lucida Sans";
+@BackgroundColor : #3b627e;
+@Title : #000;
+
 .post
 {
-    font-family: {font:Body};
+    font-family: @BodyFont;
     background-color: #fff;
     padding: 10px;
     position: relative;
@@ -135,14 +141,14 @@
 
     //block that contains the copied post data
     & .quote {
-        color: {color:Background};
+        color: @BackgroundColor;
         font-weight: bold;
         padding: 20px 20px 5px 20px;
 
         & .bg {
             font-family: georgia, serif;
             font-size: 150px;
-            color: {color:Background};
+            color: @BackgroundColor;
             opacity: 0.2;
             filter: alpha(opacity=20);
             -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
@@ -258,7 +264,7 @@
                 height: 13px;
                 float: left;
                 color: #666;
-                font-family: {font:Accent};
+                font-family: @AccentFont;
                 font-size: 11px;
                 text-transform: lowercase;
 
@@ -312,7 +318,7 @@
             }
 
             & a.asker {
-                color: {color:Body};
+                color: @BackgroundColor;
             }
         }
     }
@@ -357,7 +363,7 @@
         line-height: 25px;
 
         & a {
-            background-color: {color:Background};
+            background-color: @BackgroundColor;
             color: #fff;
             padding: 5px 5px 5px 5px;
 
@@ -372,7 +378,7 @@
     //footer full of information, such as tags and source
     & .footer {
         background: #000;
-        font-family: {font:Accent};
+        font-family: @AccentFont;
         font-size: 11px;
         color: #fff;
         margin-top: 0px;
@@ -389,14 +395,12 @@
                 text-decoration: none;
                 color: #fff;
             }
-
-            &
         }
     }
 
     & .notecontainer {
         background: #eaeaea;
-        font-family: {font:Accent};
+        font-family: @AccentFont;
         font-size: 11px;
         color: #666;
         margin-top: 10px;

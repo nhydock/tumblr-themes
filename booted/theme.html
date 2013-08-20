@@ -430,11 +430,29 @@
 </body>
 
 <script type="text/javascript">
-  $(document).scroll(refresh);
-  $(document).ready(setup);
+    $(document).scroll(refresh);
+    $(document).ready(setup);
 
-  //inject your own licensing label at the bottom of your blog
-  $("#license").load("license.html");
+    //inject your own licensing label at the bottom of your blog
+    $("#license").load("license.html");
+
+    //set all LESS variables to meta variable values
+    less.modifyVars({
+        '@BackgroundColor': '{color:Background}',
+        '@BackgroundImg': '{image:Background}',
+
+        '@PortraitURL' : '{PortraitURL-128}',
+
+        '@Glow' : '{color:Glow}',
+        '@GlowTo' : '{color:GlowGradient}',
+
+        '@Title' : '{color:Title}',
+        '@TitleText' : '{color:TitleText}',
+        '@TitleFont' : '{font:Title}',
+        '@BodyFont' : '{font:Body}'
+        '@AccentFont' : '{font:Accent}'
+
+    });
 </script>
 
 </html>
