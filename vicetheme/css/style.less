@@ -1,0 +1,213 @@
+@base-color: #3f4e55;
+@assets: "https://raw.github.com/nhydock/tumblr-themes/master/vice/assets/";
+
+#frame
+{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	
+	& #header
+	{
+		width: 100%;
+		height: 64px;
+		border-bottom: 1px solid #fff;
+		background: @base-color;
+		
+		& > .brand
+		{
+			font-size: 2.5em;
+			font-family: Arial;
+		}
+		
+		& > .avatar
+		{
+			width: 80px;
+			height: 64px;
+			top: 0px;
+			border-left: 1px solid rgba(255,255,255,.25);
+			border-right: 1px solid rgba(255,255,255,.25);
+			box-shadow: 5px 0px 5px -5px rgba(0,0,0,.5) inset, -5px 0px 5px -5px rgba(0,0,0,.5) inset;
+			
+			& img 
+			{
+				width: 64px;
+				height: 64px;
+				border-radius: 32px;
+			}
+		}
+	}
+	
+	& #sidebar
+	{
+		top: 80px;
+		left: 0px;
+		border-right: 1px solid #fff;
+		
+		& ul 
+		{
+			list-style: none;
+			& li
+			{
+				width: 64px;
+				height: 48px;
+				margin-top: -1px;
+				padding: 0;
+				opacity: .5;
+				@file: "sidebarbuttons.png";
+				background: url("@{assets}@{file}");
+					
+				&:hover, &.active
+				{
+					opacity: 1.0;
+				}
+				
+				&.active:before
+				{
+					width: 64px;
+					height: 48px;
+					position: absolute;
+					z-index: -1;
+					background: rgba(0,0,0,.5);
+					box-shadow: 0 10 5 -5 rgba(0,0,0,.25) inset, 0 -10 5 -5 rgba(0,0,0,.25);
+					border-top: 1px solid rgba(255,255,255,.5);
+					border-bottom: 1px solid rgba(255,255,255,.5);
+					opacity: 1.0;
+				}
+				
+				& #home
+				{
+					background-position: 0px 0px;
+				}
+				& #about
+				{
+					background-position: 0px 48px;
+				}
+				& #tags
+				{
+					background-position: 0px 96px;
+				}
+				& #blogs
+				{
+					background-position: 0px 144px;
+				}
+				& #pages
+				{
+					background-position: 0px 192px;
+				}
+			}
+		}
+	}
+	
+	& > .corner
+	{
+		@file: "corner.png";
+		background: url("@{assets}@{file}");
+		left: 0px;
+		top: 0px;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+	}
+}
+
+#content
+{
+	margin-left: 64px;
+	margin-top: 64px;
+	width: 800px;
+	background: rgba(0,0,0,.25);
+	
+	& .post
+	{
+		width: 600px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		background: rgba(0,0,0,.25);
+		color: #fff;
+		
+		& .banner
+		{
+			background: #fff;
+			right: -10px;
+			
+			&:after
+			{
+				width: 10px;
+				height: 10px;
+				bottom: -10px;
+				right: -10px;
+				@file: "bannertip.png";
+				background-image: url("@{assets}@{file}");
+			}
+			
+			& label
+			{
+				padding: 2px 2px;
+				border-radius: 3px;
+				border-top: 1px solid rgba(255,255,255,.5) inset;
+				border-left: 1px solid rgba(255,255,255,.25) inset;
+				border-right: 1px solid rgba(255,255,255,.25) inset;
+				color: #fff;
+				font-weight: bold;
+				float: right;
+				margin-right: 5px;
+				background: @base-color;
+			}
+		}
+		
+		& .post_content
+		{
+			width: 500px;
+		}
+		
+		& .controls
+		{
+			background: #fff;
+			border-radius: 24px;
+			height: 48px;
+			width: 48px;
+			position: absolute;
+			
+			top: 8px;
+			right: 8px;
+			
+			opacity: .5;
+			
+			&:hover
+			{
+				opacity: 1.0;
+			}
+			
+			& .icon
+			{
+				width: 24px;
+				height: 24px;
+				float: left;
+				margin-right: 30px;
+				
+				@file: "postbuttons.png";
+				background: url("@{assets}@{file}");
+					
+				& #perm
+				{
+					background-position: 0px 0px;
+				}
+				& #reblog
+				{
+					background-position: 0px 24px;
+				}
+				& #comment
+				{
+					background-position: 0px 48px;
+				}
+			}
+			
+			& .label
+			{
+				float: left;
+				color: #000;
+			}
+		}
+	}
+}
