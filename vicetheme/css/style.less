@@ -1,5 +1,5 @@
 @base-color: #3f4e55;
-@assets: "https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/";
+@assets: "https://nhydock.github.io/nhydock/tumblr-themes/vicetheme/assets/";
 
 #frame
 {
@@ -7,7 +7,7 @@
 	height: 100%;
 	position: fixed;
 	
-	& #header
+	#header
 	{
 		width: 100%;
 		height: 64px;
@@ -15,7 +15,7 @@
 		background: @base-color;
 		position: absolute;
 		
-		& > .brand
+		.brand
 		{
 			font-size: 2.5em;
 			font-family: Arial;
@@ -24,7 +24,7 @@
 			margin-right: 8px;
 		}
 		
-		& > .avatar
+		.avatar
 		{
 			float:left;
 			width: 80px;
@@ -34,7 +34,7 @@
 			border-right: 1px solid rgba(255,255,255,.25);
 			box-shadow: 5px 0px 5px -5px rgba(0,0,0,.5) inset, -5px 0px 5px -5px rgba(0,0,0,.5) inset;
 			
-			& img 
+			img 
 			{
 				width: 64px;
 				height: 64px;
@@ -43,16 +43,16 @@
 		}
 	}
 	
-	& #sidebar
+	#sidebar
 	{
 		top: 80px;
 		left: 0px;
 		border-right: 1px solid #fff;
 		
-		& ul 
+		ul 
 		{
 			list-style: none;
-			& li
+			li
 			{
 				width: 64px;
 				height: 48px;
@@ -79,23 +79,23 @@
 					border-bottom: 1px solid rgba(255,255,255,.5);
 				}
 				
-				& #home
+				#home
 				{
 					background-position: 0px 0px;
 				}
-				& #about
+				#about
 				{
 					background-position: 0px 48px;
 				}
-				& #tags
+				#tags
 				{
 					background-position: 0px 96px;
 				}
-				& #blogs
+				#blogs
 				{
 					background-position: 0px 144px;
 				}
-				& #pages
+				#pages
 				{
 					background-position: 0px 192px;
 				}
@@ -103,7 +103,7 @@
 		}
 	}
 	
-	& > .corner
+	.corner
 	{
 		@file: "corner.png";
 		background: url("@{assets}@{file}");
@@ -122,7 +122,7 @@
 	width: 800px;
 	background: rgba(0,0,0,.25);
 	
-	& .post
+	.post
 	{
 		width: 600px;
 		border-top-left-radius: 10px;
