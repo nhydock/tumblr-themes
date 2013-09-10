@@ -58,7 +58,7 @@
 		{
 			list-style: none;
 			position: absolute;
-			top: 80px;
+			top: 120px;
 			left: 0px;
 			width: 64px;
 			
@@ -70,7 +70,7 @@
 				padding: 0;
 				opacity: .5;
 				@file: "sidebarbuttons.png";
-				background: url("@{assets}@{file}");
+				background-image: url("@{assets}@{file}");
 				display: block;
 				
 				&:hover, &.active, &.active:before
@@ -140,8 +140,9 @@
 		border-bottom-left-radius: 10px;
 		background: rgba(0,0,0,.25);
 		color: #fff;
+		position: relative;
 		
-		& .banner
+		.banner
 		{
 			background: #fff;
 			right: -10px;
@@ -156,27 +157,30 @@
 				background-image: url("@{assets}@{file}");
 			}
 			
-			& label
+			label
 			{
 				padding: 2px 2px;
 				border-radius: 3px;
-				border-top: 1px solid rgba(255,255,255,.5) inset;
-				border-left: 1px solid rgba(255,255,255,.25) inset;
-				border-right: 1px solid rgba(255,255,255,.25) inset;
+				border-top: 1px solid rgba(255,255,255,.5);
+				border-left: 1px solid rgba(255,255,255,.25);
+				border-right: 1px solid rgba(255,255,255,.25);
 				color: #fff;
 				font-weight: bold;
 				float: right;
 				margin-right: 5px;
 				background: @base-color;
+				
+				font-size: .9em;
+				line-height: .9em;
 			}
 		}
 		
-		& .post_content
+		.post_content
 		{
 			width: 500px;
 		}
 		
-		& .controls
+		.controls
 		{
 			background: #fff;
 			border-radius: 24px;
@@ -194,33 +198,33 @@
 				opacity: 1.0;
 			}
 			
-			& .icon
+			.icon
 			{
 				width: 24px;
 				height: 24px;
-				float: left;
+				float: right;
 				margin-right: 30px;
 				
 				@file: "postbuttons.png";
 				background: url("@{assets}@{file}");
 					
-				& #perm
+				#perm
 				{
 					background-position: 0px 0px;
 				}
-				& #reblog
+				#reblog
 				{
 					background-position: 0px 24px;
 				}
-				& #comment
+				#comment
 				{
 					background-position: 0px 48px;
 				}
 			}
 			
-			& .label
+			.label
 			{
-				float: left;
+				float: right;
 				color: #000;
 			}
 		}
