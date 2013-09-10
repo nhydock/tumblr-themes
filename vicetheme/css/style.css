@@ -32,16 +32,21 @@
   border-radius: 32px;
 }
 #frame #sidebar {
-  top: 80px;
+  top: 0px;
   left: 0px;
   width: 64px;
   height: 100%;
   background: #3f4e55;
   border-right: 1px solid #fff;
   position: absolute;
+  padding: 0;
 }
 #frame #sidebar ul {
   list-style: none;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  width: 64px;
 }
 #frame #sidebar ul li {
   width: 64px;
@@ -50,6 +55,7 @@
   padding: 0;
   opacity: .5;
   background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/sidebarbuttons.png");
+  display: block;
 }
 #frame #sidebar ul li:hover,
 #frame #sidebar ul li.active,
