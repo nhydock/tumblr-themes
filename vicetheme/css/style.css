@@ -1,0 +1,159 @@
+#frame {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+#frame #header {
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid #fff;
+  background: #3f4e55;
+  position: absolute;
+}
+#frame #header > .brand {
+  font-size: 2.5em;
+  font-family: Arial;
+  float: left;
+  left: 100px;
+  margin-right: 8px;
+}
+#frame #header > .avatar {
+  float: left;
+  width: 80px;
+  height: 64px;
+  top: 0px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.5) inset, -5px 0px 5px -5px rgba(0, 0, 0, 0.5) inset;
+}
+#frame #header > .avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+}
+#frame #sidebar {
+  top: 80px;
+  left: 0px;
+  border-right: 1px solid #fff;
+}
+#frame #sidebar ul {
+  list-style: none;
+}
+#frame #sidebar ul li {
+  width: 64px;
+  height: 48px;
+  margin-top: -1px;
+  padding: 0;
+  opacity: .5;
+  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/sidebarbuttons.png");
+}
+#frame #sidebar ul li:hover,
+#frame #sidebar ul li.active,
+#frame #sidebar ul li.active:before {
+  opacity: 1.0;
+}
+#frame #sidebar ul li.active:before {
+  width: 64px;
+  height: 48px;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10 5 -5 rgba(0, 0, 0, 0.25) inset, 0 -10 5 -5 rgba(0, 0, 0, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+#frame #sidebar ul li #home {
+  background-position: 0px 0px;
+}
+#frame #sidebar ul li #about {
+  background-position: 0px 48px;
+}
+#frame #sidebar ul li #tags {
+  background-position: 0px 96px;
+}
+#frame #sidebar ul li #blogs {
+  background-position: 0px 144px;
+}
+#frame #sidebar ul li #pages {
+  background-position: 0px 192px;
+}
+#frame > .corner {
+  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/corner.png");
+  left: 0px;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+#content {
+  margin-left: 64px;
+  margin-top: 64px;
+  width: 800px;
+  background: rgba(0, 0, 0, 0.25);
+}
+#content .post {
+  width: 600px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+#content .post .banner {
+  background: #fff;
+  right: -10px;
+}
+#content .post .banner:after {
+  width: 10px;
+  height: 10px;
+  bottom: -10px;
+  right: -10px;
+  background-image: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/bannertip.png");
+}
+#content .post .banner label {
+  padding: 2px 2px;
+  border-radius: 3px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5) inset;
+  border-left: 1px solid rgba(255, 255, 255, 0.25) inset;
+  border-right: 1px solid rgba(255, 255, 255, 0.25) inset;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  margin-right: 5px;
+  background: #3f4e55;
+}
+#content .post .post_content {
+  width: 500px;
+}
+#content .post .controls {
+  background: #fff;
+  border-radius: 24px;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: .5;
+}
+#content .post .controls:hover {
+  opacity: 1.0;
+}
+#content .post .controls .icon {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 30px;
+  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/postbuttons.png");
+}
+#content .post .controls .icon #perm {
+  background-position: 0px 0px;
+}
+#content .post .controls .icon #reblog {
+  background-position: 0px 24px;
+}
+#content .post .controls .icon #comment {
+  background-position: 0px 48px;
+}
+#content .post .controls .label {
+  float: left;
+  color: #000;
+}
