@@ -1,5 +1,5 @@
 @base-color: #3f4e55;
-@assets: "https://raw.github.com/nhydock/tumblr-themes/master/vice/assets/";
+@assets: "https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/";
 
 #frame
 {
@@ -62,7 +62,7 @@
 				@file: "sidebarbuttons.png";
 				background: url("@{assets}@{file}");
 					
-				&:hover, &.active
+				&:hover, &.active, &.active:before
 				{
 					opacity: 1.0;
 				}
@@ -77,7 +77,6 @@
 					box-shadow: 0 10 5 -5 rgba(0,0,0,.25) inset, 0 -10 5 -5 rgba(0,0,0,.25);
 					border-top: 1px solid rgba(255,255,255,.5);
 					border-bottom: 1px solid rgba(255,255,255,.5);
-					opacity: 1.0;
 				}
 				
 				& #home
