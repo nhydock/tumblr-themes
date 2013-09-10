@@ -15,12 +15,18 @@
 		background: @base-color;
 		position: absolute;
 		
+		.container
+		{
+			left: 100px;
+			position: absolute;
+			padding: 0;
+		}
+		
 		.brand
 		{
 			font-size: 52px;
 			font-family: Arial;
-			display: inline;
-			left: 120px;
+			float: left;
 			margin-right: 8px;
 			line-height: 64px;
 		}
@@ -30,7 +36,7 @@
 			width: 80px;
 			height: 64px;
 			top: 0px;
-			display: inline;
+			float: left;
 			border-left: 1px solid rgba(255,255,255,.25);
 			border-right: 1px solid rgba(255,255,255,.25);
 			box-shadow: 5px 0px 5px -5px rgba(0,0,0,.5) inset, -5px 0px 5px -5px rgba(0,0,0,.5) inset;
