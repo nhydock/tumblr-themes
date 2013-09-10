@@ -2,6 +2,8 @@
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 9999;
+  pointer-events: none;
 }
 #frame #header {
   width: 100%;
@@ -101,28 +103,42 @@
   position: absolute;
 }
 #content {
-  margin-left: 64px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 64px;
-  width: 800px;
+  width: 600px;
   background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
 }
 #content .post {
-  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background: rgba(0, 0, 0, 0.25);
   color: #fff;
   position: relative;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 60px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 #content .post .banner {
   background: #fff;
   right: -10px;
+  width: 480px;
+  margin-bottom: 15px;
+  line-height: 18px;
+  padding-top: 2px;
 }
 #content .post .banner:after {
   width: 10px;
   height: 10px;
   bottom: -10px;
   right: -10px;
+  position: absolute;
   background-image: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/bannertip.png");
 }
 #content .post .banner label {
@@ -139,36 +155,32 @@
   font-size: .9em;
   line-height: .9em;
 }
-#content .post .post_content {
-  top: 0px;
-  left: 64px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 64px;
-  position: absolute;
-  width: 500px;
-}
 #content .post .controls {
-  background: #fff;
-  border-radius: 24px;
-  height: 48px;
-  width: 48px;
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: -144px;
+  width: 200px;
 }
 #content .post .controls li {
   opacity: .5;
   margin-bottom: 10px;
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+  background: #fff;
+  vertical-align: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
-#content .post .controls:hover {
+#content .post .controls li:hover {
   opacity: 1.0;
 }
 #content .post .controls .icon {
-  width: 24px;
-  height: 24px;
-  display: inline;
+  width: 48px;
+  height: 48px;
+  float: left;
   margin-right: 30px;
+  display: inline-block;
   background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/postbuttons.png");
 }
 #content .post .controls .icon #perm {
@@ -181,7 +193,10 @@
   background-position: 0px 48px;
 }
 #content .post .controls .label {
-  display: inline;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  float: left;
   color: #000;
-  overflow: hidden;
+  display: inline-block;
 }

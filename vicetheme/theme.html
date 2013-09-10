@@ -11,7 +11,6 @@
     <head>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
         <title>{Title} {block:PostTitle} {PostTitle} {/block:PostTitle}</title>
 
         <link rel="shortcut icon" href="{Favicon}">
@@ -26,6 +25,8 @@
 
 		<!-- DEFAULT COLORS -->
         <meta name="color:Background" content="#fff"/>
+        <meta name="image:Background" content=""/>
+        
 		<meta name="color:Text" content="#919191"/>
 		<meta name="color:Links" content="#6DC0A9"/>
 		<meta name="color:Links Hover" content="#4A8D75"/>
@@ -44,7 +45,7 @@
 		
 		<script>
 			$(document).ready(function(){
-				$(".post .controls ul li").hover(function(){
+				$(".controls a li").hover(function(){
 					$(this).animate({"width": "200px"});
 				}, function(){
 					$(this).animate({"width": "48px"});
@@ -57,14 +58,18 @@
 			{CustomCSS}
 			
 			body {
-				background: {color:Background};
-				color: {color:Text}; 
+				background: {color:Background} url('{image:Background}');
+				color: #fff;
 			}
-			
+			head {
+				display: none;
+			}
 			body, html {
 				width: 100%;
 				height: 100%;
-				padding: 0;
+				padding: 0 0;
+				top: 0px;
+				position: absolute;
 			}
 			
             #disqus_thread { width: 500px; padding: 0 0 75px 0; }
@@ -115,169 +120,155 @@
 				</ul>
 			</div>
 			<div class="corner"></div>
-		</div
-		<!--
-		<div id="header">
-			<h1><a href="/">{Title}</a></h1>
-			
-	        <p id="description">
-				{block:AskEnabled}<a href="/ask">ask</a> &nbsp;&nbsp;{/block:AskEnabled}
-				{block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a> &nbsp;&nbsp;{/block:SubmissionsEnabled}
-
-			</p>	
-   		</div>
-		-->
-		
-
-
+		</div>
 
         <div id="content">
 			
             {block:Posts}
 	
 				<div class="post">
-					<div class="post_content">
-						{Date}<br/>{TimeAgo}
-						<img src="assets/divider.png"></img>
-						
-						{block:Quote}
-					
-							<div class="quote post">
-						
-								<h2>"{Quote}"</h2>
-							
-								{block:Source}
-									<p>{Source}</p>
-								{/block:Source}
-						
-							</div>
-							
-						{/block:Quote}
-						
-						
-						{block:Photo}
-							
-							<div class="photo post">
-								
-								{LinkOpenTag}
-									<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
-								{LinkCloseTag}
-							
-								{block:Caption}
-									<p>{Caption}</p>
-								{/block:Caption}
-								
-							</div>
-							
-						{/block:Photo}
-
-
-						{block:Video}
-
-						
-							<div class="video post">
-						
-								{Video-500}
-								
-								{block:Caption}
-									<p>{Caption}</p>
-								{/block:Caption}
-								
-
-							</div>
-						
-						{/block:Video}   
-						
-						
-						{block:Link}
-
-							<div class="link post">
-
-								<h2><a href="{URL}" {Target}>{Name}</a></h2>
-								
-								{block:Description}
-									<p>{Description}</p>
-								{/block:Description}
-								
-							</div>
-						{/block:Link}
-						
-
-						{block:Chat}
-						
-							<div class="conversation post">
-								
-								{block:Title}
-									<h2>{Title}</h2>
-								{/block:Title}
-
-								<ul>
-									{block:Lines}
-										<li class="member{UserNumber}">
-											{block:Label}
-												<span class="label">{Label}</span>
-											{/block:Label}
-											{Line}
-										</li>
-									{/block:Lines}
-								</ul>				
-							</div>
-						{/block:Chat}
-						
-							
-						{block:Text}
-							<div class="text post">
-			
-								{block:Title}
-									<h2>{Title}</h2>
-								{/block:Title}
-
-								{Body}
-							</div>
-
-						{/block:Text}
-
-
-						{block:Audio}
-							
-							<div class="post audio">
-							
-								{AudioPlayerGrey}
-								
-								<div class="audio_details">{block:Artist}<b>{Artist}</b>{/block:Artist} &ndash; {block:TrackName}{TrackName}{/block:TrackName} <span class="playcount">({PlayCountWithLabel})</span></div>
-								<div class="audio_caption">{block:Caption}{Caption}{/block:Caption}</div>
-							
-								{block:ExternalAudio}
-									<p><a href="{ExternalAudioURL}">{lang:Download}</a></p>
-								{/block:ExternalAudio}			
-
-							</div>
-						
-						{/block:Audio}
-					</div>
-					
-                   <div id="tags" class="banner">
-						{block:Tags}
-							<label>
-								{Tag}
-							</label>
-						{/block:Tags}
-					</div>
-					<div id="source" class="banner">
-						<align type="left">
-							{NoteCount} {lang:Notes}
-						</align>
-						<align type="right">
-							(via {Source}) <b>{Source}</b>
-						</align>
-					</div>
-					{block:PostNotes}
-					<div>{PostNotes}</div>
-					{/block:PostNotes}
-				</div>
+					<center>{Date}<br/>{TimeAgo}
+					<br/>
+					<img src="assets/divider.png"></img></center>
+					<br/>
+					{block:Quote}
 				
-				<div class="controls">
-					<ul>
+						<div class="quote">
+					
+							<h2>"{Quote}"</h2>
+						
+							{block:Source}
+								<p>{Source}</p>
+							{/block:Source}
+					
+						</div>
+						
+					{/block:Quote}
+					
+					
+					{block:Photo}
+						
+						<div class="photo">
+							
+							{LinkOpenTag}
+								<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+							{LinkCloseTag}
+						
+							{block:Caption}
+								<p>{Caption}</p>
+							{/block:Caption}
+							
+						</div>
+						
+					{/block:Photo}
+
+
+					{block:Video}
+
+					
+						<div class="video">
+					
+							{Video-500}
+							
+							{block:Caption}
+								<p>{Caption}</p>
+							{/block:Caption}
+							
+
+						</div>
+					
+					{/block:Video}   
+					
+					
+					{block:Link}
+
+						<div class="link">
+
+							<h2><a href="{URL}" {Target}>{Name}</a></h2>
+							
+							{block:Description}
+								<p>{Description}</p>
+							{/block:Description}
+							
+						</div>
+					{/block:Link}
+					
+
+					{block:Chat}
+					
+						<div class="conversation">
+							
+							{block:Title}
+								<h2>{Title}</h2>
+							{/block:Title}
+
+							<ul>
+								{block:Lines}
+									<li class="member{UserNumber}">
+										{block:Label}
+											<span class="label">{Label}</span>
+										{/block:Label}
+										{Line}
+									</li>
+								{/block:Lines}
+							</ul>				
+						</div>
+					{/block:Chat}
+					
+						
+					{block:Text}
+						<div class="text">
+		
+							{block:Title}
+								<h2>{Title}</h2>
+							{/block:Title}
+
+							{Body}
+						</div>
+
+					{/block:Text}
+
+
+					{block:Audio}
+						
+						<div class="audio">
+						
+							{AudioPlayerGrey}
+							
+							<div class="audio_details">{block:Artist}<b>{Artist}</b>{/block:Artist} &ndash; {block:TrackName}{TrackName}{/block:TrackName} <span class="playcount">({PlayCountWithLabel})</span></div>
+							<div class="audio_caption">{block:Caption}{Caption}{/block:Caption}</div>
+						
+							{block:ExternalAudio}
+								<p><a href="{ExternalAudioURL}">{lang:Download}</a></p>
+							{/block:ExternalAudio}			
+
+						</div>
+					
+					{/block:Audio}
+				
+					<div class="footer">
+					   <div id="tags" class="banner">
+							{block:Tags}
+								<label>
+									{Tag}
+								</label>
+							{/block:Tags}
+						</div>
+						<div id="source" class="banner">
+							<align type="left">
+								{NoteCount} {lang:Notes}
+							</align>
+							<align type="right">
+								(via {Source}) <b>{Source}</b>
+							</align>
+						</div>
+						<br/>
+						{block:PostNotes}
+						<div>{PostNotes}</div>
+						{/block:PostNotes}
+					</div>
+				
+					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
 								<div id="perm" class="icon"></div><div class="label">Permalink</div>
@@ -288,16 +279,15 @@
 								<div id="reblog" class="icon"></div><div class="label">Reblog</div>
 							</li>
 						</a>
-						{block:IfDisqusShortname}
 						<a href="{Permalink}#disqus_thread">
 							<li>
 								<div id="disqus" class="icon"></div><div class="label">Comments</div>
 							</li>
 						</a>
-						{/block:IfDisqusShortname}
 					</ul>
 				</div>
 			{/block:Posts}
+			
 			{block:Pagination}
 
 				<div id="navigation">
