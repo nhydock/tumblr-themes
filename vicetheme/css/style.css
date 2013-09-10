@@ -11,11 +11,12 @@
   position: absolute;
 }
 #frame #header .brand {
-  font-size: 48px;
+  font-size: 52px;
   font-family: Arial;
   display: inline;
-  left: 100px;
+  left: 120px;
   margin-right: 8px;
+  line-height: 64px;
 }
 #frame #header .avatar {
   float: left;
@@ -136,6 +137,12 @@
   line-height: .9em;
 }
 #content .post .post_content {
+  top: 0px;
+  left: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 64px;
+  position: absolute;
   width: 500px;
 }
 #content .post .controls {
@@ -146,7 +153,10 @@
   position: absolute;
   top: 8px;
   right: 8px;
+}
+#content .post .controls li {
   opacity: .5;
+  margin-bottom: 10px;
 }
 #content .post .controls:hover {
   opacity: 1.0;

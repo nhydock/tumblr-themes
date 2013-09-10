@@ -134,28 +134,7 @@
             {block:Posts}
 	
 				<div class="post">
-					<div class="controls">
-						<ul>
-							<a href="{Permalink}">
-								<li>
-									<div id="perm" class="icon"></div><div class="label">Permalink</div>
-								</li>
-							</a>
-							<a href="{ReblogLink}">
-								<li>
-									<div id="reblog" class="icon"></div><div class="label">Reblog</div>
-								</li>
-							</a>
-							{block:IfDisqusShortname}
-							<a href="{Permalink}#disqus_thread">
-								<li>
-									<div id="disqus" class="icon"></div><div class="label">Comments</div>
-								</li>
-							</a>
-							{/block:IfDisqusShortname}
-						</ul>
-					</div>
-					<div class="post_body">
+					<div class="post_content">
 						{Date}<br/>{TimeAgo}
 						<img src="assets/divider.png"></img>
 						
@@ -293,6 +272,28 @@
 					{block:PostNotes}
 					<div>{PostNotes}</div>
 					{/block:PostNotes}
+				</div>
+				
+				<div class="controls">
+					<ul>
+						<a href="{Permalink}">
+							<li>
+								<div id="perm" class="icon"></div><div class="label">Permalink</div>
+							</li>
+						</a>
+						<a href="{ReblogLink}">
+							<li>
+								<div id="reblog" class="icon"></div><div class="label">Reblog</div>
+							</li>
+						</a>
+						{block:IfDisqusShortname}
+						<a href="{Permalink}#disqus_thread">
+							<li>
+								<div id="disqus" class="icon"></div><div class="label">Comments</div>
+							</li>
+						</a>
+						{/block:IfDisqusShortname}
+					</ul>
 				</div>
 			{/block:Posts}
 			{block:Pagination}
