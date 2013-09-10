@@ -34,7 +34,11 @@
 #frame #sidebar {
   top: 80px;
   left: 0px;
+  width: 64px;
+  height: 100%;
+  background: #3f4e55;
   border-right: 1px solid #fff;
+  position: absolute;
 }
 #frame #sidebar ul {
   list-style: none;
@@ -45,7 +49,7 @@
   margin-top: -1px;
   padding: 0;
   opacity: .5;
-  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/sidebarbuttons.png");
+  background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/sidebarbuttons.png");
 }
 #frame #sidebar ul li:hover,
 #frame #sidebar ul li.active,
@@ -77,8 +81,8 @@
 #frame #sidebar ul li #pages {
   background-position: 0px 192px;
 }
-#frame > .corner {
-  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/corner.png");
+#frame .corner {
+  background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/corner.png");
   left: 0px;
   top: 0px;
   width: 100px;
@@ -107,7 +111,7 @@
   height: 10px;
   bottom: -10px;
   right: -10px;
-  background-image: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/bannertip.png");
+  background-image: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/bannertip.png");
 }
 #content .post .banner label {
   padding: 2px 2px;
@@ -142,7 +146,7 @@
   height: 24px;
   float: left;
   margin-right: 30px;
-  background: url("https://raw.github.com/nhydock/tumblr-themes/master/vicetheme/assets/postbuttons.png");
+  background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/postbuttons.png");
 }
 #content .post .controls .icon #perm {
   background-position: 0px 0px;
