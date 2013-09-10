@@ -154,7 +154,7 @@
 #content .post .controls .icon {
   width: 24px;
   height: 24px;
-  float: right;
+  display: inline;
   margin-right: 30px;
   background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/postbuttons.png");
 }
@@ -168,6 +168,7 @@
   background-position: 0px 48px;
 }
 #content .post .controls .label {
-  float: right;
+  display: inline;
   color: #000;
+  overflow: hidden;
 }
