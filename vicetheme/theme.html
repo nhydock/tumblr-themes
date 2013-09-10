@@ -78,49 +78,7 @@
     </head>
 
     <body>
-	
-		<div id="frame">
-			<div id="header">
-				<div class="container">
-					<div class="brand">
-						{Title}
-					</div>
-					<div class="avatar">
-						{Avatar64}
-					</div>
-				</div>
-			</div>
-			<div id="sidebar">
-				<ul>
-					<a href="#">
-						<li id="home"></li>
-					</a>
-					<a href="#">
-						<li id="about"></li>
-					</a>
-					<!--
-					{block:AskEnabled}
-					<a href="/ask">
-						<li id="ask"></li>
-					</a>
-					
-					{/block:AskEnabled}
-					-->
-					<a href="#">
-						<li id="tags"></li>
-					</a>
-					<a href="#">
-						<li id="blogs"></li>
-					</a>
-					{block:HasPages}
-					<a href="#">
-						<li id="pages"></li>
-					</a>
-					{/block:HasPages}
-				</ul>
-			</div>
-			<div class="corner"></div>
-		</div>
+		
 
         <div id="content">
 			
@@ -313,8 +271,6 @@
 				</form>
 			
 			</div>
-
-
      
         </div>
 
@@ -335,6 +291,47 @@
         </script>
     {/block:IfDisqusShortname}
 
+		<div id="header">
+			<div class="container">
+				<div class="brand">
+					{Title}
+				</div>
+				<div class="avatar">
+					{Avatar64}
+				</div>
+			</div>
+		</div>
+		<div id="sidebar">
+			<ul>
+				<a href="#">
+					<li id="home"></li>
+				</a>
+				<a href="#">
+					<li id="about"></li>
+				</a>
+				<!--
+				{block:AskEnabled}
+				<a href="/ask">
+					<li id="ask"></li>
+				</a>
+				
+				{/block:AskEnabled}
+				-->
+				<a href="#">
+					<li id="tags"></li>
+				</a>
+				<a href="#">
+					<li id="blogs"></li>
+				</a>
+				{block:HasPages}
+				<a href="#">
+					<li id="pages"></li>
+				</a>
+				{/block:HasPages}
+			</ul>
+		</div>
+		<div class="corner"></div>
+		
     </body>
 
 </html>
