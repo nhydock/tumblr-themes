@@ -37,6 +37,7 @@
 		<meta name="color:Permalink Hover" content="#000000"/>
 		<meta name="color:Text Alt" content="#919191"/>
 
+		
 		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/qtip.css" rel="stylesheet" type="text/css"/>
 		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" rel="stylesheet" type="text/css"/>
 
@@ -58,6 +59,10 @@
 				}, function(){
 					$(this).stop().animate({"width": "48px"}, 300);
 				});
+                
+                $(".pages").qtip({
+                    content: $(this).next()
+                });
 			});
 		</script>
 		
@@ -217,6 +222,7 @@
 					<div class="footer">
 						<div class="banner_container">
 						   <div id="tags" class="banner">
+							    Tags:	
 								{block:Tags}
 									<label>
 										{Tag}
@@ -225,17 +231,21 @@
 							</div>
 							<div class="tip"></div>
 						</div>
+                        {block:NoteCount}
 						<div class="banner_container">
 							<div id="source" class="banner">
-								<align type="left">
+								<p align="left">
 									{NoteCount} {lang:Notes}
-								</align>
-								<align type="right">
-									(via {Source}) <b>{Source}</b>
-								</align>
+								</p>
+                                {block:RebloggedFrom}
+								<p align="right">
+									(via {ReblogParentName}) <b>{ReblogRootName}</b>
+								</p>
+                                {/block:RebloggedFrom}
 							</div>
 							<div class="tip"></div>
 						</div>
+                        {/block:NoteCount}
 						<br/>
 						{block:PostNotes}
 						<div>{PostNotes}</div>
@@ -245,17 +255,17 @@
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
-								<div class="icon perm"></div><div class="label">Permalink</div>
+								<img class="perm"></img><p>Permalink</p>
 							</li>
 						</a>
 						<a href="{ReblogLink}">
 							<li>
-								<div class="icon reblog"></div><div class="label">Reblog</div>
+								<img class="reblog" /><p>Reblog</p>
 							</li>
 						</a>
 						<a href="{Permalink}#disqus_thread">
 							<li>
-								<div class="icon disqus"></div><div class="label">Comments</div>
+								<img class="disqus" /><p>Comments</p>
 							</li>
 						</a>
 					</ul>

@@ -215,8 +215,7 @@
 					display: block;
 					position: relative;
 					float: right;
-					line-height: 18px;
-					padding-top: 2px;
+					line-height: 20px;
 					padding-left: 4px;
 					
 					label
@@ -228,12 +227,19 @@
 						border-right: @softtrim;
 						color: #fff;
 						font-weight: bold;
-						float: left;
-						margin-right: 5px;
+						display: inline;
+						margin-left: 4px;
 						background: @base-color;
 						
 						font-size: .9em;
 						line-height: .9em;
+						
+						vertical-align: middle;
+					}
+					
+					p
+					{
+						display: inline;
 					}
 				}
 			}
@@ -254,7 +260,6 @@
 				width: 48px;
 				border-radius: 24px;
 				background: #fff;
-				vertical-align: center;
 				white-space: nowrap;
 				line-height: 48px;
 				&:hover
@@ -263,43 +268,45 @@
 				}
 				
 				overflow: hidden;
-			}
-			
-			
-			
-			.icon
-			{
-				width: 36px;
-				height: 36px;
-				float: left;
-				margin-right: 30px;
-				display: inline-block;
-				@file: "postbuttons.png";
-				background: url("@{assets}@{file}") 0 0 no-repeat;
-				overflow: hidden;
 				
-				&.perm
+				img
 				{
-					background-position: 0px 0px;
+					width: 36px;
+					height: 36px;
+					margin-right: 30px;
+					margin-left: 6px;
+					display: inline-block;
+					@file: "postbuttons.png";
+					background: url("@{assets}@{file}") 0 0 no-repeat;
+					overflow: hidden;
+					vertical-align: middle;
+				
+					&.perm
+					{
+						background-position: 0px 0px;
+					}
+					&.reblog
+					{
+						background-position: 0px -36px;
+					}
+					&.comment
+					{
+						background-position: 0px -72px;
+					}
 				}
-				&.reblog
+				
+				p
 				{
-					background-position: 0px -36px;
+					height: 48px;
+					line-height: 48px;
+					font-size: 16px;
+					font-weight: bold;
+					margin-right: 8px;
+					color: #000;
+					display: inline;
+					vertical-align: middle;
+				
 				}
-				&.comment
-				{
-					background-position: 0px -72px;
-				}
-			}
-			
-			.label
-			{
-				height: 48px;
-				line-height: 48px;
-				font-size: 16px;
-				margin-right: 8px;
-				color: #000;
-				display: inline-block;
 			}
 		}
 	}
