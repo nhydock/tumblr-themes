@@ -111,7 +111,7 @@
             {block:Posts}
 	
 				<div class="post">
-					<img class="group-avatar" src="{PostAuthorPortraitURL-48}" />
+					<a href="{PostAuthorURL}"><img class="group-avatar" src="{PostAuthorPortraitURL-48}" /></a>
 					
                     {block:Date}
 					<center style="margin-top: 20px;">
@@ -125,6 +125,7 @@
                     <img class="divider"></img>
                     </center>
 					<br/>
+                    
 					{block:Quote}
 				
 						<div class="quote">
@@ -241,6 +242,7 @@
 					{/block:Audio}
 				
 					<div class="footer">
+                        {block:HasTags}
 						<div class="banner_container">
 						   <div id="tags" class="banner">
 							    Tags:	
@@ -252,6 +254,7 @@
 							</div>
 							<div class="tip"></div>
 						</div>
+                        {/block:HasTags}
                         {block:NoteCount}
 						<div class="banner_container">
 							<div id="source" class="banner">
