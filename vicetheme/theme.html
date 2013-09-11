@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
         
         <meta name="text:Disqus Shortname" content="" />
-		
+    	
 		<link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css">
 
 		<!-- DEFAULT COLORS -->
@@ -39,6 +39,13 @@
         
         <meta name="select:Layout" content="left" title="Left"/>
         <meta name="select:Layout" content="center" title="Center"/>
+        
+        <meta name="if:Fixed Bg" content="1"/>
+        <meta name="select:Bg Style" content="center no-repeat" title="No Tiling"/>
+        <meta name="select:Bg Style" content="0 0 repeat-x" title="Tile X Only"/>
+        <meta name="select:Bg Style" content="0 0 repeat-y" title="Tile Y Only"/>
+        <meta name="select:Bg Style" content="0 0 repeat" title="Tile"/>
+        
         
         <meta name="if:Show Likes" content="0"/>
 		
@@ -75,8 +82,9 @@
 			{CustomCSS}
 			
 			body {
-				background: {color:Background} url('{image:Background}');
-				color: #fff;
+				background: {color:Background} url('{image:Background}')  {select:Bg Style}  {block:IfFixedBg} fixed {/block:IfFixedBg} ; 
+                    
+			    color: #fff;
 			}
 			head {
 				display: none;
