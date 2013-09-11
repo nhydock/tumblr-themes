@@ -123,6 +123,18 @@
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
+#content .post .group-avatar {
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  opacity: .5;
+}
+#content .post .group-avatar:hover {
+  opacity: 1.0f;
+}
 #content .post .divider {
   margin-left: auto;
   margin-right: auto;
@@ -247,4 +259,25 @@
 }
 .dropdown {
   display: none;
+}
+#more {
+  position: absolute;
+  right: 0;
+  padding-top: 100px;
+}
+#more ul.likes {
+  background: url("../assets/alphagray.png") 0 0 repeat;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#more ul.likes li.like_post {
+  background: url("../assets/alphagray.png") 0 0 repeat;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

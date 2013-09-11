@@ -99,6 +99,8 @@
             {block:Posts}
 	
 				<div class="post">
+					<img class="group-avatar" src="{PostAuthorPortraitURL-64}" />
+					
 					<center>{Date}<br/>{TimeAgo}
 					<br/>
 					<img class="divider"></img>
@@ -248,7 +250,7 @@
                         {/block:NoteCount}
 						<br/>
 						{block:PostNotes}
-						<div>{PostNotes}</div>
+						<div>{PostNotes-16}</div>
 						{/block:PostNotes}
 					</div>
 				
@@ -265,7 +267,7 @@
 						</a>
 						<a href="{Permalink}#disqus_thread">
 							<li>
-								<img class="disqus" /><p>Comments</p>
+								<img class="comment" /><p>Comments</p>
 							</li>
 						</a>
 					</ul>
@@ -307,6 +309,12 @@
         </script>
     {/block:IfDisqusShortname}
 
+		<div id="mode">
+			{block:Likes}
+			{Likes limit="5" summarize="100" width="150"}
+			{/block:Likes}
+		</div>
+
 		<div id="header">
 			<div class="container">
 				<div class="brand">
@@ -325,19 +333,13 @@
 				<a href="#">
 					<li class="about"></li>
 				</a>
-				<!--
 				{block:AskEnabled}
 				<a href="/ask">
-					<li id="ask"></li>
+					<li class="ask"></li>
 				</a>
-				
 				{/block:AskEnabled}
-				-->
 				<a href="#">
 					<li class="tags"></li>
-				</a>
-				<a href="#">
-					<li class="blogs"></li>
 				</a>
 				{block:HasPages}
 				<a href="#">
