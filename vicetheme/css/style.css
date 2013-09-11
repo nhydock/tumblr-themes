@@ -4,7 +4,7 @@
   width: 100%;
   height: 64px;
   border-bottom: 1px solid #ffffff;
-  background: #3f4e55;
+  background: #3f4f56;
   position: fixed;
 }
 #header .container {
@@ -39,7 +39,14 @@
   left: 0px;
   width: 64px;
   height: 100%;
-  background: #3f4e55;
+  background: #3f4f56;
+  background: -moz-linear-gradient(top, #3f4f56 18%, #142122 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, #3f4f56), color-stop(100%, #142122));
+  background: -webkit-linear-gradient(top, #3f4f56 18%, #142122 100%);
+  background: -o-linear-gradient(top, #3f4f56 18%, #142122 100%);
+  background: -ms-linear-gradient(top, #3f4f56 18%, #142122 100%);
+  background: linear-gradient(to bottom, #3f4f56 18%, #142122 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@base-color', endColorstr='@base-dark', GradientType=0);
   border-right: 1px solid #ffffff;
   position: fixed;
   padding: 0;
@@ -201,7 +208,7 @@
   font-weight: bold;
   display: inline;
   margin-left: 4px;
-  background: #3f4e55;
+  background: #3f4f56;
   font-size: .9em;
   line-height: .9em;
   vertical-align: middle;
@@ -261,13 +268,13 @@
 .qtip ul {
   list-style: none;
   background: #fff;
-  border-bottom: 2px solid #3f4e55;
+  border-bottom: 2px solid #3f4f56;
 }
 .qtip ul li {
   color: #000;
 }
 .qtip ul li:hover {
-  background: #3f4e55;
+  background: #3f4f56;
   color: #fff;
 }
 .dropdown {
