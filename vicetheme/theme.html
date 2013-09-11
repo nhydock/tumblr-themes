@@ -63,6 +63,7 @@
 		<script src="js/qtip.js" type="text/javascript"></script>
 		-->
 		
+		
 		<script>
 			$(document).ready(function(){
 				$(".controls a li").hover(function(){
@@ -243,39 +244,35 @@
 				
 					<div class="footer">
                         {block:HasTags}
-						<div class="banner_container">
-						   <div id="tags" class="banner">
-							    Tags:	
-								{block:Tags}
-									<label>
-										{Tag}
-									</label>
-								{/block:Tags}
-							</div>
-							<div class="tip"></div>
+						<div id="tags" class="banner">
+							Tags:	
+							{block:Tags}
+								<label>
+									{Tag}
+								</label>
+							{/block:Tags}
 						</div>
-                        {/block:HasTags}
-                        {block:NoteCount}
-						<div class="banner_container">
-							<div id="source" class="banner">
-								<p align="left">
-									{NoteCount} {lang:Notes}
-								</p>
-                                {block:RebloggedFrom}
-								<p align="right">
-									(via {ReblogParentName}) <b>{ReblogRootName}</b>
-								</p>
-                                {/block:RebloggedFrom}
-							</div>
-							<div class="tip"></div>
+						<div class="tip"></div>
+						{/block:HasTags}
+						{block:NoteCount}
+						<div id="source" class="banner">
+							<p style="float:left;">
+								{NoteCount} {lang:Notes}
+							</p>
+							{block:RebloggedFrom}
+							<p style="float:right;">
+								(via <a href="{ReblogParentURL}">{ReblogParentName}</a>) <b><a href="{ReblogRootURL}">{ReblogRootName}</a></b>
+							</p>
+							{/block:RebloggedFrom}
 						</div>
-                        {/block:NoteCount}
-						<br/>
-						{block:PostNotes}
-						<div>{PostNotes-16}</div>
-						{/block:PostNotes}
+						<div class="tip"></div>
+						{/block:NoteCount}
 					</div>
-				
+					<br/>
+					{block:PostNotes}
+					<div>{PostNotes-16}</div>
+					{/block:PostNotes}
+					
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
