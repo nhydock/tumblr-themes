@@ -36,7 +36,11 @@
 		<meta name="color:Permalink" content="#3F3F3F"/>
 		<meta name="color:Permalink Hover" content="#000000"/>
 		<meta name="color:Text Alt" content="#919191"/>
-
+        
+        <meta name="select:Layout" content="left" title="Left"/>
+        <meta name="select:Layout" content="center" title="Center"/>
+        
+        <meta name="if:Show Likes" content="0"/>
 		
 		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/qtip.css" rel="stylesheet" type="text/css"/>
 		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" rel="stylesheet" type="text/css"/>
@@ -94,7 +98,7 @@
     <body>
 		
 
-        <div id="content">
+        <div id="content" class="{select:Layout}">
 			
             {block:Posts}
 	
@@ -309,11 +313,13 @@
         </script>
     {/block:IfDisqusShortname}
 
+		{block:IfShowLikes}
 		<div id="mode">
 			{block:Likes}
 			{Likes limit="5" summarize="100" width="150"}
 			{/block:Likes}
 		</div>
+		{/block:IfShowLikes}
 
 		<div id="header">
 			<div class="container">

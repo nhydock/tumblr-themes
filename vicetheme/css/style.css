@@ -107,6 +107,9 @@
   width: 700px;
   background: url("../assets/alphagray.png") 0 0 repeat;
 }
+#content.left {
+  margin-left: 64px;
+}
 #content .post {
   margin-left: auto;
   margin-right: auto;
