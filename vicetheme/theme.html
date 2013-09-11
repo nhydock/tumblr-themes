@@ -21,7 +21,7 @@
         
     	<meta name="text:Disqus Shortname" content="" />
 		
-		<link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css" />
+		<link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css">
 
 		<!-- DEFAULT COLORS -->
         <meta name="color:Background" content="#fff"/>
@@ -38,17 +38,25 @@
 		<meta name="color:Text Alt" content="#919191"/>
 
 		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/qtip.css" rel="stylesheet" type="text/css"/>
-		<link rel="stylesheet" type="text/css" href="https://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" />
+		<link href="https://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" rel="stylesheet" type="text/css"/>
 
 		<script src="https://nhydock.github.io/tumblr-themes/shared/js/jquery.js" type="text/javascript"></script>
 		<script src="https://nhydock.github.io/tumblr-themes/vicetheme/js/qtip.js" type="text/javascript"></script>
 		
+		<!--
+		<link href="css/qtip.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+		<script src="../shared/js/jquery.js" type="text/javascript"></script>
+		<script src="js/qtip.js" type="text/javascript"></script>
+		-->
+		
 		<script>
 			$(document).ready(function(){
 				$(".controls a li").hover(function(){
-					$(this).animate({"width": "200px"});
+					$(this).stop().animate({"width": "200px"}, 300);
 				}, function(){
-					$(this).animate({"width": "48px"});
+					$(this).stop().animate({"width": "48px"}, 300);
 				});
 			});
 		</script>
@@ -69,6 +77,7 @@
 				height: 100%;
 				padding: 0 0;
 				top: 0px;
+				left: 0px;
 				position: absolute;
 			}
 			
@@ -87,8 +96,9 @@
 				<div class="post">
 					<center>{Date}<br/>{TimeAgo}
 					<br/>
-					<img src="https://nhydock.github.io/tumblr-themes/vicetheme/assets/divider.png"></img></center>
+					<img class="divider"></img>
 					<br/>
+					</center>
 					{block:Quote}
 				
 						<div class="quote">
