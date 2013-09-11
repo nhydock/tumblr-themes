@@ -235,17 +235,17 @@
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
-								<div id="perm" class="icon"></div><div class="label">Permalink</div>
+								<div class="icon perm"></div><div class="label">Permalink</div>
 							</li>
 						</a>
 						<a href="{ReblogLink}">
 							<li>
-								<div id="reblog" class="icon"></div><div class="label">Reblog</div>
+								<div class="icon reblog"></div><div class="label">Reblog</div>
 							</li>
 						</a>
 						<a href="{Permalink}#disqus_thread">
 							<li>
-								<div id="disqus" class="icon"></div><div class="label">Comments</div>
+								<div class="icon disqus"></div><div class="label">Comments</div>
 							</li>
 						</a>
 					</ul>
@@ -310,10 +310,10 @@
 		<div id="sidebar">
 			<ul>
 				<a href="#">
-					<li id="home"></li>
+					<li class="home active"></li>
 				</a>
 				<a href="#">
-					<li id="about"></li>
+					<li class="about"></li>
 				</a>
 				<!--
 				{block:AskEnabled}
@@ -324,14 +324,14 @@
 				{/block:AskEnabled}
 				-->
 				<a href="#">
-					<li id="tags"></li>
+					<li class="tags"></li>
 				</a>
 				<a href="#">
-					<li id="blogs"></li>
+					<li class="blogs"></li>
 				</a>
 				{block:HasPages}
 				<a href="#">
-					<li id="pages"></li>
+					<li class="pages"></li>
 				</a>
 				{/block:HasPages}
 			</ul>

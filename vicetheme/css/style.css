@@ -3,7 +3,7 @@
   left: 0px;
   width: 100%;
   height: 64px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
   background: #3f4e55;
   position: fixed;
 }
@@ -26,7 +26,8 @@
   float: left;
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   border-right: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.5) inset, -5px 0px 5px -5px rgba(0, 0, 0, 0.5) inset;
+  background: url("../assets/alphagray.png") 0 0 repeat;
+  box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25) inset, -10px 0px 5px -5px rgba(0, 0, 0, 0.25) inset;
 }
 #header .avatar img {
   width: 64px;
@@ -39,7 +40,7 @@
   width: 64px;
   height: 100%;
   background: #3f4e55;
-  border-right: 1px solid #fff;
+  border-right: 1px solid #ffffff;
   position: fixed;
   padding: 0;
   pointer-events: auto;
@@ -57,38 +58,39 @@
   margin-top: -1px;
   padding: 0;
   opacity: .5;
-  background-image: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/sidebarbuttons.png");
+  background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/sidebarbuttons.png") 0 0 no-repeat;
   display: block;
+  overflow: hidden;
 }
 #sidebar ul li:hover,
 #sidebar ul li.active,
 #sidebar ul li.active:before {
   opacity: 1.0;
 }
-#sidebar ul li.active:before {
+#sidebar ul li.active::before {
+  content: "";
+  display: inline;
   width: 64px;
   height: 48px;
-  position: absolute;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.5);
+  background: url("../assets/alphagray.png") 0 0 repeat;
   box-shadow: 0 10 5 -5 rgba(0, 0, 0, 0.25) inset, 0 -10 5 -5 rgba(0, 0, 0, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
-#sidebar ul li #home {
+#sidebar ul li.home {
   background-position: 0px 0px;
 }
-#sidebar ul li #about {
-  background-position: 0px 48px;
+#sidebar ul li.about {
+  background-position: 0px -48px;
 }
-#sidebar ul li #tags {
-  background-position: 0px 96px;
+#sidebar ul li.tags {
+  background-position: 0px -96px;
 }
-#sidebar ul li #blogs {
-  background-position: 0px 144px;
+#sidebar ul li.blogs {
+  background-position: 0px -144px;
 }
-#sidebar ul li #pages {
-  background-position: 0px 192px;
+#sidebar ul li.pages {
+  background-position: 0px -192px;
 }
 .corner {
   background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/corner.png");
@@ -103,7 +105,7 @@
   margin-right: auto;
   margin-top: 64px;
   width: 700px;
-  background: rgba(0, 0, 0, 0.25);
+  background: url("../assets/alphagray.png") 0 0 repeat;
 }
 #content .post {
   margin-left: auto;
@@ -112,7 +114,7 @@
   min-height: 160px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: rgba(0, 0, 0, 0.25);
+  background: url("../assets/alphagray.png") 0 0 repeat;
   color: #fff;
   position: relative;
   padding-left: 10px;
@@ -122,7 +124,9 @@
   margin-bottom: 10px;
 }
 #content .post .footer {
-  margin-left: 40px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 #content .post .footer .banner_container {
   width: 540px;
@@ -137,7 +141,7 @@
   background-image: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/bannertip.png");
 }
 #content .post .footer .banner_container .banner {
-  width: 480px;
+  width: 100%;
   background: #fff;
   right: 0px;
   display: block;
@@ -150,7 +154,7 @@
 #content .post .footer .banner_container .banner label {
   padding: 2px 2px;
   border-radius: 3px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   border-left: 1px solid rgba(255, 255, 255, 0.25);
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   color: #fff;
@@ -188,16 +192,17 @@
   float: left;
   margin-right: 30px;
   display: inline-block;
-  background-image: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/postbuttons.png");
+  background: url("https://nhydock.github.io/tumblr-themes/vicetheme/assets/postbuttons.png") 0 0 no-repeat;
+  overflow: hidden;
 }
-#content .post .controls .icon #perm {
+#content .post .controls .icon.perm {
   background-position: 0px 0px;
 }
-#content .post .controls .icon #reblog {
-  background-position: 0px 24px;
+#content .post .controls .icon.reblog {
+  background-position: 0px -36px;
 }
-#content .post .controls .icon #comment {
-  background-position: 0px 48px;
+#content .post .controls .icon.comment {
+  background-position: 0px -72px;
 }
 #content .post .controls .label {
   height: 48px;
