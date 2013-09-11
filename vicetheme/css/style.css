@@ -130,8 +130,8 @@
   position: absolute;
   margin-top: 16px;
   margin-left: 16px;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   border-radius: 32px;
   opacity: .5;
 }
@@ -146,13 +146,22 @@
   background: url("../assets/divider.png") 0 0 no-repeat;
   display: block;
 }
+#content .post .conversation .label {
+  margin-left: 10px;
+}
 #content .post .conversation .member1 {
   background: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+#content .post .conversation .member1 .label {
   color: #000;
 }
 #content .post .conversation .member2 {
   background: url("../assets/alphagray.png") 0 0 repeat;
   color: #fff;
+}
+#content .post .conversation .member2 .label {
+  color: #000;
 }
 #content .post .footer {
   margin-left: 30px;

@@ -173,8 +173,8 @@
 			position: absolute;
 			margin-top: 16px;
 			margin-left: 16px;
-			width: 64px;
-			height: 64px;
+			width: 48px;
+			height: 48px;
 			border-radius: 32px;
 			opacity: .5;
 			
@@ -194,13 +194,26 @@
 		}
 		.conversation
 		{
+			.label
+			{
+				margin-left: 10px;
+			}
 			.member1 {
 				background: rgba(255,255,255,.5);
 				color: #000;
+				
+				.label
+				{
+					color: #000;
+				}
 			}
 			.member2 {
 				background: @shadow;
 				color: #fff;
+				.label
+				{
+					color: #000;
+				}
 			}
 		}
 

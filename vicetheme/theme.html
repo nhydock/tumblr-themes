@@ -111,13 +111,20 @@
             {block:Posts}
 	
 				<div class="post">
-					<img class="group-avatar" src="{PostAuthorPortraitURL-64}" />
+					<img class="group-avatar" src="{PostAuthorPortraitURL-48}" />
 					
-					<center>{Date}<br/>{TimeAgo}
+                    {block:Date}
+					<center style="margin-top: 20px;">
+                    <p style="font-size: 1.65em; display:inline-block;">
+                        {DayOfMonth} {Month}, {Year}
+                    </p>
+                    <br/>{TimeAgo}
+                    </center>
+                    {/block:Date}
 					<br/>
-					<img class="divider"></img>
+                    <img class="divider"></img>
+                    </center>
 					<br/>
-					</center>
 					{block:Quote}
 				
 						<div class="quote">
