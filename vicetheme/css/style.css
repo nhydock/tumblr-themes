@@ -167,7 +167,7 @@ html {
   background: url("../assets/divider.png") 0 0 no-repeat;
   display: block;
 }
-#content .post .conversation {
+#content .post .conversation ul {
   list-style: none;
   padding-left: 0px;
 }

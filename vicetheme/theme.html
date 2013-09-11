@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
         
         <meta name="text:Disqus Shortname" content="" />
-    	
+        
 		<!--link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css"-->
 
 		<!-- DEFAULT COLORS -->
@@ -86,11 +86,20 @@
 				background: {color:Background} url('{image:Background}')  {select:Bg Style}  {block:IfFixedBg} fixed {/block:IfFixedBg} ; 
                     
 			    color: #fff;
-			}
+            }
 			head {
 				display: none;
 			}
-			
+            
+            a {
+                text-decoration: none;
+                color: {color:Links};
+            }
+            
+            a:hover {
+                color: {color:LinksHover};
+            }
+            
             #disqus_thread { width: 500px; padding: 0 0 75px 0; }
 		</style>
 
