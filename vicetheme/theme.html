@@ -19,7 +19,7 @@
         <meta name="viewport"  content="width=660"/>
         <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
         
-    	<meta name="text:Disqus Shortname" content="" />
+        <meta name="text:Disqus Shortname" content="" />
 		
 		<link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css">
 
@@ -278,16 +278,6 @@
 
 			{/block:Pagination}
 			</div>
-	
-			<!-- Footer -->
-			<div id="footer">
-
-				<form action="/search" method="get" id="searchform">
-					<p><input type="search" name="q" value="" results="5" /></p>
-				</form>
-			
-			</div>
-     
         </div>
 
 	{block:IfDisqusShortname}
@@ -313,7 +303,7 @@
 					{Title}
 				</div>
 				<div class="avatar">
-					{Avatar64}
+					<center><img src="{PortraitURL-64}"/></center>
 				</div>
 			</div>
 		</div>
@@ -342,6 +332,15 @@
 				{block:HasPages}
 				<a href="#">
 					<li class="pages"></li>
+                    <div class="dropdown">
+                    <ul>
+                        {block:Pages}
+                            <a href="{URL}">
+                                <li>{Label}</li>
+                            </a>
+                        {/block:Pages}
+                    </ul>
+                    </div>
 				</a>
 				{/block:HasPages}
 			</ul>

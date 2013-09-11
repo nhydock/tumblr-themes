@@ -172,58 +172,71 @@
 			background: url("@{assets}@{file}") 0 0 no-repeat;
 			display: block;
 		}
+		.conversation
+		{
+			.member1 {
+				background: rgba(255,255,255,.5);
+				color: #000;
+			}
+			.member2 {
+				background: @shadow;
+				color: #fff;
+			}
+		}
 
 		.footer{
 			margin-left: 30px;
 			margin-bottom: 10px;
 			margin-top: 20px;
 		
-		.banner_container
-		{
-			width: 540px;
 			
-			.tip
-			{
-				content: "";
-				position: relative;
-				float: right;
-				display: block;
-				width: 10px;
-				height: 10px;
-				@file: "bannertip.png";
-				background-image: url("@{assets}@{file}");
-			}
 			
-			.banner
+			.banner_container
 			{
-				width: 100%;
-				background: #fff;
-				right: 0px;
-				display: block;
-				position: relative;
-				float: right;
-				line-height: 18px;
-				padding-top: 2px;
-				padding-left: 4px;
+				width: 540px;
 				
-				label
+				.tip
 				{
-					padding: 2px 2px;
-					border-radius: 3px;
-					border-top: @softtrim;
-					border-left: @softtrim;
-					border-right: @softtrim;
-					color: #fff;
-					font-weight: bold;
-					float: left;
-					margin-right: 5px;
-					background: @base-color;
+					content: "";
+					position: relative;
+					float: right;
+					display: block;
+					width: 10px;
+					height: 10px;
+					@file: "bannertip.png";
+					background-image: url("@{assets}@{file}");
+				}
+				
+				.banner
+				{
+					width: 100%;
+					background: #fff;
+					right: 0px;
+					display: block;
+					position: relative;
+					float: right;
+					line-height: 18px;
+					padding-top: 2px;
+					padding-left: 4px;
 					
-					font-size: .9em;
-					line-height: .9em;
+					label
+					{
+						padding: 2px 2px;
+						border-radius: 3px;
+						border-top: @softtrim;
+						border-left: @softtrim;
+						border-right: @softtrim;
+						color: #fff;
+						font-weight: bold;
+						float: left;
+						margin-right: 5px;
+						background: @base-color;
+						
+						font-size: .9em;
+						line-height: .9em;
+					}
 				}
 			}
-		}
 		}
 		
 		.controls
@@ -284,10 +297,34 @@
 				height: 48px;
 				line-height: 48px;
 				font-size: 16px;
-				float: left;
+				margin-right: 8px;
 				color: #000;
 				display: inline-block;
 			}
 		}
 	}
+}
+
+.qtip
+{
+	ul
+	{
+		list-style: none;
+		background: #fff;
+		border-bottom: 2px solid @base-color;
+		
+		li
+		{
+			color: #000;
+			
+			&:hover {
+				background: @base-color;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.dropdown {
+	display: none;
 }

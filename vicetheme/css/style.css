@@ -131,6 +131,14 @@
   background: url("../assets/divider.png") 0 0 no-repeat;
   display: block;
 }
+#content .post .conversation .member1 {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+#content .post .conversation .member2 {
+  background: url("../assets/alphagray.png") 0 0 repeat;
+  color: #fff;
+}
 #content .post .footer {
   margin-left: 30px;
   margin-bottom: 10px;
@@ -216,7 +224,22 @@
   height: 48px;
   line-height: 48px;
   font-size: 16px;
-  float: left;
+  margin-right: 8px;
   color: #000;
   display: inline-block;
+}
+.qtip ul {
+  list-style: none;
+  background: #fff;
+  border-bottom: 2px solid #3f4e55;
+}
+.qtip ul li {
+  color: #000;
+}
+.qtip ul li:hover {
+  background: #3f4e55;
+  color: #fff;
+}
+.dropdown {
+  display: none;
 }
