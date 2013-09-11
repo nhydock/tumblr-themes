@@ -8,6 +8,18 @@
 @trim: 1px solid #fff;
 @softtrim: 1px solid rgba(255,255,255,.25);
 
+body, html {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	font-family: Arial;
+	font-size: 12px;
+}
+
 	#header
 	{
 		top: 0px;
@@ -77,6 +89,7 @@
 		
 		ul 
 		{
+			padding-left: 0px;
 			list-style: none;
 			position: absolute;
 			top: 120px;
@@ -152,6 +165,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 64px;
+	padding-bottom: 32px;       
 	width: 700px;
 	background: @shadow;
 	
@@ -203,6 +217,9 @@
 		}
 		.conversation
 		{
+			list-style: none;
+			padding-left: 0px;
+			
 			.label
 			{
 				margin-left: 10px;
