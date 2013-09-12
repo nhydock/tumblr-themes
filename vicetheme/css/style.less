@@ -28,41 +28,52 @@ body, html {
 		border-bottom: @trim;
 		background: @base-color;
 		position: fixed;
+		white-space: nowwrap;
 		
 		.container
 		{
 			left: 100px;
 			position: absolute;
 			padding: 0;
-		}
-		
-		.brand
-		{
-			font-size: 52px;
-			font-family: Arial;
-			float: left;
-			margin-right: 8px;
-			line-height: 64px;
-		}
-		
-		.avatar
-		{
-			width: 80px;
-			height: 64px;
-			top: 0px;
-			float: left;
-			border-left: @softtrim;
-			border-right: @softtrim;
-			background: @shadow;
-			box-shadow: 10px 0px 5px -5px @shadow-col inset, -10px 0px 5px -5px @shadow-col inset;
-			
-			img 
+			.brand
 			{
-				width: 64px;
+				font-size: 52px;
+				font-family: Arial;
+				float: left;
+				margin-right: 8px;
+				line-height: 64px;
+			}
+			
+			.avatar
+			{
+				width: 80px;
 				height: 64px;
-				border-radius: 32px;
+				top: 0px;
+				float: left;
+				border-left: @softtrim;
+				border-right: @softtrim;
+				background: @shadow;
+				box-shadow: 10px 0px 5px -5px @shadow-col inset, -10px 0px 5px -5px @shadow-col inset;
+				
+				img 
+				{
+					width: 64px;
+					height: 64px;
+					border-radius: 32px;
+				}
+			}
+			.license
+			{
+				position: absolute;
+				right: 30px;
+				bottom: 8px;
+				color: rgba(0,0,0,.5);
 			}
 		}
+		
+		
+		
+		
 	}
 	
 	#sidebar

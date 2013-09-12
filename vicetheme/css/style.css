@@ -16,20 +16,21 @@ html {
   border-bottom: 1px solid #ffffff;
   background: #3f4f56;
   position: fixed;
+  white-space: nowwrap;
 }
 #header .container {
   left: 100px;
   position: absolute;
   padding: 0;
 }
-#header .brand {
+#header .container .brand {
   font-size: 52px;
   font-family: Arial;
   float: left;
   margin-right: 8px;
   line-height: 64px;
 }
-#header .avatar {
+#header .container .avatar {
   width: 80px;
   height: 64px;
   top: 0px;
@@ -39,10 +40,16 @@ html {
   background: url("../assets/alphagray.png") 0 0 repeat;
   box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.25) inset, -10px 0px 5px -5px rgba(0, 0, 0, 0.25) inset;
 }
-#header .avatar img {
+#header .container .avatar img {
   width: 64px;
   height: 64px;
   border-radius: 32px;
+}
+#header .container .license {
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
+  color: rgba(0, 0, 0, 0.5);
 }
 #sidebar {
   top: 0px;
