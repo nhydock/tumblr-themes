@@ -319,6 +319,7 @@ html {
 .qtip ul li {
   background: none;
   color: #000;
+  padding: 4px 2px;
 }
 .qtip ul li:hover {
   background: #3f4f56;
