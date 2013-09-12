@@ -201,7 +201,7 @@ html {
   height: 10px;
   background-image: url("../assets/bannertip.png");
   margin-bottom: 0px;
-  margin-left: 510px;
+  margin-left: 530px;
 }
 #content .post .footer .banner {
   width: 520px;
@@ -231,7 +231,7 @@ html {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  display: inline;
+  display: inline-block;
   margin: 0;
   margin-left: 4px;
   height: 1em;
@@ -246,6 +246,13 @@ html {
   font-size: 1em;
   line-height: 16px;
   vertical-align: middle;
+}
+#content .post .footer .banner p a {
+  color: #000;
+}
+#content .post .footer .banner p a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 #content .post .controls {
   position: absolute;
