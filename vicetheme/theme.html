@@ -339,11 +339,16 @@
 		</div>
 		<div id="sidebar">
 			<ul>
-				<a href="#">
+				<a href="/">
 					<li class="home active"></li>
 				</a>
 				<a href="#">
-					<li class="about"></li>
+					<li class="about dropdown"></li>
+                    <div class="about menu" style="display:none;">
+                        <div style="padding: 10px;">
+                            {Description}
+                        </div>
+                    </div>
 				</a>
 				{block:AskEnabled}
 				<a href="/ask">
@@ -406,8 +411,7 @@
             
             $(".tags.dropdown").qtip({
                 content: {text: $(".tags.menu").html()},
-                show: 'mouseover',
-                hide: 'mouseout',
+                show: {event:'mouseover', solo:true},
                 position: {
                     my: 'top left',
                     at: 'top right'
@@ -425,15 +429,40 @@
                     }
                 },
                 hide: {
-					fixed: true,
+					event: 'mouseout',
+        			fixed: true,
+					delay: 300
+				}
+            });
+            $(".about.dropdown").qtip({
+                content: {text:$(".about.menu").html()},
+                show: {event:'mouseover', solo:true},
+                position: {
+                    my: 'center left',
+                    at: 'center right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left center',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                },
+                hide: {
+                    event: 'mouseout',
+    				fixed: true,
 					delay: 300
 				}
             });
             {block:HasPages}
             $(".pages.dropdown").qtip({
                 content: {text: $(".pages.menu").html()},
-                show: 'mouseover',
-                hide: 'mouseout',
+                show: {event:'mouseover', solo:true},
                 position: {
                     my: 'top left',
                     at: 'top right'
@@ -451,7 +480,8 @@
                     }
                 },
                 hide: {
-    				fixed: true,
+    				event: 'mouseout',
+        			fixed: true,
 					delay: 300
 				}
             });
