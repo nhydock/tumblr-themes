@@ -318,6 +318,7 @@ html {
   background: none;
   color: #000;
   padding: 4px 8px;
+  min-width: 150px;
 }
 .qtip-default .qtip-content ul li:hover {
   background: #3f4f56;
