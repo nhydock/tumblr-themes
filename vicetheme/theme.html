@@ -3,8 +3,6 @@
 <!--
      Vice Theme
      by Nicholas Hydock
-     
-     based on Feather by Erichu
 -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -20,10 +18,8 @@
         <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
         
         <meta name="text:Disqus Shortname" content="" />
-        
-        <!--link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css"-->
 
-    	<!-- DEFAULT COLORS -->
+        <!-- DEFAULT COLORS -->
         <meta name="color:Background" content="#fff"/>
         <meta name="image:Background" content=""/>
         
@@ -340,7 +336,7 @@
 		<div id="sidebar">
 			<ul>
 				<a href="/">
-					<li class="home active"></li>
+					<li class="home"></li>
 				</a>
 				<a href="#">
 					<li class="about dropdown"></li>
@@ -369,14 +365,14 @@
 				{block:HasPages}
 				<a href="#">
 					<li class="pages dropdown"></li>
-                    <div class="menu" style="display:none;">
-                    <ul>
-                        {block:Pages}
-                            <a href="{URL}">
-                                <li>{Label}</li>
-                            </a>
-                        {/block:Pages}
-                    </ul>
+                    <div class="pages menu" style="display:none;">
+                        <ul>
+                            {block:Pages}
+                                <a href="{URL}">
+                                    <li>{Label}</li>
+                                </a>
+                            {/block:Pages}
+                        </ul>
                     </div>
 				</a>
 				{/block:HasPages}
@@ -486,6 +482,33 @@
 				}
             });
             {/block:HasPages}
+            
+            var url = document.URL;
+            
+            $("#sidebar ul a li").removeClass("active");
+            if (url.indexOf('/tagged/') != -1)
+            {
+				$("#sidebar ul a li.tags").addClass("active");
+			}
+			else if (url.indexOf('/ask') != -1)
+			{
+				$("#sidebar ul a li.ask").addClass("active");	
+			}
+			{block:HasPages} 
+				{block:Pages}
+					else if (url.indexOf('{URL}') != -1)
+					{
+						$("#sidebar ul a li.pages").addClass("active");	
+					}
+				{/block:Pages}
+			{/block:HasPages}
+			else if (url.indexOf('/post/') != -1)
+			{
+			}
+			else
+			{
+				$("#sidebar ul a li.home").addClass("active");
+			}
 		});
 	</script>
 </html>
