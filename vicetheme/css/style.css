@@ -196,12 +196,12 @@ html {
 #content .post .footer .tip {
   content: "";
   position: relative;
-  float: right;
   display: block;
   width: 10px;
   height: 10px;
   background-image: url("../assets/bannertip.png");
   margin-bottom: 0px;
+  margin-left: 510px;
 }
 #content .post .footer .banner {
   width: 520px;
@@ -209,7 +209,6 @@ html {
   right: 0px;
   display: block;
   position: relative;
-  float: right;
   font-size: 1.2em;
   line-height: 1.4em;
   padding-left: 10px;
