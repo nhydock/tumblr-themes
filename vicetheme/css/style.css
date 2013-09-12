@@ -201,6 +201,7 @@ html {
   width: 10px;
   height: 10px;
   background-image: url("../assets/bannertip.png");
+  margin-bottom: 0px;
 }
 #content .post .footer .banner {
   width: 520px;
@@ -215,6 +216,7 @@ html {
   padding-right: 10px;
   color: #000;
   vertical-align: middle;
+  margin-bottom: 0px;
 }
 #content .post .footer .banner span {
   background: #49626b;
