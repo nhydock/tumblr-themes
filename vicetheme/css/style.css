@@ -45,10 +45,10 @@ html {
   height: 64px;
   border-radius: 32px;
 }
-#header .container .license {
-  float: right;
-  margin-right: 10px;
-  margin-bottom: 8px;
+#header .license {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
   color: rgba(0, 0, 0, 0.5);
 }
 #sidebar {
