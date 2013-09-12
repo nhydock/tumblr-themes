@@ -72,7 +72,7 @@ body, html {
 		width: 64px;
 		height: 100%;
 		background: #3f4f56;
-		background: -moz-linear-gradient(top,  @base-color 100px, #142122 100%);
+		background: -moz-linear-gradient(top,  @base-color 100px, @base-dark 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(100px,@base-color), color-stop(100%,@base-dark));
 		background: -webkit-linear-gradient(top,  @base-color 100px,@base-dark 100%);
 		background: -o-linear-gradient(top,  @base-color 100px,@base-dark 100%);
@@ -280,7 +280,7 @@ body, html {
 				span
 				{
 					background: @base-light;
-					background: -moz-linear-gradient(top,  @base-light 100px, #142122 100%);
+					background: -moz-linear-gradient(top,  @base-light 100px, @base-color 100%);
 					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@base-light), color-stop(100%,@base-color));
 					background: -webkit-linear-gradient(top,  @base-light 0%,@base-color 100%);
 					background: -o-linear-gradient(top,  @base-light 0%,@base-color 100%);
@@ -410,6 +410,12 @@ body, html {
 				
 				&:hover {
 					background: @base-color;
+					background: -moz-linear-gradient(top,  @base-light 100px, @base-dark 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@base-light), color-stop(100%,@base-dark));
+					background: -webkit-linear-gradient(top,  @base-light 0%,@base-dark 100%);
+					background: -o-linear-gradient(top,  @base-light 0%,@base-dark 100%);
+					background: -ms-linear-gradient(top,  @base-light 0%,@base-dark 100%);
+					background: linear-gradient(to bottom,  @base-light 0%,@base-dark 100%);
 					color: #fff;
 				}
 			}

@@ -218,7 +218,7 @@ html {
 }
 #content .post .footer .banner span {
   background: #49626b;
-  background: -moz-linear-gradient(top, #49626b 100px, #142122 100%);
+  background: -moz-linear-gradient(top, #49626b 100px, #3f4f56 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #49626b), color-stop(100%, #3f4f56));
   background: -webkit-linear-gradient(top, #49626b 0%, #3f4f56 100%);
   background: -o-linear-gradient(top, #49626b 0%, #3f4f56 100%);
@@ -322,6 +322,12 @@ html {
 }
 .qtip-default .qtip-content ul li:hover {
   background: #3f4f56;
+  background: -moz-linear-gradient(top, #49626b 100px, #142122 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #49626b), color-stop(100%, #142122));
+  background: -webkit-linear-gradient(top, #49626b 0%, #142122 100%);
+  background: -o-linear-gradient(top, #49626b 0%, #142122 100%);
+  background: -ms-linear-gradient(top, #49626b 0%, #142122 100%);
+  background: linear-gradient(to bottom, #49626b 0%, #142122 100%);
   color: #fff;
 }
 #more {
