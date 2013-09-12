@@ -28,7 +28,7 @@ body, html {
 		border-bottom: @trim;
 		background: @base-color;
 		position: fixed;
-		white-space: nowwrap;
+		white-space: no-wrap;
 		
 		.container
 		{
@@ -64,9 +64,10 @@ body, html {
 			}
 			.license
 			{
+				float: right;
 				position: absolute;
-				right: 30px;
-				bottom: 8px;
+				margin-right: 10px;
+				margin-bottom: 8px;
 				color: rgba(0,0,0,.5);
 			}
 		}
