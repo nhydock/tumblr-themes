@@ -304,6 +304,7 @@ html {
   list-style: none;
   font-size: 1.25em;
   line-height: 1.25em;
+  margin: 0;
 }
 .qtip-default .qtip-content ul li {
   background: none;
