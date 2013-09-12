@@ -46,6 +46,7 @@
         <meta name="select:Bg Style" content="0 0 repeat-y" title="Tile Y Only"/>
         <meta name="select:Bg Style" content="0 0 repeat" title="Tile"/>
         
+        <meta name="text:Tags" content="" />
         
         <meta name="if:Show Likes" content="0"/>
 		
@@ -62,21 +63,6 @@
 		<script src="../shared/js/jquery.js" type="text/javascript"></script>
 		<script src="js/qtip.js" type="text/javascript"></script>
 		-->
-		
-		
-		<script>
-			$(document).ready(function(){
-				$(".controls a li").hover(function(){
-					$(this).stop().animate({"width": "200px"}, 300);
-				}, function(){
-					$(this).stop().animate({"width": "48px"}, 300);
-				});
-                
-                $(".pages").qtip({
-                    content: $(this).next()
-                });
-			});
-		</script>
 		
 		<style type="text/css" media="screen">
 			
@@ -362,13 +348,21 @@
 					<li class="ask"></li>
 				</a>
 				{/block:AskEnabled}
+                {block:IfTags}
 				<a href="#">
-					<li class="tags"></li>
+					<li class="tags dropdown">
+        				 <div class="tags menu" style="display:none;">
+                              <ul>
+                                
+                              </ul>
+                         </div>
+					</li>
 				</a>
+                {/block:IfTags}
 				{block:HasPages}
 				<a href="#">
-					<li class="pages"></li>
-                    <div class="dropdown">
+					<li class="pages dropdown"></li>
+                    <div class="menu" style="display:none;">
                     <ul>
                         {block:Pages}
                             <a href="{URL}">
@@ -384,5 +378,53 @@
 		<div class="corner"></div>
 		
     </body>
-
+    <script type="text/javascript">
+        (function(){
+        
+            var tags = "{text:Tags}".split(/,+\s+/);
+            
+            $.each(tags, function(index, value){
+              $(".tags.menu ul").append(
+                 '<a href="/tagged/' + value + '">' +
+                 '<li>' + value + '</li>' +
+                 '</a>'
+              );
+            });
+        
+        })();
+    </script>
+    	
+	<script>
+		$(document).ready(function(){
+			$(".controls a li").hover(function(){
+				$(this).stop().animate({"wdith": "200px"}, 300);
+			}, function(){
+				$(this).stop().animate({"width": "48px"}, 300);
+			});
+            
+            $(".dropdown").qtip({
+                content: {text: "hello"},
+                show: 'mouseover',
+                hide: 'mouseout',
+                position: {
+                    my: 'top left',
+                    at: 'top right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left top',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                }
+            });
+            
+            console.log($(".dropdown").children(".menu").html());
+		});
+	</script>
 </html>

@@ -205,14 +205,15 @@ html {
   background-image: url("../assets/bannertip.png");
 }
 #content .post .footer .banner {
-  width: 540px;
+  width: 520px;
   background: #fff;
   right: 0px;
   display: block;
   position: relative;
   float: right;
   line-height: 16px;
-  padding-left: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #000;
   vertical-align: middle;
 }
@@ -234,6 +235,9 @@ html {
 }
 #content .post .footer .banner p {
   display: inline;
+  font-size: 1em;
+  line-height: 16px;
+  vertical-align: middle;
 }
 #content .post .controls {
   position: absolute;
@@ -296,8 +300,18 @@ html {
   background: #3f4f56;
   color: #fff;
 }
-.dropdown {
-  display: none;
+.qtip-default {
+  border: 0px solid #fff;
+  border-bottom: 2px solid #3f4f56;
+  background: #fff;
+}
+.qtip ul li {
+  background: none;
+  color: #000;
+}
+.qtip ul li:hover {
+  background: #3f4f56;
+  color: #fff;
 }
 #more {
   position: absolute;

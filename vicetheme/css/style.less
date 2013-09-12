@@ -265,14 +265,15 @@ body, html {
 			
 			.banner
 			{
-				width: 540px;
+				width: 520px;
 				background: #fff;
 				right: 0px;
 				display: block;
 				position: relative;
 				float: right;
 				line-height: 16px;
-				padding-left: 4px;
+				padding-left: 10px;
+				padding-right: 10px;
 				color: #000;
 				vertical-align: middle;
 				
@@ -299,6 +300,9 @@ body, html {
 				p
 				{
 					display: inline;
+					font-size: 1em;
+					line-height: 16px;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -390,8 +394,21 @@ body, html {
 	}
 }
 
-.dropdown {
-	display: none;
+.qtip-default{
+	border: 0px solid #fff;
+	border-bottom: 2px solid @base-color;
+	background: #fff;
+}
+
+.qtip{
+	ul li {
+		background: none;
+		color: #000;
+		&:hover {
+			background: @base-color;
+			color: #fff;
+		}
+	}
 }
 
 #more {
