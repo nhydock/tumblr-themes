@@ -302,8 +302,14 @@ html {
 }
 .qtip-default {
   border: 0px solid #fff;
-  border-bottom: 2px solid #3f4f56;
+  border-bottom: 4px solid #3f4f56;
   background: #fff;
+}
+.qtip ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.25em;
+  line-height: 1.25em;
 }
 .qtip ul li {
   background: none;

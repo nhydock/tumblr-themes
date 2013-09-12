@@ -396,17 +396,23 @@ body, html {
 
 .qtip-default{
 	border: 0px solid #fff;
-	border-bottom: 2px solid @base-color;
+	border-bottom: 4px solid @base-color;
 	background: #fff;
 }
 
 .qtip{
-	ul li {
-		background: none;
-		color: #000;
-		&:hover {
-			background: @base-color;
-			color: #fff;
+	ul{ 
+		list-style: none;
+		padding-left: 0;
+		font-size: 1.25em;
+		line-height: 1.25em;
+		li {
+			background: none;
+			color: #000;
+			&:hover {
+				background: @base-color;
+				color: #fff;
+			}
 		}
 	}
 }

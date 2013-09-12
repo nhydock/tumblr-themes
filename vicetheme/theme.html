@@ -21,7 +21,7 @@
         
         <meta name="text:Disqus Shortname" content="" />
         
-		<!--link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css"-->
+    	<!--link rel="stylesheet" href="http://static.tumblr.com/anfpypi/0Iim2p5oa/feather.css"-->
 
 		<!-- DEFAULT COLORS -->
         <meta name="color:Background" content="#fff"/>
@@ -402,8 +402,8 @@
 				$(this).stop().animate({"width": "48px"}, 300);
 			});
             
-            $(".dropdown").qtip({
-                content: {text: "hello"},
+            $(".tags.dropdown").qtip({
+                content: {text: $(".tags.menu").html()},
                 show: 'mouseover',
                 hide: 'mouseout',
                 position: {
@@ -421,10 +421,37 @@
                         // Grab the tip element
                         var elem = api.elements.tip;
                     }
-                }
+                },
+                hide: {
+					fixed: true,
+					delay: 300
+				}
             });
-            
-            console.log($(".dropdown").children(".menu").html());
+            $(".pages.dropdown").qtip({
+                content: {text: $(".pages.menu").html()},
+                show: 'mouseover',
+                hide: 'mouseout',
+                position: {
+                    my: 'top left',
+                    at: 'top right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left top',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                },
+                hide: {
+    				fixed: true,
+					delay: 300
+				}
+            });
 		});
 	</script>
 </html>
