@@ -23,7 +23,7 @@
         <meta name="color:Background" content="#fff"/>
         <meta name="image:Background" content=""/>
         
-		<meta name="color:Text" content="#919191"/>
+    	<meta name="color:Text" content="#919191"/>
 		<meta name="color:Links" content="#6DC0A9"/>
 		<meta name="color:Links Hover" content="#4A8D75"/>
 		<meta name="color:Heading" content="#000"/>
@@ -277,11 +277,13 @@
 								<img class="reblog" /><p>Reblog</p>
 							</li>
 						</a>
+                        {block:IfDisqusShortname}
 						<a href="{Permalink}#disqus_thread">
 							<li>
 								<img class="comment" /><p>Comments</p>
 							</li>
 						</a>
+                        {/block:IfDisqusShortname}
 					</ul>
 					
 					{/block:Date}
