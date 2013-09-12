@@ -1,12 +1,13 @@
 @base-color: #3f4f56;
 @base-dark: #142122;
+@base-light: #49626b;
 @assets: "../assets/";
 
 @shadow: url("../assets/alphagray.png") 0 0 repeat;
 @shadow-col: rgba(0,0,0,.25);
 
 @trim: 1px solid #fff;
-@softtrim: 1px solid rgba(255,255,255,.25);
+@softtrim: 1px solid rgba(255,255,255,.5);
 
 body, html {
 	width: 100%;
@@ -277,9 +278,17 @@ body, html {
 				color: #000;
 				vertical-align: middle;
 				
-				label
+				span
 				{
-					background: @base-color;
+					background: @base-light;
+					background: -moz-linear-gradient(top,  @base-light 100px, #142122 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@base-light), color-stop(100%,@base-color));
+					background: -webkit-linear-gradient(top,  @base-light 0%,@base-color 100%);
+					background: -o-linear-gradient(top,  @base-light 0%,@base-color 100%);
+					background: -ms-linear-gradient(top,  @base-light 0%,@base-color 100%);
+					background: linear-gradient(to bottom,  @base-light 0%,@base-color 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@base-light', endColorstr='@base-color',GradientType=0 );
+
 					border-radius: 3px;
 					border-top: @softtrim;
 					border-left: @softtrim;
@@ -290,7 +299,7 @@ body, html {
 					margin: 0;
 					margin-left: 4px;
 					height: 12px;
-					
+					padding: 4px 2px;
 					font-size: 10px;
 					line-height: 16px;
 					
@@ -379,7 +388,7 @@ body, html {
 	border-bottom: 4px solid @base-color;
 	background: #fff;
 	
-	box-shadow: 8px 4px 0 0 rgba(0,0,0,.25);
+	box-shadow: 2px 2px 0 0 rgba(0,0,0,.5);
 	
 	.qtip-content {
 		border: none;
