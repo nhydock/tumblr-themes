@@ -98,21 +98,25 @@
             {block:Posts}
 	
 				<div class="post">
-					<a href="{PostAuthorURL}"><img class="group-avatar" src="{PostAuthorPortraitURL-48}" /></a>
-					
-                    {block:Date}
-					<center style="margin-top: 20px;">
-                    <p style="font-size: 1.65em; display:inline-block; margin-bottom: 0px;">
-                        {DayOfMonth} {Month}, {Year}
-                    </p>
-                    <br/>{TimeAgo}
-                    </center>
+					{block:Date}	
+					<div class="heading" style="margin-top: 0px;">
+						<a href="{PostAuthorURL}">
+							<img class="group-avatar" src="{PostAuthorPortraitURL-48}" />
+						</a>
+						
+						<center>
+							<p style="font-size: 1.65em; display:inline-block; margin-bottom: 0px;">
+								{DayOfMonth} {Month}, {Year}
+							</p>
+							<br/>
+							{TimeAgo}
+							<p/>
+							<img class="divider"></img>
+						</center>
+						<br/>
+                    </div>
                     {/block:Date}
-					<br/>
-                    <img class="divider"></img>
-                    </center>
-					<br/>
-                    
+					
 					{block:Quote}
 				
 						<div class="quote">
@@ -260,6 +264,8 @@
 					<div>{PostNotes-16}</div>
 					{/block:PostNotes}
 					
+					{block:Date}	
+					
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
@@ -277,6 +283,8 @@
 							</li>
 						</a>
 					</ul>
+					
+					{/block:Date}
 				</div>
 			{/block:Posts}
 			
