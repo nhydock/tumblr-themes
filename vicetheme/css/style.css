@@ -211,7 +211,7 @@ html {
   display: block;
   position: relative;
   float: right;
-  line-height: 16px;
+  line-height: 1.4em;
   padding-left: 10px;
   padding-right: 10px;
   color: #000;
@@ -231,13 +231,13 @@ html {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  font-weight: bold;
   display: inline;
   margin: 0;
   margin-left: 4px;
   height: 12px;
-  padding: 4px 2px;
-  font-size: 10px;
+  padding: 2px 2px;
+  font-size: 1.25em;
+  font-weight: bold;
   line-height: 16px;
   vertical-align: middle;
 }
