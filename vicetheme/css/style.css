@@ -154,6 +154,7 @@ html {
 }
 #content .post blockquote {
   border-left: 2px dotted #fff;
+  padding-left: 15px;
 }
 #content .post .group-avatar {
   position: absolute;
@@ -202,8 +203,6 @@ html {
   right: 0px;
   display: inline-block;
   position: relative;
-  font-size: 1.2em;
-  line-height: 1.2em;
   padding: 4px 10px;
   color: #000;
   vertical-align: middle;
@@ -240,6 +239,9 @@ html {
   margin-top: 20px;
   position: relative;
 }
+#content .post .footer .banner {
+  font-size: .9em;
+}
 #content .post .footer .banner span {
   background: #49626b;
   background: -moz-linear-gradient(top, #49626b 100px, #3f4f56 100%);
@@ -259,7 +261,7 @@ html {
   margin-right: 4px;
   margin-bottom: 2px;
   padding: 2px 2px;
-  font-size: .8em;
+  font-size: .9em;
   font-weight: bold;
   vertical-align: middle;
 }
