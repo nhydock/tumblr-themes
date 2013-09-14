@@ -152,6 +152,9 @@ html {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
+#content .post blockquote {
+  border-left: 2px dotted #fff;
+}
 #content .post .group-avatar {
   position: absolute;
   margin-top: 16px;
@@ -193,14 +196,20 @@ html {
 #content .post .conversation .member2 .label {
   color: #fff;
 }
-#content .post .footer {
-  margin-left: 30px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+#content .post .banner {
+  width: 520px;
+  background: #fff;
+  right: 0px;
+  display: inline-block;
   position: relative;
-  width: 540px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding: 4px 10px;
+  color: #000;
+  vertical-align: middle;
+  margin-bottom: 0px;
 }
-#content .post .footer .tip {
+#content .post .tip {
   content: "";
   position: relative;
   display: block;
@@ -208,21 +217,28 @@ html {
   height: 10px;
   background-image: url("../assets/bannertip.png");
   margin-bottom: 0px;
+  margin-top: 0px;
   margin-left: 530px;
 }
-#content .post .footer .banner {
-  width: 520px;
-  background: #fff;
-  right: 0px;
-  display: block;
+#content .post .ask {
+  margin-left: -20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
   position: relative;
-  font-size: 1.2em;
-  line-height: 1.4em;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #000;
-  vertical-align: middle;
-  margin-bottom: 0px;
+}
+#content .post .ask .banner {
+  width: 500px;
+}
+#content .post .ask .tip {
+  margin-left: 0px;
+  margin-top: 0px;
+  transform: scaleX(-1);
+}
+#content .post .footer {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  position: relative;
 }
 #content .post .footer .banner span {
   background: #49626b;
@@ -238,14 +254,13 @@ html {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  display: inline-block;
+  display: inline;
   margin: 0;
-  margin-left: 4px;
-  height: 1em;
+  margin-right: 4px;
+  margin-bottom: 2px;
   padding: 2px 2px;
-  font-size: 1em;
+  font-size: .8em;
   font-weight: bold;
-  line-height: 1.2em;
   vertical-align: middle;
 }
 #content .post .footer .banner p {
