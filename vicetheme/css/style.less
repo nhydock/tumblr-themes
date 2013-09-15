@@ -8,6 +8,14 @@
 
 @trim: 1px solid #fff;
 @softtrim: 1px solid rgba(255,255,255,.5);
+@hardtrim: 1px solid rgba(0,0,0,.5);
+
+@font-face
+{
+	font-family: Cantarell;
+	@file: "Cantarell.otf";
+	src: url('@{assets}@{file}');
+} 
 
 body, html {
 	width: 100%;
@@ -38,10 +46,11 @@ body, html {
 			.brand
 			{
 				font-size: 52px;
-				font-family: Arial;
+				font-family: Cantarell, Arial;
 				float: left;
 				margin-right: 8px;
 				line-height: 64px;
+				vertical-align: middle;
 			}
 			
 			.avatar
@@ -146,7 +155,7 @@ body, html {
 				{
 					background-position: 0px -96px;
 				}
-				&.blogs
+				&.ask
 				{
 					background-position: 0px -144px;
 				}
@@ -269,6 +278,7 @@ body, html {
 			color: #000;
 			vertical-align: middle;
 			margin-bottom:0px;
+			font-family: Cantarell, Arial;
 		}
 		.tip
 		{
@@ -321,20 +331,17 @@ body, html {
 					background: linear-gradient(to bottom,  @base-light 0%,@base-color 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@base-light', endColorstr='@base-color',GradientType=0 );
 
-					border-radius: 3px;
+					border-radius: 5px;
 					border-top: @softtrim;
 					border-left: @softtrim;
 					border-right: @softtrim;
 					color: #fff;
-					font-weight: bold;
 					display: inline;
 					margin: 0;
 					margin-right: 4px;
 					margin-bottom: 2px;
 					padding: 2px 2px;
-					font-size: .9em;
-					font-weight: bold;
-					
+					text-align: center;
 					vertical-align: middle;
 				}
 				
@@ -371,7 +378,7 @@ body, html {
 				border-radius: 24px;
 				background: #fff;
 				white-space: nowrap;
-				line-height: 48px;
+				line-height: 24px;
 				&:hover
 				{
 					opacity: 1.0;
@@ -381,10 +388,10 @@ body, html {
 				
 				img
 				{
-					width: 36px;
-					height: 36px;
+					width: 24px;
+					height: 24px;
 					margin-right: 30px;
-					margin-left: 6px;
+					margin-left: 12px;
 					display: inline-block;
 					@file: "postbuttons.png";
 					background: url("@{assets}@{file}") 0 0 no-repeat;
@@ -397,11 +404,11 @@ body, html {
 					}
 					&.reblog
 					{
-						background-position: 0px -36px;
+						background-position: 0px -24px;
 					}
 					&.comment
 					{
-						background-position: 0px -72px;
+						background-position: 0px -48px;
 					}
 				}
 				
@@ -415,7 +422,7 @@ body, html {
 					color: #000;
 					display: inline;
 					vertical-align: middle;
-				
+					font-family: Cantarell, Arial;
 				}
 			}
 		}
