@@ -118,27 +118,26 @@ body, html {
 			{
 				width: 64px;
 				height: 48px;
-				margin-top: -1px;
 				padding: 0;
+				margin-bottom:1px;
 				opacity: .5;
 				@file: "sidebarbuttons.png";
-				background: url("@{assets}@{file}") 0 0 no-repeat;
+				background-color: rgba(0,0,0,0);
+				background-image: url("@{assets}@{file}");
+				background-repeat: no-repeat;
 				display: block;
 				overflow: hidden;
 				
-				&:hover, &.active, &.active:before
+				&:hover, &.active
 				{
 					opacity: 1.0;
 				}
 				
-				&.active::before
+				&.active
 				{
-					content: "";
-					display: inline;
-					width: 64px;
-					height: 48px;
-					background: @shadow;
-					box-shadow: 0px 10px 5px -5px @shadow-col inset, 0px -10px 5px -5px @shadow-col;
+					content: " ";
+					background-color: @shadow-col;
+					box-shadow: 0px 10px 5px -5px @shadow-col inset, 0px -10px 5px -5px @shadow-col inset;
 					border-top: @softtrim;
 					border-bottom: @softtrim;
 				}
