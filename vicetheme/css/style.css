@@ -246,7 +246,8 @@ html {
   position: relative;
 }
 #content .post .footer .banner {
-  font-size: .9em;
+  font-size: 12px;
+  line-height: 14px;
 }
 #content .post .footer .banner span {
   background: #49626b;
@@ -257,18 +258,19 @@ html {
   background: -ms-linear-gradient(top, #49626b 0%, #3f4f56 100%);
   background: linear-gradient(to bottom, #49626b 0%, #3f4f56 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@base-light', endColorstr='@base-color', GradientType=0);
-  border-radius: 5px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  border: 1px solid #142122;
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.6) inset;
   color: #fff;
-  display: inline;
+  display: inline-block;
   margin: 0;
   margin-right: 4px;
-  margin-bottom: 2px;
-  padding: 2px 2px;
+  padding: 4px 4px;
   text-align: center;
   vertical-align: middle;
+  font-size: 12px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
 }
 #content .post .footer .banner p {
   display: inline;
