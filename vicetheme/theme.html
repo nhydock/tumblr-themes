@@ -24,28 +24,20 @@
         <meta name="image:Background" content=""/>
         
         <meta name="color:Text" content="#919191"/>
-		<meta name="color:Links" content="#6DC0A9"/>
+    	<meta name="color:Links" content="#6DC0A9"/>
 		<meta name="color:Links Hover" content="#4A8D75"/>
-		<meta name="color:Heading" content="#000"/>
-		<meta name="color:Heading Hover" content="#000"/>
-		<meta name="color:Description" content="#919191"/>
-		<meta name="color:Permalink" content="#3F3F3F"/>
-		<meta name="color:Permalink Hover" content="#000000"/>
 		<meta name="color:Text Alt" content="#919191"/>
         
         <meta name="select:Layout" content="left" title="Left"/>
         <meta name="select:Layout" content="center" title="Center"/>
         
-        <meta name="if:Fixed Bg" content="1"/>
-        <meta name="select:Bg Style" content="center no-repeat" title="No Tiling"/>
-        <meta name="select:Bg Style" content="0 0 repeat-x" title="Tile X Only"/>
-        <meta name="select:Bg Style" content="0 0 repeat-y" title="Tile Y Only"/>
-        <meta name="select:Bg Style" content="0 0 repeat" title="Tile"/>
-        
         <meta name="text:Tags" content="" />
         
         <meta name="if:Show Likes" content="0"/>
-		
+        
+        <meta name="font:Title" content="Arial" />
+        <meta name="font:Body" content="Arial" />
+        
 		<link href="http://nhydock.github.io/tumblr-themes/vicetheme/css/qtip.css" rel="stylesheet" type="text/css"/>
 		<link href="http://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" rel="stylesheet" type="text/css"/>
 
@@ -65,27 +57,45 @@
 			{CustomCSS}
 			
 			body {
-				background: {color:Background} url('{image:Background}')  {select:Bg Style}  {block:IfFixedBg} fixed {/block:IfFixedBg} ; 
+				background-color: {color:Background};
+                background-image: url('{image:Background}');
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat; 
                     
 			    color: #fff;
 			    
 				font-family: Arial;
-				font-size: 14px;
+				font-size: 13px;
             }
-			head {
-				display: none;
-			}
             
-            a {
+            #header .container .brand {
+                font-family: {font:Title};
+            }
+            
+            #content .post {
+                font-family: {font:Body};
+            }
+            
+            #content .post .footer .banner span {
+                
+            }
+            
+            a{
                 text-decoration: none;
                 color: {color:Links};
             }
             
-            a:hover {
+            a:hover{
                 color: {color:Links Hover};
             }
             
+            .qtip {
+                box-shadow: 6px 6px 0px -2px rgba(0,0,0,.5);
+            }
             #disqus_thread { width: 500px; padding: 0 0 75px 0; }
+            .install_button{display:block;}
+            
 		</style>
 
     </head>
@@ -205,7 +215,7 @@
                         <div class="ask">
                              <div class="banner">
                                 <img src="{AskerPortraitURL-30}"/>
-                                {Asker} asked - <br/>
+                                <b>{Asker}</b> asked - <br/>
                                 {Question}
                             </div>
                             <img class="tip"/>
@@ -245,7 +255,7 @@
 					
 					{/block:Audio}
 				
-					<div class="footer">
+					<div class="footer" style="margin-bottom: -25px;">
                         {block:HasTags}
 						<div id="tags" class="banner">
 							{block:Tags}
@@ -260,14 +270,18 @@
 						{/block:HasTags}
 						{block:NoteCount}
 						<div id="source" class="banner">
-							<p>
-								<b>{NoteCount} {lang:Notes}</b>
-							</p>
-							{block:RebloggedFrom}
-							<p>
-								(via <a href="{ReblogParentURL}">{ReblogParentName}</a>) <b><a href="{ReblogRootURL}">{ReblogRootName}</a></b>
-							</p>
-							{/block:RebloggedFrom}
+                            <table style="width:100%;">
+                            <tr>
+                            <td style="text-align: left;">
+                                <b>{NoteCount} {lang:Notes}</b>
+                            </td>
+                            {block:RebloggedFrom}
+    						<td style="text-align: right;">
+                            (via <a href="{ReblogParentURL}">{ReblogParentName}</a>) <b><a href="{ReblogRootURL}">{ReblogRootName}</a></b>
+                            </td>
+    						{/block:RebloggedFrom}
+                            </tr>
+                            </table>
 						</div>
 						<img class="tip" />
 						{/block:NoteCount}
@@ -356,7 +370,7 @@
 				</div>
 			</div>
 			<div class="license">
-				designed by © Nicholas Hydock {CopyrightYears}
+				<a href="http://github.com/nhydock" style="color: inherit;">design © Nicholas Hydock</a>
 			</div>
 		</div>
 		<div id="sidebar">
@@ -366,12 +380,12 @@
 				</a>
 				<a href="#">
 					<li class="about dropdown"></li>
-                    <div class="about menu" style="display:none;">
-                        <div style="padding: 10px;">
-                            {Description}
-                        </div>
-                    </div>
 				</a>
+                <div class="about menu" style="display:none;">
+                    <div style="padding: 10px;">
+                        {Description}
+                    </div>
+                </div>
 				{block:AskEnabled}
 				<a href="/ask">
 					<li class="ask"></li>
@@ -405,7 +419,7 @@
 			</ul>
 		</div>
 		<div class="corner"></div>
-		
+		<a id="install_theme" href="https://github.com/nhydock/tumblr-themes/blob/gh-pages/vicetheme/theme.html"><img border="0" src="http://static.tumblr.com/2w7y46r/wuvmba8c2/installtheme.png" style="position:fixed; right:10px; bottom:5px;z-index:99999999 !important;"></img></a>
     </body>
     <script type="text/javascript">
         (function(){
