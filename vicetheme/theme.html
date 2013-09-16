@@ -77,10 +77,6 @@
                 font-family: {font:Body};
             }
             
-            #content .post .footer .banner span {
-                
-            }
-            
             a{
                 text-decoration: none;
                 color: {color:Links};
@@ -121,7 +117,7 @@
 							<br/>
 							{TimeAgo}
 							<p/>
-							<img class="divider"></img>
+							<span class="divider" ></span>
 						</center>
 						<br/>
                     </div>
@@ -218,7 +214,7 @@
                                 <b>{Asker}</b> asked - <br/>
                                 {Question}
                             </div>
-                            <img class="tip"/>
+                            <span class="tip"/>
                         </div>
                         <div class="text">
                             {Answer}
@@ -266,7 +262,7 @@
 							</a>
 							{/block:Tags}
 						</div>
-						<img class="tip" />
+						<span class="tip" />
 						{/block:HasTags}
 						{block:NoteCount}
 						<div id="source" class="banner">
@@ -283,7 +279,7 @@
                             </tr>
                             </table>
 						</div>
-						<img class="tip" />
+						<span class="tip" />
 						{/block:NoteCount}
 					</div>
 					<br/>
@@ -296,18 +292,18 @@
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
-								<img class="perm"></img><p>Permalink</p>
+								<span class="perm"/><p>Permalink</p>
 							</li>
 						</a>
 						<a href="{ReblogURL}">
 							<li>
-								<img class="reblog" /><p>Reblog</p>
+								<span class="reblog"/><p>Reblog</p>
 							</li>
 						</a>
                         {block:IfDisqusShortname}
 						<a href="{Permalink}#disqus_thread">
 							<li>
-								<img class="comment" /><p>Comments</p>
+								<span class="comment" /><p>Comments</p>
 							</li>
 						</a>
                         {/block:IfDisqusShortname}
