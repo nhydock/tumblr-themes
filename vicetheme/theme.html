@@ -24,7 +24,7 @@
         <meta name="image:Background" content=""/>
         
         <meta name="color:Text" content="#919191"/>
-    	<meta name="color:Links" content="#6DC0A9"/>
+        <meta name="color:Links" content="#6DC0A9"/>
 		<meta name="color:Links Hover" content="#4A8D75"/>
 		<meta name="color:Text Alt" content="#919191"/>
         
@@ -214,7 +214,7 @@
                                 <b>{Asker}</b> asked - <br/>
                                 {Question}
                             </div>
-                            <span class="tip"/>
+                            <span class="tip" ></span>
                         </div>
                         <div class="text">
                             {Answer}
@@ -262,7 +262,7 @@
 							</a>
 							{/block:Tags}
 						</div>
-						<br class="tip" />
+						<span class="tip" ></span>
 						{/block:HasTags}
 						{block:NoteCount}
 						<div id="source" class="banner">
@@ -279,7 +279,7 @@
                             </tr>
                             </table>
 						</div>
-						<br class="tip" />
+						<span class="tip" ></span>
 						{/block:NoteCount}
 					</div>
 					<br/>
@@ -292,18 +292,18 @@
 					<ul class="controls">
 						<a href="{Permalink}">
 							<li>
-								<span class="icon perm"/>Permalink
+								<span class="icon perm"></span>Permalink
 							</li>
 						</a>
 						<a href="{ReblogURL}">
 							<li>
-								<span class="icon reblog"/>Reblog
+								<span class="icon reblog"></span>Reblog
 							</li>
 						</a>
                         {block:IfDisqusShortname}
 						<a href="{Permalink}#disqus_thread">
 							<li>
-								<span class="icon comment" />Comments
+								<span class="icon comment"></span>Comments
 							</li>
 						</a>
                         {/block:IfDisqusShortname}
