@@ -215,7 +215,7 @@ html {
 #content .post .tip {
   content: "";
   position: relative;
-  display: block;
+  display: inline-block;
   width: 10px;
   height: 10px;
   background-image: url("../assets/bannertip.png");
@@ -272,19 +272,6 @@ html {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-weight: bold;
 }
-#content .post .footer .banner p {
-  display: inline;
-  font-size: 1em;
-  line-height: 16px;
-  vertical-align: middle;
-}
-#content .post .footer .banner p a {
-  color: #000;
-}
-#content .post .footer .banner p a:hover {
-  color: #000;
-  text-decoration: underline;
-}
 #content .post .controls {
   position: absolute;
   top: 8px;
@@ -299,41 +286,35 @@ html {
   border-radius: 18px;
   background: #fff;
   white-space: nowrap;
-  line-height: 18px;
+  line-height: 36px;
+  vertical-align: middle;
+  font-family: Cantarell, Arial;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
   overflow: hidden;
 }
 #content .post .controls li:hover {
   opacity: 1.0;
 }
-#content .post .controls li span {
+#content .post .controls li .icon {
   width: 18px;
   height: 18px;
-  margin-right: 30px;
   margin-left: 9px;
+  margin-top: 0px;
+  margin-right: 30px;
   display: inline-block;
   background: url("../assets/postbuttons.png") 0 0 no-repeat;
-  overflow: hidden;
   vertical-align: middle;
 }
-#content .post .controls li span.perm {
+#content .post .controls li .icon.perm {
   background-position: 0px 0px;
 }
-#content .post .controls li span.reblog {
+#content .post .controls li .icon.reblog {
   background-position: 0px -18px;
 }
-#content .post .controls li span.comment {
+#content .post .controls li .icon.comment {
   background-position: 0px -36px;
-}
-#content .post .controls li p {
-  height: 36px;
-  line-height: 36px;
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 8px;
-  color: #000;
-  display: inline;
-  vertical-align: middle;
-  font-family: Cantarell, Arial;
 }
 .qtip-default {
   border: 0px solid #fff;

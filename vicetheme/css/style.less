@@ -283,7 +283,7 @@ body, html {
 		{
 			content: "";
 			position: relative;
-			display: block;
+			display: inline-block;
 			width: 10px;
 			height: 10px;
 			@file: "bannertip.png";
@@ -347,21 +347,6 @@ body, html {
 					text-shadow: 0px -1px 0px rgba(0,0,0,.7);
 					font-weight: bold;
 				}
-				
-				p
-				{
-					display: inline;
-					font-size: 1em;
-					line-height: 16px;
-					vertical-align: middle;
-					a {
-						color: #000;
-						&:hover {
-							color: #000;
-							text-decoration: underline;
-						}
-					}
-				}
 			}
 		}
 		
@@ -381,24 +366,29 @@ body, html {
 				border-radius: 18px;
 				background: #fff;
 				white-space: nowrap;
-				line-height: 18px;
+				line-height: 36px;
+				vertical-align: middle;
+				font-family: Cantarell, Arial;
+				font-size: 16px;
+				font-weight: bold;
+				color: #000;
+				overflow: hidden;
+					
 				&:hover
 				{
 					opacity: 1.0;
 				}
 				
-				overflow: hidden;
-				
-				span
+				.icon
 				{
 					width: 18px;
 					height: 18px;
-					margin-right: 30px;
 					margin-left: 9px;
+					margin-top: 0px;
+					margin-right: 30px;
 					display: inline-block;
 					@file: "postbuttons.png";
 					background: url("@{assets}@{file}") 0 0 no-repeat;
-					overflow: hidden;
 					vertical-align: middle;
 				
 					&.perm
@@ -415,18 +405,6 @@ body, html {
 					}
 				}
 				
-				p
-				{
-					height: 36px;
-					line-height: 36px;
-					font-size: 16px;
-					font-weight: bold;
-					margin-right: 8px;
-					color: #000;
-					display: inline;
-					vertical-align: middle;
-					font-family: Cantarell, Arial;
-				}
 			}
 		}
 	}
