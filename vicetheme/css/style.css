@@ -215,7 +215,7 @@ html {
 #content .post .tip {
   content: "";
   position: relative;
-  display: inline-block;
+  display: block;
   width: 10px;
   height: 10px;
   background-image: url("../assets/bannertip.png");
