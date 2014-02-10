@@ -8,8 +8,8 @@
   border-bottom: 3px solid #000;
   border-radius: 0px;
 }
-#wrapper .post:hover .post-controls,
-#wrapper .post:hover .activeind {
+#wrapper .post:hover > .post-controls,
+#wrapper .post:hover > .activeind {
   opacity: 1.0;
 }
 #wrapper .post .btn {
