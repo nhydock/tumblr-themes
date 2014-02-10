@@ -121,7 +121,7 @@ function setup() {
     
     //little highlight glow on the side of posts to indicate which
     //one the mouse is currently over
-    $('#wrapper.post').hover(
+    $('#wrapper .post').hover(
         function(){
             $(this).children('.activeind').stop().animate({ opacity:1.0 }, 200);
             $(this).children('.btn-group-vertical').stop().animate({ opacity: 1.0 }, 200);
@@ -130,15 +130,6 @@ function setup() {
             $(this).children('.activeind').stop().animate({ opacity:0 }, 200);
             $(this).children('.btn-group-vertical').stop().animate({ opacity: 0 }, 200);
         }
-    );
-    
-    $('#wrapper .post .btn-group-vertical .btn').hover(
-      function(){
-            $(this).stop().animate({width: '200px'}, 200);
-      },
-      function(){
-            $(this).stop().animate({width: '44px'}, 200);
-      }
     );
     
     //make a menu appear when a header bar button is hovered over

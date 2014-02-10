@@ -64,13 +64,15 @@
 #wrapper .post .btn-group-vertical {
   position: absolute;
   text-align: left;
-  left: 845px;
+  right: -244px;
+  width: 200px;
   top: 0px;
   background: none;
 }
 #wrapper .post .btn-group-vertical a.btn {
   background-color: #000;
   width: 44px;
+  height: 44px;
   margin-bottom: 6px;
   border: 0px none;
   padding: 10px 10px;
@@ -79,14 +81,15 @@
   color: #fff;
   opacity: .65;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.25s ease-in-out;
-  -moz-transition: opacity 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, width 0.25s linear;
+  -moz-transition: opacity 0.25s ease-in-out, width 0.25s linear;
+  -webkit-transition: opacity 0.25s ease-in-out, width 0.25s linear;
   overflow: hidden;
 }
 #wrapper .post .btn-group-vertical a.btn:hover,
 #wrapper .post .btn-group-vertical a.btn:active {
   opacity: 1.0;
+  width: 200px;
 }
 #wrapper .post .btn-group-vertical a.btn #reblog {
   background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -498px -270px transparent;
