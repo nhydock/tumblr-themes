@@ -94,6 +94,7 @@
   height: 44px;
   margin-bottom: 6px;
   border: 0px none;
+  border-radius: 0px;
   padding: 10px 10px;
   font-size: .90em;
   line-height: 24px;
@@ -112,7 +113,7 @@
 #wrapper .post .post-controls a.btn:hover,
 #wrapper .post .post-controls a.btn:active {
   opacity: 1.0;
-  width: 100%;
+  width: 200px;
 }
 #wrapper .post .post-controls a.btn .icon {
   width: 18px;
