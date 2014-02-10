@@ -119,19 +119,6 @@ function setup() {
         $("#about").css({display:"block"});
     }
     
-    //little highlight glow on the side of posts to indicate which
-    //one the mouse is currently over
-    $('#wrapper .post').hover(
-        function(){
-            $(this).children('.activeind').stop().animate({ opacity:1.0 }, 200);
-            $(this).children('.btn-group-vertical').stop().animate({ opacity: 1.0 }, 200);
-        },
-        function(){
-            $(this).children('.activeind').stop().animate({ opacity:0 }, 200);
-            $(this).children('.btn-group-vertical').stop().animate({ opacity: 0 }, 200);
-        }
-    );
-    
     //make a menu appear when a header bar button is hovered over
     $('.dropdown').hover(
     
