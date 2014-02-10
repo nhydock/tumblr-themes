@@ -145,7 +145,6 @@
     <script src="http://nhydock.github.io/tumblr-themes/shared/js/jquery.js"></script>
     <script src="http://nhydock.github.io/tumblr-themes/booted/js/bootstrap.min.js"></script>
     <script src="http://nhydock.github.io/tumblr-themes/booted/js/hover-dropdown.min.js"></script>
-    <script src="http://nhydock.github.io/tumblr-themes/booted/js/fx.js"></script>
     
 <!-- Javascript sources -->
 
@@ -468,14 +467,23 @@
     {/block:Twitter}
     
 
+    <script src="http://nhydock.github.io/tumblr-themes/booted/js/fx.js"></script>
+    <script type="text/javascript">
+        $(document).scroll(refresh);
+        $(document).ready(function(){
+            setup();
+            $('.post .panel-footer > .footer').each(function(i, data){
+                console.log(data.html());
+                if ($(data).is(':empty')) {
+                    $(data).remove();
+                    console.log("kill me");
+                }
+            });
+        });
+    
+        //inject your own licensing label at the bottom of your blog
+        $("#license").load("license.html");
+    </script>
 </body>
-
-<script type="text/javascript">
-    $(document).scroll(refresh);
-    $(document).ready(setup);
-
-    //inject your own licensing label at the bottom of your blog
-    $("#license").load("license.html");
-</script>
 
 </html>

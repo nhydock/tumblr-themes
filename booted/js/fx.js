@@ -22,33 +22,30 @@ function reset(){
 
 //function that occurs on scrolling
 //causes the header bar to slide in our out depending on current document position
-var permtop = $("#controls").offset().top;
 var refresh = function(){
-
-	var windowTop = $(document).scrollTop();
-
-	if (windowTop > permtop)
-	{
-	    $("#controls").css(
-	    	{ 
-	    		position: 'fixed', 
-	    		top: 0, 
-	    		width: $(document).width()
-	    	}
-	    );
-	    $("#wrapper").css(
-	    	{ 
-	    		'margin-top': $(".navbar").height() 
-	    	}
-	    );
-	}
-	else
-	{
-	    $("#controls").css({ position: 'relative', top: 0, width: $(document).width()});
-	    $("#wrapper").css({ 'margin-top': "0px" });
-	}
-
-	$("controls").css({width: "100%"});
+            
+    var permtop = $("#header").outerHeight();
+    var windowTop = $(document).scrollTop();
+    
+    if (windowTop > permtop)
+    {
+        $("#controls").css(
+            { 
+                position: 'fixed', 
+                top: 0
+            }
+        );
+        $("#wrapper").css(
+            { 
+                'margin-top': $(".navbar").height() 
+            }
+        );
+    }
+    else
+    {
+        $("#controls").css({ position: 'relative', top: 0});
+        $("#wrapper").css({ 'margin-top': "0px" });
+    }
 }
 
 //function that checks if there's a livestream connection
@@ -124,7 +121,7 @@ function setup() {
     
     //little highlight glow on the side of posts to indicate which
     //one the mouse is currently over
-    $('#wrapper #content .post').hover(
+    $('#wrapper.post').hover(
         function(){
             $(this).children('.activeind').stop().animate({ opacity:1.0 }, 200);
             $(this).children('.btn-group-vertical').stop().animate({ opacity: 1.0 }, 200);
@@ -135,7 +132,7 @@ function setup() {
         }
     );
     
-    $('#wrapper #content .post .btn-group-vertical .btn').hover(
+    $('#wrapper .post .btn-group-vertical .btn').hover(
       function(){
             $(this).stop().animate({width: '200px'}, 200);
       },
