@@ -88,7 +88,7 @@
     & .post-controls {
         position: absolute;
         text-align: left;
-        right: -244px;
+        right: -200px;
         width: 200px;
         top: 0px;
         background: none;
@@ -113,10 +113,11 @@
             -webkit-transition: opacity .25s ease-in-out, width .25s linear;
 
             overflow: hidden;
+            text-align: left;
             
             &:hover, &:active {
                 opacity: 1.0;
-                width: 200px;
+                width: 100%;
             }
 
             & #reblog {
@@ -395,7 +396,6 @@
 
         & > .footer {
             background: #000;
-            font-family: @AccentFont;
             font-size: 11px;
             color: #fff;
             margin-top: 0px;
@@ -418,7 +418,6 @@
 
     & .notecontainer {
         background: #eaeaea;
-        font-family: @AccentFont;
         font-size: 11px;
         color: #666;
         margin-top: 10px;
@@ -475,7 +474,7 @@
 
         & .post .caption a.disquscomments {
             font-size: 12px;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: @BodyFont;
             letter-spacing: 2px;
             text-transform: uppercase;
             -webkit-font-smoothing: subpixel-antialiased;

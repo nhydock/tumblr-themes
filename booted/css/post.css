@@ -71,7 +71,7 @@
 #wrapper .post .post-controls {
   position: absolute;
   text-align: left;
-  right: -244px;
+  right: -200px;
   width: 200px;
   top: 0px;
   background: none;
@@ -93,11 +93,12 @@
   -moz-transition: opacity 0.25s ease-in-out, width 0.25s linear;
   -webkit-transition: opacity 0.25s ease-in-out, width 0.25s linear;
   overflow: hidden;
+  text-align: left;
 }
 #wrapper .post .post-controls a.btn:hover,
 #wrapper .post .post-controls a.btn:active {
   opacity: 1.0;
-  width: 200px;
+  width: 100%;
 }
 #wrapper .post .post-controls a.btn #reblog {
   background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -498px -270px transparent;
@@ -315,7 +316,6 @@
 }
 #wrapper .post .panel-footer > .footer {
   background: #000;
-  font-family: "Lucida Sans";
   font-size: 11px;
   color: #fff;
   margin-top: 0px;
@@ -333,7 +333,6 @@
 }
 #wrapper .post .notecontainer {
   background: #eaeaea;
-  font-family: "Lucida Sans";
   font-size: 11px;
   color: #666;
   margin-top: 10px;
@@ -378,7 +377,7 @@
 }
 #wrapper .post .post .caption a.disquscomments {
   font-size: 12px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Arial";
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
