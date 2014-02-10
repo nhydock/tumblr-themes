@@ -115,15 +115,6 @@ function pageExists(url)
 }
 
 function setup() {
-    {block:ifShowPopularTags}
-        constructTagMenu();
-    {/block:ifShowPopularTags}
-    
-    
-    {block:ifShowOtherBlogs}
-        constructBlogMenu();
-    {/block:ifShowOtherBlogs}
-    
     $('.link_copied').css({ 'bottom': -$(this).outerHeight() });
     
     //show about if the page does exists
@@ -131,23 +122,6 @@ function setup() {
         $("#about").css({display:"block"});
     }
     
-    //show Livestream block
-    {block:IfLivestream}
-        $("#livestream").css("display", "block");
-        if (livestream("{text:Livestream}"))
-        {
-            $("#livestream > a").append(
-                "<font color='#0F0' style='text-shadow: 0px 0px 2px;'>On Air</font>"
-            );
-        }
-        else
-        {
-            $("#livestream > a").append(
-                "<font color='#F00' style='text-shadow: 0px 0px 2px;'>Off Air</font>"
-            );  
-        }
-    {/block:IfLivestream}
-
     //little highlight glow on the side of posts to indicate which
     //one the mouse is currently over
     $('#wrapper #content .post').hover(
