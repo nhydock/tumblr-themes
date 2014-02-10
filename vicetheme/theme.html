@@ -1,472 +1,337 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <!--
-
-/////////   BBBBBBBBBBBB  ////////////////////////       ////////////////       //////                 
-//////////     B  BBBBBBB  //////////////////////  TTT  ////////////////  DDD  ///////
-////////////  B  B    BBBB  ////////////////////  TT  /////////////////  DD   ////////  
-//////       B  B    BBBB         //             TT            ///      DD   /////////
-//////  BBBBBBBBBBBBB      OO0OO     OOOOO   TTTTTTTT    EEEEE     DDDDDD  ///////////
-///////   B  B   BBBB    OOO  OOO  OOO  OOO   TT       EE   EEE  DD   DD  ////////////
-///////  B  B     BBBB  OOO  OOO  OOO  OOO   TT       EEEEEEEE  DD   DD  /////////////
-///     B  B    BBBBB  OOO  OOO  OOO  OOO   TT  TTT  EE        DD   DD  //////////////
-//  BBBBBBBBBBBBB       OOOOO     OOOOO     TTTTT     EEEEEEE   DDDDDD   /////////////
-
-/////////  44    44  ///  M    ///////////////////  bb     ll  ///////////////////////
-////////  44    44  ///   MM                        bb     ll       //////////////////
-///////  44444444  ///  MMMMMM   uu    uu  mm   mm  bb     ll  rrr   /////////////////
-//////        44  /////   MM     uu    uu mmmm mmmm bbbbbb ll rr rr  /////////////////
-///////////  44  ///////  MM  M  uuu  uuu mm mmm mm bb  bb ll rr     /////////////////
-//////////  44  /////////  MMM     uuuu   mm     mm bbbbbb ll rr  ////////////////////
-      
-      By Nicholas Hydock 2012
-
-    ************************************************************************
-    PLEASE DO NOT MODIFY THIS HEADER, PLEASE GIVE CREDIT WHERE CREDIT IS DUE
-    ************************************************************************
-
-    Booted is a heavily modified version of Tumblr's classic default theme
-        Redux.  
-
-    This theme adds custom stylings in addition to Twitter's Bootstrap 
-    CSS/HTML/JS library found at
-       
-        http://twbs.github.io/bootstrap
-
-    Thanks to Booted, you now have access to all of Bootstrap's abilities,
-    as well as JQuery to continue building this theme to your own liking.
-
-    Plenty of additional options have been added for Tumblr through the 
-    use of meta tags, that are particularly useful for those who wish to 
-    advertise common tags of theirs, addition blogs.  And for the artists 
-    of tumblr, there's an option and menu for handling commissions with 
-    ease, and Livestream channel linking with Airtime updating.
-
-    I designed this theme around things that I personally do a lot of with 
-    my blogs and though that other's might like to have in theirs.
-
-    Be sure to check out the source for Booted and more at
-        http://github.com/nhydock/tumblr-themes
-
+     Vice Theme
+     by Nicholas Hydock
 -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <!-- DEFAULT VARIABLES -->
-    <meta name="color:Background" content="#3b627e" />
-    <meta name="color:Title" content="#000" />
-    <meta name="color:TitleText" content="#fff" />
-    <meta name="color:Glow" content="#c00" />
-    <meta name="color:GlowGradient" content="#700" />
-    
-    <!-- meta name="font:Title" content="Arial" /-->
-    <!--meta name="font:Body" content="Arial" /-->
-    <!--meta name="font:Accent" content="Lucida Sans" /-->
-    
-    <meta name="if:Show Search" content="1" />
-    <meta name="if:Show Tags" content="1" />
-    <meta name="if:Show Album Art on Audio Posts" content="1" />
-    <meta name="if:Enable Jump Pagination" content="0" />
-    
-    <meta name="text:Disqus Shortname" content="" />
-    <meta name="image:Background" content="" />
-    <meta name="image:Header" content="" />
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
-    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-    <link rel="shortcut icon" href="{Favicon}" />
-    <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
-    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
 
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/custom.css" rel="stylesheet" type="text/css">
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/post.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Ruda:400,700|Roboto:400,700' rel='stylesheet' type='text/css'>
-   
-    <style type="text/css">
+    <head>
 
-        body {
-            background: {color:Background} url({image:Background}) top left fixed repeat;
-        }
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>{Title} {block:PostTitle} {PostTitle} {/block:PostTitle}</title>
 
-        #wrapper .post .panel-body,
-        #wrapper .post .panel-header,
-        #wrapper .post .panel-footer .footer {
-            font-family: {font:Body};
-            font-family: 'Roboto';
-        }
-
-
-        .dropdown-menu {
-            box-shadow: 0px 2px 0px 0px {color:Glow},
-                        0px 3px 3px 0px rgba(0,0,0,.5);
-            border: none;
-        }
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
         
-        .dropdown-menu li > a:hover, 
-        .dropdown-menu li > a:active {
-            background-color: {color:Glow};
-            background-image: -moz-linear-gradient(top, {color:GlowGradient}, {color:Glow});
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, from({color:GlowGradient}), to({color:Glow}));
-            background-image: -webkit-linear-gradient(top, {color:GlowGradient},  {color:Glow});
-            background-image: -o-linear-gradient(top, {color:GlowGradient},  {color:Glow});
-            background-image: linear-gradient(to bottom, {color:GlowGradient}, {color:Glow});
-            background-repeat: repeat-x;
-            color: #fff;
-        }
-
-        #header {
-            background-color: {color:Title};
-            background-image: url('{image:Header}');
-            color: {color:TitleText};
-        }
+        <meta name="viewport"  content="width=660"/>
+        <link rel="apple-touch-icon" href="{PortraitURL-128}"></link>
         
-        {block:IfHeaderImage}
-        #info {
-            background: rgba(0,0,0,.65);
-            box-shadow: 0px 10px 5px rgba(0,0,0,.4) inset,
-                        0px -1px 10px rgba(255,255,255,.25);
-        }
-        {/block:IfHeaderImage}
+        <meta name="text:Disqus Shortname" content="" />
+
+        <!-- DEFAULT COLORS -->
+        <meta name="color:Background" content="#fff"/>
+        <meta name="image:Background" content=""/>
         
-        #info > h1 {
-            font-family: {font:Title};
-            font-family: 'Montserrat Alternates';
-            color: {color:TitleText};
-        }
+        <meta name="color:Text" content="#919191"/>
+        <meta name="color:Links" content="#6DC0A9"/>
+		<meta name="color:Links Hover" content="#4A8D75"/>
+		<meta name="color:Text Alt" content="#919191"/>
         
-        #info > h2 {
-            font-family: 'Ruda';
-            color: {color:TitleText};
-        }
+        <meta name="select:Layout" content="left" title="Left"/>
+        <meta name="select:Layout" content="center" title="Center"/>
         
-        #header .avatar {
-            background: url('{PortraitURL-128}');
-            border: 0px solid transparent;
-        }
-
-    </style>
-
-    <style type="text/css">{CustomCSS}</style>
-</head>
-
-<!-- Javascript sources -->
-
-    <script src="http://nhydock.github.io/tumblr-themes/shared/js/jquery.js"></script>
-    <script src="http://nhydock.github.io/tumblr-themes/booted/js/bootstrap.min.js"></script>
-    <script src="http://nhydock.github.io/tumblr-themes/booted/js/hover-dropdown.min.js"></script>
-    
-<!-- Javascript sources -->
-
-<body>
-    <div id="header">
-        <center>
-        <a href="/"><span class="avatar"></span></a>
-        <span id="info">
-            <h1>
-                {Title}
-            </h1>
-            <h2>
-                {Description}
-            </h2>
-        </span>
-        </center>
+        <meta name="text:Tags" content="" />
         
-    </div>
-    <nav class="navbar navbar-inverse" role="navigation" id="controls">
-        <div class="container pull-left" style="width: 100%">
+        <meta name="if:Show Likes" content="0"/>
         
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">{Title}</a>
-            </div>
+        <meta name="font:Title" content="Arial" />
+        <meta name="font:Body" content="Arial" />
+        
+		<link href="http://nhydock.github.io/tumblr-themes/vicetheme/css/qtip.css" rel="stylesheet" type="text/css"/>
+		<link href="http://nhydock.github.io/tumblr-themes/vicetheme/css/style.css" rel="stylesheet" type="text/css"/>
 
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  {block:AskEnabled}
-                  <li>
-                    <a href="/ask">
-                        Ask Me A Question
-                    </a>
-                  </li>
-                  {/block:AskEnabled}
-                  {block:HasPages}
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        {block:Pages}
-                            <li><a href="{URL}">
-                                {Label}
-                            </a>
-                            </li>
-                        {/block:Pages}
-                    </ul>
-                  </li>
-                  {/block:HasPages}
-                  
-                </ul>
-                {block:IfShowSearch}
-                <form 
-                    class="navbar-form navbar-right" 
-                    action="/search" method="get">
-                    <div class="input-group">
-                        <input class="form-control" type="text" name="q" value="{SearchQuery}" />
-                        <span class="input-group-btn" style="display: inline">
-                            <button class="btn btn-default" type="submit" value="Search">Search</button>
-                        </span>
-                    </div>
-                </form>
-                {/block:IfShowSearch}
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-    
-    <div id="content" class="row">
-    <div class="col-sm-1 col-md-3"></div>    
-    <div id="wrapper" class="col-md-6 col-sm-10">
-      
-        {block:SearchPage}
-            {block:SearchResults}
-                <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
-            {/block:SearchResults}
+		<script src="http://nhydock.github.io/tumblr-themes/shared/js/jquery.js" type="text/javascript"></script>
+		<script src="http://nhydock.github.io/tumblr-themes/vicetheme/js/qtip.js" type="text/javascript"></script>
+		
+		<!--
+		<link href="css/qtip.css" rel="stylesheet" type="text/css"/>
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+		<script src="../shared/js/jquery.js" type="text/javascript"></script>
+		<script src="js/qtip.js" type="text/javascript"></script>
+		-->
+		
+		<style type="text/css" media="screen">
+			
+			{CustomCSS}
+			
+			body {
+				background-color: {color:Background};
+                background-image: url('{image:Background}');
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat; 
+                    
+			    color: #fff;
+			    
+				font-family: Arial;
+				font-size: 13px;
+            }
             
-            {block:NoSearchResults}
-                <div id="searchresults">{lang:No search results for SearchQuery 2}</div>
-            {/block:NoSearchResults}
-        {/block:SearchPage}
-        
-        {block:Posts}
-            <div class="post panel panel-default">
-                <div class="post-controls btn-group-vertical">
-                    <a href='{ShortURL}' class="btn">
-                        <span class="icon perm"></span>
-                        <font size=2>Permalink</font>
-                    </a>  
-                    <a href="{ReblogURL}" class="btn">
-                        <span class="icon reblog"></span>
-                        <font size=2>Reblog</font>
-                    </a>
-                    {block:IfDisqusShortname} 
-                    <a href="{Permalink}#disqus_thread" class="btn">
-                        <span class="icon comment"></span>
-                        <font size=2>Disqus Comments</font>
-                    </a>
-                    {/block:IfDisqusShortname}
-                </div>
+            #header .container .brand {
+                font-family: {font:Title};
+            }
+            
+            #content .post {
+                font-family: {font:Body};
+            }
+            
+            a{
+                text-decoration: none;
+                color: {color:Links};
+            }
+            
+            a:hover{
+                color: {color:Links Hover};
+            }
+            
+            .qtip {
+                box-shadow: 6px 6px 0px -2px rgba(0,0,0,.5);
+            }
+            #disqus_thread { width: 500px; padding: 0 0 75px 0; }
+            .install_button{display:block;}
+            
+		</style>
 
-                <div class="panel-heading">
-                    {block:NoteCount}
-                    <a href="{Permalink}#notes">
-                        <div class="notecount">
-                            <b>
-                                <font size=2>{NoteCount} Notes</font>
-                            </b>
-                        </div>
-                    </a>
-                    {/block:NoteCount}
-                    
-                    <b>
-                        {Month} {DayOfMonth}, {Year}
-                    </b>
-                    <br/>
-                    <font size=1>
-                        <i>({TimeAgo})</i>
-                    </font>
-                    <p/>
-                    <span class="divider"></span>
-                </div>
+    </head>
 
-                <div class="panel-body">
+    <body>
+		
 
-                    {block:Photo}
-                        <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
-                            {LinkCloseTag}
-                        </div>
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Photo}
-                    
-                    {block:Video}
-                        <div class="media">
-                            {Video-500}
-                        </div>
-                        {block:Caption}
-                            <div class="copy">
-                                {Caption}
-                            </div>
-                        {/block:Caption}
-                    {/block:Video}
-                    
-                    {block:Audio}
-                        
-                        {block:AudioEmbed}
-                            {AudioEmbed}
-                        {/block:AudioEmbed}
-                        
-                        {block:AudioPlayer}
-                            {block:IfShowAlbumArtOnAudioPosts}
-                                {block:AlbumArt}
-                                    <div class="album_art">
-                                        <img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}"/>
-                                    </div>
-                                {/block:AlbumArt}
-                            {/block:IfShowAlbumArtOnAudioPosts}
-                        
-                            <div class="audio">
-                                <div class="player">{AudioPlayerWhite}</div>
-                                <div class="meta">{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
-                                <div class="clear"></div>
-                            </div>
-                        {/block:AudioPlayer}
-                        
-                        <div class="clear"></div>
-                        
-                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-                        
-                    {/block:Audio}
-                    
-                    {block:Quote}
-                        <div class="quote {Length}">{Quote}
-                            <div class="copy">
-                                <div class="bg">“</div>
-                                {block:Source}
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tr>
-                                            <td valign="top" style="width:20px;">&mdash;</td>
-                                            <td valign="top" class="quote_source">
-                                                {Source}
-                                            </td>
-                                        </tr>
-                                    </table>
-                                {/block:Source}
-                            </div>
-                        </div>
-                    {/block:Quote}
-                        
-                    {block:Text}
-                        {block:Title}
-                            <div class="title">
-                                {Title}
-                            </div>
-                        {/block:Title}
-                        <div class="copy">
-                            {Body}
-                        </div>
-                    {/block:Text}
-                    
+        <div id="content" class="{select:Layout}">
+			
+            {block:Posts}
+	
+				<div class="post">
+					{block:Date}	
+					<div class="heading" style="margin-top: 0px;">
+						<a href="{PostAuthorURL}">
+							<img class="group-avatar" src="{PostAuthorPortraitURL-48}" />
+						</a>
+						
+						<center>
+							<p style="font-size: 1.65em; display:inline-block; margin-bottom: 0px;">
+								{DayOfMonth} {Month}, {Year}
+							</p>
+							<br/>
+							{TimeAgo}
+							<p/>
+							<span class="divider" ></span>
+						</center>
+						<br/>
+                    </div>
+                    {/block:Date}
+					
+					{block:Quote}
+				
+						<div class="quote">
+					
+							<h2>"{Quote}"</h2>
+						
+							{block:Source}
+								<p>{Source}</p>
+							{/block:Source}
+					
+						</div>
+						
+					{/block:Quote}
+					
+					
+					{block:Photo}
+						
+						<div class="photo">
+							
+							{LinkOpenTag}
+								<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+							{LinkCloseTag}
+						
+							{block:Caption}
+								<p>{Caption}</p>
+							{/block:Caption}
+							
+						</div>
+						
+					{/block:Photo}
+
+
+					{block:Video}
+
+					
+						<div class="video">
+					
+							{Video-500}
+							
+							{block:Caption}
+								<p>{Caption}</p>
+							{/block:Caption}
+							
+
+						</div>
+					
+					{/block:Video}   
+					
+					
+					{block:Link}
+
+						<div class="link">
+
+							<h2><a href="{URL}" {Target}>{Name}</a></h2>
+							
+							{block:Description}
+								<p>{Description}</p>
+							{/block:Description}
+							
+						</div>
+					{/block:Link}
+					
+
+					{block:Chat}
+					
+						<div class="conversation">
+							
+							{block:Title}
+								<h2>{Title}</h2>
+							{/block:Title}
+
+							<ul>
+								{block:Lines}
+									<li class="member{UserNumber}">
+										{block:Label}
+											<span class="label">{Label}</span>
+										{/block:Label}
+										{Line}
+									</li>
+								{/block:Lines}
+							</ul>				
+						</div>
+					{/block:Chat}
+					
                     {block:Answer}
-                        <div class="question">
-                            <div class="nipple"></div>
-                            {Question}
+                        <div class="ask">
+                             <div class="banner">
+                                <img src="{AskerPortraitURL-30}"/>
+                                <b>{Asker}</b> asked - <br/>
+                                {Question}
+                            </div>
+                            <span class="tip" ></span>
                         </div>
-                        <div class="asker_container">
-                            <img src="{AskerPortraitURL-24}">
-                                {Asker}
-                        </div>
-                        <div class="copy">
+                        <div class="text">
                             {Answer}
                         </div>
                     {/block:Answer}
-                    
-                    {block:Chat}
-                        {block:Title}<div class="title">{Title}</div>{/block:Title}
-                        <div class="chat">
-                            <div class="lines">
-                                {block:Lines}
-                                    <div class="line {Alt}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</div>
-                                {/block:Lines}
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div style="height:10px;"></div>
-                    {/block:Chat}
-                    
-                    {block:Link}
-                        <div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
-                        {block:Description}<div class="copy">{Description}</div>{/block:Description}
-                    {/block:Link}
-                </div>
-                
-                <div class="panel-footer">
-                    {block:IfShowTags}
-                    {block:HasTags}
-                    <div class="footer">
-                                <div class="tags">
-                                    {lang:Tagged}: 
-                                        {block:Tags}
-                                        <a href="{TagURL}">
-                                            <span class="label label-default">{Tag}</span>
-                                        </a>
-                                        {/block:Tags}
-                                </div>
-                        <div class="clear"></div>
-                    </div>
-                    {/block:HasTags}
-                    {/block:IfShowTags}
-                    {block:ContentSource}
-                    <div class="footer">
-                        <a href="{SourceURL}">
-                                {lang:Source}:
-                                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
-                                {block:NoSourceLogo}<span class="label label-info">{SourceTitle}</span>{/block:NoSourceLogo}
-                        </a>
-                        <div class="clear"></div>
-                    </div>
-                    {/block:ContentSource}
-                </div>
-                <div class="activeind"></div>
+						
+					{block:Text}
+						<div class="text">
+		
+							{block:Title}
+								<h2>{Title}</h2>
+							{/block:Title}
 
-                {block:IfDisqusShortname}{block:Permalink}
-                    <div id="disqus_thread"></div>
-                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                {/block:Permalink}{/block:IfDisqusShortname}
-        
-                {block:PostNotes}
-                    <div class="notecontainer">
-                        {PostNotes}
-                    </div>
-                {/block:PostNotes}
+							{Body}
+						</div>
 
-            </div>
-                
-            <div class="bottom"></div>
-        {/block:Posts}
-        
-        {block:Pagination}
-            <div id="navigation" {block:IfEnableJumpPagination}class="jump_pagination"{/block:IfEnableJumpPagination}>
-                {block:PreviousPage}<a href="{PreviousPage}">&larr; {lang:Previous}</a>{/block:PreviousPage}
-                
-                {block:IfEnableJumpPagination}
-                    {block:JumpPagination length="5"}
-                        {block:CurrentPage}
-                            <span class="current_page">{PageNumber}</span>
-                        {/block:CurrentPage}
-                        
-                        {block:JumpPage}
-                            <a class="jump_page" href="{URL}">{PageNumber}</a>
-                        {/block:JumpPage}
-                        
-                    {/block:JumpPagination}
-                {/block:IfEnableJumpPagination}
-                
-                {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
-            </div>
-        {/block:Pagination}
-    </div>
+					{/block:Text}
 
-    <div class="col-sm-1 col-md-3"></div>  
-    </div>
-    
-    {block:IfDisqusShortname}
+
+					{block:Audio}
+						
+						<div class="audio">
+						
+							{AudioPlayerGrey}
+							
+							<div class="audio_details">{block:Artist}<b>{Artist}</b>{/block:Artist} &ndash; {block:TrackName}{TrackName}{/block:TrackName} <span class="playcount">({PlayCountWithLabel})</span></div>
+							<div class="audio_caption">{block:Caption}{Caption}{/block:Caption}</div>
+						
+							{block:ExternalAudio}
+								<p><a href="{ExternalAudioURL}">{lang:Download}</a></p>
+							{/block:ExternalAudio}			
+
+						</div>
+					
+					{/block:Audio}
+				
+					<div class="footer" style="margin-bottom: -25px;">
+                        {block:HasTags}
+						<div id="tags" class="banner">
+							{block:Tags}
+							<a href="{TagURL}">
+								<span>
+									#{Tag}
+								</span>
+							</a>
+							{/block:Tags}
+						</div>
+						<span class="tip" ></span>
+						{/block:HasTags}
+						{block:NoteCount}
+						<div id="source" class="banner">
+                            <table style="width:100%;">
+                            <tr>
+                            <td style="text-align: left;">
+                                <b>{NoteCount} {lang:Notes}</b>
+                            </td>
+                            {block:RebloggedFrom}
+    						<td style="text-align: right;">
+                            (via <a href="{ReblogParentURL}">{ReblogParentName}</a>) <b><a href="{ReblogRootURL}">{ReblogRootName}</a></b>
+                            </td>
+    						{/block:RebloggedFrom}
+                            </tr>
+                            </table>
+						</div>
+						<span class="tip" ></span>
+						{/block:NoteCount}
+					</div>
+					<br/>
+					{block:PostNotes}
+					<div>{PostNotes-16}</div>
+					{/block:PostNotes}
+					
+					{block:Date}	
+					
+					<ul class="controls">
+						<a href="{Permalink}">
+							<li>
+								<span class="icon perm"></span>Permalink
+							</li>
+						</a>
+						<a href="{ReblogURL}">
+							<li>
+								<span class="icon reblog"></span>Reblog
+							</li>
+						</a>
+                        {block:IfDisqusShortname}
+						<a href="{Permalink}#disqus_thread">
+							<li>
+								<span class="icon comment"></span>Comments
+							</li>
+						</a>
+                        {/block:IfDisqusShortname}
+					</ul>
+					
+					{/block:Date}
+				</div>
+			{/block:Posts}
+			
+			{block:Pagination}
+
+				<div id="navigation">
+   
+					{block:NextPage}
+		                <a href="{NextPage}" id="nav-next" style="text-transform:lowercase;">&larr; {lang:Older}</a>
+		            {/block:NextPage}
+					<span class="page_number"> &nbsp; {CurrentPage}/{TotalPages} &nbsp;</span>
+					{block:PreviousPage}
+	                	<a href="{PreviousPage}" id="nav-prev" style="text-transform:lowercase;">{lang:Newer} &rarr;</a>
+		            {/block:PreviousPage}
+
+				</div>
+
+			{/block:Pagination}
+			</div>
+        </div>
+
+	{block:IfDisqusShortname}
         <script type="text/javascript">
             //<![CDATA[
             (function() {
@@ -477,24 +342,209 @@
                         query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
                     }
                 }
-                document.write('<script charset="utf-8" type="text/javascript" src="https://dl-web.dropbox.com/get/weblayout/disqus_comments.js?w=94647765' + query + '"></' + 'script>');
+                document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
             })();
             //]]>
         </script>
     {/block:IfDisqusShortname}
-    
-    {block:Twitter}
-        <script type="text/javascript" src="/tweets.js"></script>
-    {/block:Twitter}
-    
 
-    <script src="http://nhydock.github.io/tumblr-themes/booted/js/fx.js"></script>
+		{block:IfShowLikes}
+		<div id="mode">
+			{block:Likes}
+			{Likes limit="5" summarize="100" width="150"}
+			{/block:Likes}
+		</div>
+		{/block:IfShowLikes}
+
+		<div id="header">
+			<div class="container">
+				<div class="brand">
+					{Title}
+				</div>
+				<div class="avatar">
+					<center><img src="{PortraitURL-64}"/></center>
+				</div>
+			</div>
+			<div class="license">
+				<a href="http://github.com/nhydock" style="color: inherit;">design © Nicholas Hydock</a>
+			</div>
+		</div>
+		<div id="sidebar">
+			<ul>
+				<a href="/">
+					<li class="home"></li>
+				</a>
+				<a href="#">
+					<li class="about dropdown"></li>
+				</a>
+                <div class="about menu" style="display:none;">
+                    <div style="padding: 10px;">
+                        {Description}
+                    </div>
+                </div>
+				{block:AskEnabled}
+				<a href="/ask">
+					<li class="ask"></li>
+				</a>
+				{/block:AskEnabled}
+                {block:IfTags}
+				<a href="#">
+					<li class="tags dropdown">
+        				 <div class="tags menu" style="display:none;">
+                              <ul>
+                                
+                              </ul>
+                         </div>
+					</li>
+				</a>
+                {/block:IfTags}
+				{block:HasPages}
+				<a href="#">
+					<li class="pages dropdown"></li>
+                    <div class="pages menu" style="display:none;">
+                        <ul>
+                            {block:Pages}
+                                <a href="{URL}">
+                                    <li>{Label}</li>
+                                </a>
+                            {/block:Pages}
+                        </ul>
+                    </div>
+				</a>
+				{/block:HasPages}
+			</ul>
+		</div>
+		<div class="corner"></div>
+		<a id="install_theme" href="https://github.com/nhydock/tumblr-themes/blob/gh-pages/vicetheme/theme.html"><img border="0" src="http://static.tumblr.com/2w7y46r/wuvmba8c2/installtheme.png" style="position:fixed; right:10px; bottom:5px;z-index:99999999 !important;"></img></a>
+    </body>
     <script type="text/javascript">
-        $(document).scroll(refresh);
-        $(document).ready(setup);
+        (function(){
+        
+            var tags = "{text:Tags}".split(/,+\s+/);
+            
+            $.each(tags, function(index, value){
+              $(".tags.menu ul").append(
+                 '<a href="/tagged/' + value + '">' +
+                 '<li>' + value + '</li>' +
+                 '</a>'
+              );
+            });
+        
+        })();
     </script>
-    
-    <a id="install_theme" href="https://github.com/nhydock/tumblr-themes/blob/gh-pages/booted/theme.html"><img border="0" src="http://static.tumblr.com/2w7y46r/wuvmba8c2/installtheme.png" style="position:fixed; right:10px; bottom:5px;z-index:99999999 !important;"></img></a>
-</body>
-
+    	
+	<script>
+		$(document).ready(function(){
+			$(".controls a li").hover(function(){
+				$(this).stop().animate({"width": "200px"}, 300);
+			}, function(){
+				$(this).stop().animate({"width": "36px"}, 300);
+			});
+            
+            $(".tags.dropdown").qtip({
+                content: {text: $(".tags.menu").html()},
+                show: {event:'mouseover', solo:true},
+                position: {
+                    my: 'top left',
+                    at: 'top right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left top',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                },
+                hide: {
+					event: 'mouseout',
+        			fixed: true,
+					delay: 300
+				}
+            });
+            $(".about.dropdown").qtip({
+                content: {text:$(".about.menu").html()},
+                show: {event:'mouseover', solo:true},
+                position: {
+                    my: 'center left',
+                    at: 'center right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left center',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                },
+                hide: {
+                    event: 'mouseout',
+    				fixed: true,
+					delay: 300
+				}
+            });
+            {block:HasPages}
+            $(".pages.dropdown").qtip({
+                content: {text: $(".pages.menu").html()},
+                show: {event:'mouseover', solo:true},
+                position: {
+                    my: 'top left',
+                    at: 'top right'
+                },
+                style: {
+                    tip: {
+                        corner: 'left top',
+                        target: '.dropdown'
+                    }
+                },
+                events: {
+                    render: function(event, api) {
+                        // Grab the tip element
+                        var elem = api.elements.tip;
+                    }
+                },
+                hide: {
+    				event: 'mouseout',
+        			fixed: true,
+					delay: 300
+				}
+            });
+            {/block:HasPages}
+            
+            var url = document.URL;
+            
+            $("#sidebar ul a li").removeClass("active");
+            if (url.indexOf('/tagged/') != -1)
+            {
+				$("#sidebar ul a li.tags").addClass("active");
+			}
+			else if (url.indexOf('/ask') != -1)
+			{
+				$("#sidebar ul a li.ask").addClass("active");	
+			}
+			{block:HasPages} 
+				{block:Pages}
+					else if (url.indexOf('{URL}') != -1)
+					{
+						$("#sidebar ul a li.pages").addClass("active");	
+					}
+				{/block:Pages}
+			{/block:HasPages}
+			else if (url.indexOf('/post/') != -1)
+			{
+			}
+			else
+			{
+				$("#sidebar ul a li.home").addClass("active");
+			}
+		});
+	</script>
 </html>
