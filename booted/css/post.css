@@ -133,11 +133,11 @@
   background-position: 0px -36px;
 }
 @media (max-width: 970px) {
-  #wrapper .post #wrapper .post .post-controls {
+  #wrapper .post .post-controls {
     left: none;
     right: 16px;
   }
-  #wrapper .post #wrapper .post .post-controls .btn {
+  #wrapper .post .post-controls .btn {
     float: right;
   }
 }
