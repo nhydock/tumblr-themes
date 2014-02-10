@@ -3,6 +3,7 @@
 @AccentFont : "Lucida Sans";
 @BackgroundColor : #3b627e;
 @Title : #000;
+@assets: "../assets/";
 
 #wrapper .post
 {
@@ -32,6 +33,15 @@
     & a {
         color: #6e7173;
         text-decoration: none;
+    }
+
+    .divider {
+        @file: "divider.svg";
+        background: url("@{assets}@{file}");
+        width: 100%;
+        height: 18px;
+        display: inline-block;
+        margin: 4px 0px;
     }
 
     //glowing sidebars that appear on hover over
@@ -120,31 +130,30 @@
                 width: 100%;
             }
 
-            & #reblog {
-                background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -498px -270px transparent; 
-                width: 24px;
-                height: 20px;
-                margin-left: 1px;
-                margin-right: 12px;
-                float: left;    
-            }
-
-            & #comment {
-                background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -500px -242px transparent; 
-                height: 20px;
-                width: 24px;
-                margin-left: 3px;
-                margin-right: 12px;
-                float: left;
-            }
-
-            & #perm {
-                background: url("http://i.imgur.com/6m5S7.png") no-repeat scroll transparent; 
-                height: 20px;
-                width: 24px;
-                margin-left: 2px;
-                margin-right: 12px;
-                float: left;
+            .icon
+            {
+                width: 18px;
+                height: 18px;
+                margin-left: 9px;
+                margin-top: -6px;
+                margin-right: 30px;
+                display: inline-block;
+                @file: "postbuttons.png";
+                background: url("@{assets}@{file}") 0 0 no-repeat;
+                vertical-align: middle;
+            
+                &.perm
+                {
+                    background-position: 0px 0px;
+                }
+                &.reblog
+                {
+                    background-position: 0px -18px;
+                }
+                &.comment
+                {
+                    background-position: 0px -36px;
+                }
             }
         }
     }
@@ -393,6 +402,7 @@
     //footer full of information, such as tags and source
     & .panel-footer {
         background: transparent;
+        padding: 0px;
 
         & > .footer {
             background: #000;

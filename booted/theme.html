@@ -224,18 +224,16 @@
             <div class="post panel panel-default">
                 <div class="post-controls btn-group-vertical">
                     <a href='{ShortURL}' class="btn">
-                        <span id="perm">
-                        </span>
+                        <span class="icon perm"></span>
                         <font size=2>Permalink</font>
                     </a>  
                     <a href="{ReblogURL}" class="btn">
-                        <span id="reblog">
-                        </span>
+                        <span class="icon reblog"></span>
                         <font size=2>Reblog</font>
                     </a>
                     {block:IfDisqusShortname} 
                     <a href="{Permalink}#disqus_thread" class="btn">
-                        <div id="comment"></div>
+                        <span class="icon comment"></span>
                         <font size=2>Disqus Comments</font>
                     </a>
                     {/block:IfDisqusShortname}
@@ -260,6 +258,7 @@
                         <i>({TimeAgo})</i>
                     </font>
                     <p/>
+                    <span class="divider"></span>
                     <img src="http://upload.wikimedia.org/wikipedia/commons/9/9e/Decorative_text_divider_3.svg"/>
                 </div>
 
