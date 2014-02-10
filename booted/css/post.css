@@ -138,7 +138,7 @@
     left: auto;
     right: 16px;
   }
-  #wrapper .post .post-controls .btn {
+  #wrapper .post .post-controls a.btn {
     float: right;
   }
 }
