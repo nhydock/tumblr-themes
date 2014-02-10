@@ -97,7 +97,9 @@
 
 
         .dropdown-menu {
-            border-bottom: 2px solid {color:Glow};
+            box-shadow: 0px 2px 0px 0px {color:Glow},
+                        0px 3px 3px 0px rgba(0,0,0,.5);
+            border: none;
         }
         
         .dropdown-menu li > a:hover, 
@@ -109,6 +111,7 @@
             background-image: -o-linear-gradient(top, {color:GlowGradient},  {color:Glow});
             background-image: linear-gradient(to bottom, {color:GlowGradient}, {color:Glow});
             background-repeat: repeat-x;
+            color: #fff;
         }
 
         #header {
@@ -138,6 +141,7 @@
         
         #header .avatar {
             background: url('{PortraitURL-128}');
+            border: 0px solid transparent;
         }
 
     </style>
@@ -169,7 +173,7 @@
         
     </div>
     <nav class="navbar navbar-inverse" role="navigation" id="controls">
-        <div class="container-fluid pull-left">
+        <div class="container pull-left">
         
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -194,9 +198,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         {block:Pages}
-                            <a href="{URL}">
-                                <li>{Label}</li>
+                            <li><a href="{URL}">
+                                {Label}
                             </a>
+                            </li>
                         {/block:Pages}
                     </ul>
                   </li>
@@ -376,9 +381,9 @@
                 </div>
                 
                 <div class="panel-footer">
+                    {block:IfShowTags}
+                    {block:HasTags}
                     <div class="footer">
-                        {block:IfShowTags}
-                            {block:HasTags}
                                 <div class="tags">
                                     {lang:Tagged}: 
                                         {block:Tags}
@@ -387,19 +392,20 @@
                                         </a>
                                         {/block:Tags}
                                 </div>
-                            {/block:HasTags}
-                        {/block:IfShowTags}
-                        
-                        {block:ContentSource}
-                            <a href="{SourceURL}">
+                        <div class="clear"></div>
+                    </div>
+                    {/block:HasTags}
+                    {/block:IfShowTags}
+                    {block:ContentSource}
+                    <div class="footer">
+                        <a href="{SourceURL}">
                                 {lang:Source}:
                                 {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
                                 {block:NoSourceLogo}<span class="label label-info">{SourceTitle}</span>{/block:NoSourceLogo}
                         </a>
-                        {/block:ContentSource}
-                        
                         <div class="clear"></div>
                     </div>
+                    {/block:ContentSource}
                 </div>
                 <div class="activeind"></div>
 
@@ -473,16 +479,7 @@
     <script src="http://nhydock.github.io/tumblr-themes/booted/js/fx.js"></script>
     <script type="text/javascript">
         $(document).scroll(refresh);
-        $(document).ready(function(){
-            setup();
-            $('.post .panel-footer > .footer').each(function(i, data){
-                console.log(data.html());
-                if ($(data).is(':empty')) {
-                    $(data).remove();
-                    console.log("kill me");
-                }
-            });
-        });
+        $(document).ready(setup);
     
         //inject your own licensing label at the bottom of your blog
         $("#license").load("license.html");
