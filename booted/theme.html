@@ -61,6 +61,7 @@
     <!--meta name="font:Body" content="Arial" /-->
     <!--meta name="font:Accent" content="Lucida Sans" /-->
     
+    <meta name="if:Show Search" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
     <meta name="if:Enable Jump Pagination" content="0" />
@@ -141,6 +142,7 @@
         
         #header .avatar {
             background: url('{PortraitURL-128}');
+            border: 0px solid transparent;
         }
 
     </style>
@@ -172,7 +174,7 @@
         
     </div>
     <nav class="navbar navbar-inverse" role="navigation" id="controls">
-        <div class="container pull-left">
+        <div class="container pull-left" style="width: 100%">
         
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -205,12 +207,25 @@
                     </ul>
                   </li>
                   {/block:HasPages}
+                  
                 </ul>
+                {block:IfShowSearch}
+                <form 
+                    class="navbar-form navbar-right" 
+                    action="/search" method="get">
+                    <div class="input-group">
+                        <input class="form-control" type="text" name="q" value="{SearchQuery}" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" value="Search">Search</button>
+                        </span>
+                    </div>
+                </form>
+                {/block:IfShowSearch}
             </div><!--/.nav-collapse -->
         </div>
     </nav>
     
-    <div class="row">
+    <div id="content" class="row">
     <div class="col-sm-3"></div>    
     <div id="wrapper" class="col-sm-6">
       
@@ -445,9 +460,6 @@
                 {block:NextPage}<a href="{NextPage}">{lang:Next page} &rarr;</a>{/block:NextPage}
             </div>
         {/block:Pagination}
-        
-        <div id="license">
-        </div>
     </div>
 
     <div class="col-sm-3"></div>  
@@ -479,9 +491,6 @@
     <script type="text/javascript">
         $(document).scroll(refresh);
         $(document).ready(setup);
-    
-        //inject your own licensing label at the bottom of your blog
-        $("#license").load("license.html");
     </script>
 </body>
 

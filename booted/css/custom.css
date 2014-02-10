@@ -42,6 +42,9 @@ blockquote p {
   background-image: linear-gradient(to bottom, #770000, #cc0000);
   background-repeat: repeat-x;
 }
+#content {
+  margin: 0px;
+}
 #header {
   position: relative;
   width: 100%;
