@@ -112,13 +112,13 @@
             color: {color:TitleText};
         }
         
+        {block:IfHeaderImage}
         #info {
-            {block:IfHeaderImage}
             background: rgba(0,0,0,.65);
             box-shadow: 0px 10px 5px rgba(0,0,0,.4) inset,
                         0px -1px 10px rgba(255,255,255,.25);
-            {/block:IfHeaderImage}
         }
+        {/block:IfHeaderImage}
         
         #info > h1 {
             font-family: {font:Title};
@@ -128,7 +128,7 @@
         
         #info > h2 {
             font-family: 'Ruda';
-            color: ;{color:TitleText};
+            color: {color:TitleText};
         }
         
         #header .avatar {

@@ -55,7 +55,7 @@ blockquote p {
   background-position: center bottom;
   background-size: cover;
 }
-#header > .avatar {
+#header .avatar {
   background-size: cover;
   display: block;
   margin-left: auto;
