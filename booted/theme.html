@@ -57,9 +57,9 @@
     <meta name="color:Glow" content="#c00" />
     <meta name="color:GlowGradient" content="#700" />
     
-    <meta name="font:Title" content="Arial" />
-    <meta name="font:Body" content="Arial" />
-    <meta name="font:Accent" content="Lucida Sans" />
+    <!-- meta name="font:Title" content="Arial" /-->
+    <!--meta name="font:Body" content="Arial" /-->
+    <!--meta name="font:Accent" content="Lucida Sans" /-->
     
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
@@ -67,6 +67,7 @@
     
     <meta name="text:Disqus Shortname" content="" />
     <meta name="image:Background" content="" />
+    <meta name="image:Header" content="" />
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
@@ -77,14 +78,16 @@
 
     <link href="http://nhydock.github.io/tumblr-themes/booted/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://nhydock.github.io/tumblr-themes/booted/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/custom.css" rel="stylesheet/css" type="text/css">
-    <link href="http://nhydock.github.io/tumblr-themes/booted/css/post.css" rel="stylesheet/css" type="text/css">
+    <link href="http://nhydock.github.io/tumblr-themes/booted/css/custom.css" rel="stylesheet" type="text/css">
+    <link href="http://nhydock.github.io/tumblr-themes/booted/css/post.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Ruda:400,700|Roboto:400,700' rel='stylesheet' type='text/css'>
    
     <style type="text/css">
 
         body {
             background: {color:Background} url({image:Background}) top left fixed repeat;
             font-family: {font:Body};
+            font-family: 'Roboto';
         }
 
 
@@ -105,14 +108,31 @@
 
         #header {
             background-color: {color:Title};
+            background-image: url('{image:Header}');
             color: {color:TitleText};
-            
-        #header > h1 {
-            font-family: {font:Title};
         }
         
-        #avatar {
-            background: url({PortraitURL-128});
+        #info {
+            {block:IfHeaderImage}
+            background: rgba(0,0,0,.65);
+            box-shadow: 0px 10px 5px rgba(0,0,0,.4) inset,
+                        0px -1px 10px rgba(255,255,255,.25);
+            {/block:IfHeaderImage}
+        }
+        
+        #info > h1 {
+            font-family: {font:Title};
+            font-family: 'Montserrat Alternates';
+            color: {color:TitleText};
+        }
+        
+        #info > h2 {
+            font-family: 'Ruda';
+            color: ;{color:TitleText};
+        }
+        
+        #header .avatar {
+            background: url('{PortraitURL-128}');
         }
 
     </style>
@@ -131,20 +151,31 @@
 
 <body>
     <div id="header">
-        <a href="/"><div id="avatar"></div></a>
-        <h1>
-            {Title}
-        </h1>
-        <h2>
-            {Description}
-        </h2>
+        <center>
+        <a href="/"><span class="avatar"></span></a>
+        <span id="info">
+            <h1>
+                {Title}
+            </h1>
+            <h2>
+                {Description}
+            </h2>
+        </span>
+        </center>
+        
     </div>
     <nav class="navbar navbar-inverse" role="navigation" id="controls">
         <div class="container-fluid pull-left">
         
-            <a class="navbar-brand" href="#" onClick="reset();">
-              {Title}    
-            </a>
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">{Title}</a>
+            </div>
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -166,14 +197,14 @@
                     </ul>
                   </li>
                   {/block:HasPages}
-    			</ul>
-		    </div><!--/.nav-collapse -->
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
     </nav>
     
     <div class="row">
     <div class="col-sm-3"></div>    
-    <div id="wrapper" class="col-sm-6" style="position:relative;z-index:0;">
+    <div id="wrapper" class="col-sm-6">
       
         {block:SearchPage}
             {block:SearchResults}
@@ -343,28 +374,30 @@
                 </div>
                 
                 <div class="panel-footer">
-                    {block:IfShowTags}
-                        {block:HasTags}
-                            <div class="tags">
-                                {lang:Tagged}: 
-                                    {block:Tags}
-                                    <a href="{TagURL}" class="label">
-                                        {Tag}
-                                    </a>
-                                    {/block:Tags}
-                            </div>
-                        {/block:HasTags}
-                    {/block:IfShowTags}
-                    
-                    {block:ContentSource}
-                        <a href="{SourceURL}">
-                            {lang:Source}:
-                            {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
-                            {block:NoSourceLogo}<span class="label label-info">{SourceTitle}</span>{/block:NoSourceLogo}
-                    </a>
-                    {/block:ContentSource}
-                    
-                    <div class="clear"></div>
+                    <div class="footer">
+                        {block:IfShowTags}
+                            {block:HasTags}
+                                <div class="tags">
+                                    {lang:Tagged}: 
+                                        {block:Tags}
+                                        <a href="{TagURL}" class="label">
+                                            {Tag}
+                                        </a>
+                                        {/block:Tags}
+                                </div>
+                            {/block:HasTags}
+                        {/block:IfShowTags}
+                        
+                        {block:ContentSource}
+                            <a href="{SourceURL}">
+                                {lang:Source}:
+                                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}
+                                {block:NoSourceLogo}<span class="label label-info">{SourceTitle}</span>{/block:NoSourceLogo}
+                        </a>
+                        {/block:ContentSource}
+                        
+                        <div class="clear"></div>
+                    </div>
                 </div>
                 <div class="activeind"></div>
 
