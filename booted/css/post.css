@@ -1,4 +1,4 @@
-.post {
+#wrapper #content .post {
   font-family: "Arial";
   background-color: #fff;
   padding: 10px;
@@ -7,18 +7,18 @@
   border: 0px;
   border-radius: 0px;
 }
-.post .btn {
+#wrapper #content .post .btn {
   background-color: #000;
   height: 2px;
 }
-.post img {
+#wrapper #content .post img {
   max-width: 500px;
 }
-.post a {
+#wrapper #content .post a {
   color: #6e7173;
   text-decoration: none;
 }
-.post .activeind {
+#wrapper #content .post .activeind {
   width: 845px;
   height: 100%;
   top: 0px;
@@ -29,7 +29,7 @@
   opacity: 0.0;
   pointer-events: none;
 }
-.post .panel-heading {
+#wrapper #content .post .panel-heading {
   font-size: 0.95em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -40,7 +40,7 @@
   display: inherit;
   border: 0px;
 }
-.post .panel-heading .notecount {
+#wrapper #content .post .panel-heading .notecount {
   position: absolute;
   line-height: 24px;
   top: 15px;
@@ -56,17 +56,17 @@
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
 }
-.post .panel-heading .notecount:hover {
+#wrapper #content .post .panel-heading .notecount:hover {
   opacity: 1.0;
 }
-.post .btn-group-vertical {
+#wrapper #content .post .btn-group-vertical {
   position: absolute;
   text-align: left;
   left: 845px;
   top: 0px;
   background: none;
 }
-.post .btn-group-vertical a.btn {
+#wrapper #content .post .btn-group-vertical a.btn {
   background-color: #000;
   width: 44px;
   margin-bottom: 6px;
@@ -82,11 +82,11 @@
   -webkit-transition: opacity 0.25s ease-in-out;
   overflow: hidden;
 }
-.post .btn-group-vertical a.btn:hover,
-.post .btn-group-vertical a.btn:active {
+#wrapper #content .post .btn-group-vertical a.btn:hover,
+#wrapper #content .post .btn-group-vertical a.btn:active {
   opacity: 1.0;
 }
-.post .btn-group-vertical a.btn #reblog {
+#wrapper #content .post .btn-group-vertical a.btn #reblog {
   background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -498px -270px transparent;
   width: 24px;
   height: 20px;
@@ -94,7 +94,7 @@
   margin-right: 12px;
   float: left;
 }
-.post .btn-group-vertical a.btn #comment {
+#wrapper #content .post .btn-group-vertical a.btn #comment {
   background: url("/images/dashboard_master_sprite.png?4") no-repeat scroll -500px -242px transparent;
   height: 20px;
   width: 24px;
@@ -102,7 +102,7 @@
   margin-right: 12px;
   float: left;
 }
-.post .btn-group-vertical a.btn #perm {
+#wrapper #content .post .btn-group-vertical a.btn #perm {
   background: url("http://i.imgur.com/6m5S7.png") no-repeat scroll transparent;
   height: 20px;
   width: 24px;
@@ -110,16 +110,16 @@
   margin-right: 12px;
   float: left;
 }
-.post .media {
+#wrapper #content .post .media {
   text-align: center;
   margin-bottom: 10px;
 }
-.post .quote {
+#wrapper #content .post .quote {
   color: #3b627e;
   font-weight: bold;
   padding: 20px 20px 5px 20px;
 }
-.post .quote .bg {
+#wrapper #content .post .quote .bg {
   font-family: georgia, serif;
   font-size: 150px;
   color: #3b627e;
@@ -130,87 +130,87 @@
   top: 136px;
   left: 10px;
 }
-.post .quote.short {
+#wrapper #content .post .quote.short {
   font-size: 33px;
   line-height: 35px;
 }
-.post .quote.medium {
+#wrapper #content .post .quote.medium {
   font-size: 25px;
   line-height: 28px;
 }
-.post .quote.long {
+#wrapper #content .post .quote.long {
   font-size: 18px;
   line-height: 22px;
 }
-.post .quote *:first-child,
-.post .quote .source *:first-child {
+#wrapper #content .post .quote *:first-child,
+#wrapper #content .post .quote .source *:first-child {
   margin-top: 0px;
 }
-.post .quote *:last-child,
-.post .quote .source *:last-child {
+#wrapper #content .post .quote *:last-child,
+#wrapper #content .post .quote .source *:last-child {
   margin-bottom: 0px;
 }
-.post .copy {
+#wrapper #content .post .copy {
   color: #6e7173;
   padding: 10px;
   font-size: 13px;
   line-height: 15px;
   font-weight: plain;
 }
-.post .copy a {
+#wrapper #content .post .copy a {
   color: #6e7173;
   text-decoration: underline;
 }
-.post .copy p {
+#wrapper #content .post .copy p {
   margin: 10px 0 0 0;
   padding: 0;
 }
-.post .copy > p:first-child {
+#wrapper #content .post .copy > p:first-child {
   margin-top: 0;
 }
-.post .copy pre {
+#wrapper #content .post .copy pre {
   margin: 10px 0px 10px 0px;
   padding: 10px;
   background-color: #e6e6e6;
   font: normal 11px Courier, monospace;
   overflow: auto;
 }
-.post .copy img {
+#wrapper #content .post .copy img {
   max-width: 100%;
 }
-.post .copy blockquote {
+#wrapper #content .post .copy blockquote {
   margin: 10px 0px 10px 10px;
   padding-left: 15px;
   border-left: solid 4px #dcdcdc;
 }
-.post .copy blockquote blockquote {
+#wrapper #content .post .copy blockquote blockquote {
   border-left: solid 4px #cccccc;
 }
-.post .copy blockquote blockquote blockquote {
+#wrapper #content .post .copy blockquote blockquote blockquote {
   border-left: solid 4px #bcbcbc;
 }
-.post .copy blockquote blockquote blockquote blockquote {
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote {
   border-left: solid 4px #acacac;
 }
-.post .copy blockquote blockquote blockquote blockquote blockquote {
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote blockquote {
   border-left: solid 4px #9c9c9c;
 }
-.post .copy blockquote blockquote blockquote blockquote blockquote blockquote {
+#wrapper #content .post .copy blockquote blockquote blockquote blockquote blockquote blockquote {
   border-left: solid 4px #8c8c8c;
 }
-.post .audio {
+#wrapper #content .post .audio {
   background: #eaeaea;
   float: left;
   padding: 7px;
   margin-bottom: 10px;
 }
-.post .audio .player {
+#wrapper #content .post .audio .player {
   float: left;
 }
-.post .audio .player .audio_player embed {
+#wrapper #content .post .audio .player .audio_player embed {
   border: 1px solid #c8c8c8;
 }
-.post .audio .meta {
+#wrapper #content .post .audio .meta {
   padding: 8px 13px;
   height: 13px;
   float: left;
@@ -219,17 +219,17 @@
   font-size: 11px;
   text-transform: lowercase;
 }
-.post .audio .meta a {
+#wrapper #content .post .audio .meta a {
   color: #666;
   text-decoration: none;
 }
-.post .album_art {
+#wrapper #content .post .album_art {
   text-align: center;
 }
-.post .album_art img {
+#wrapper #content .post .album_art img {
   margin-bottom: 10px;
 }
-.post .question {
+#wrapper #content .post .question {
   color: #494949;
   font-size: 16px;
   font-weight: bold;
@@ -241,7 +241,7 @@
   padding: 15px 20px;
   position: relative;
 }
-.post .question .nipple {
+#wrapper #content .post .question .nipple {
   width: 13px;
   height: 7px;
   background: #f1f1f1 url('http://assets.tumblr.com/themes/redux/ask-mask.png');
@@ -249,55 +249,55 @@
   bottom: -7px;
   left: 30px;
 }
-.post .asker_container {
+#wrapper #content .post .asker_container {
   margin: 0 0 20px 24px;
 }
-.post .asker_container img {
+#wrapper #content .post .asker_container img {
   margin: 0 12px -7px 0;
 }
-.post .asker_container a.asker {
+#wrapper #content .post .asker_container a.asker {
   color: #3b627e;
 }
-.post .title {
+#wrapper #content .post .title {
   color: #494949;
   font-size: 32px;
   font-weight: bold;
   padding: 10px 10px 0 10px;
 }
-.post .chat {
+#wrapper #content .post .chat {
   background-color: #fff;
   border-left: 10px solid #000;
   margin: 10px 10px 0 10px;
   font-size: 14px;
 }
-.post .chat .lines {
+#wrapper #content .post .chat .lines {
   margin-left: 1px;
 }
-.post .chat .lines .line {
+#wrapper #content .post .chat .lines .line {
   background-color: #eaeaea;
   color: #494949;
   margin-bottom: 1px;
   padding: 3px 5px;
 }
-.post .chat .lines .line.even {
+#wrapper #content .post .chat .lines .line.even {
   background-color: #dedddd;
 }
-.post .link {
+#wrapper #content .post .link {
   margin: 4px 0 2px 0;
   font-size: 16px;
   line-height: 25px;
 }
-.post .link a {
+#wrapper #content .post .link a {
   background-color: #3b627e;
   color: #fff;
   padding: 5px 5px 5px 5px;
 }
-.post .link a:hover {
+#wrapper #content .post .link a:hover {
   opacity: 0.9;
   filter: alpha(opacity=90);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
-.post .footer {
+#wrapper #content .post .panel-footer {
   background: #000;
   font-family: "Lucida Sans";
   font-size: 11px;
@@ -311,11 +311,11 @@
   padding-right: 15px;
   box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.4);
 }
-.post .footer .tags a {
+#wrapper #content .post .panel-footer .tags a {
   text-decoration: none;
   color: #fff;
 }
-.post .notecontainer {
+#wrapper #content .post .notecontainer {
   background: #eaeaea;
   font-family: "Lucida Sans";
   font-size: 11px;
@@ -323,44 +323,44 @@
   margin-top: 10px;
   margin-bottom: -10px;
 }
-.post .notecontainer a {
+#wrapper #content .post .notecontainer a {
   color: #666;
   text-decoration: underline;
 }
-.post .notecontainer ol.notes {
+#wrapper #content .post .notecontainer ol.notes {
   padding: 0px 0 10px 0;
   list-style-type: none;
   font-size: 11px;
 }
-.post .notecontainer ol.notes li.note {
+#wrapper #content .post .notecontainer ol.notes li.note {
   padding: 10px 10px 0 10px;
 }
-.post .notecontainer ol.notes li.note img.avatar {
+#wrapper #content .post .notecontainer ol.notes li.note img.avatar {
   vertical-align: -4px;
   margin-right: 10px;
   width: 16px;
   height: 16px;
 }
-.post .notecontainer ol.notes li.note span.action {
+#wrapper #content .post .notecontainer ol.notes li.note span.action {
   font-weight: normal;
 }
-.post .notecontainer ol.notes li.note .answer_content {
+#wrapper #content .post .notecontainer ol.notes li.note .answer_content {
   font-weight: normal;
 }
-.post .notecontainer ol.notes li.note blockquote {
+#wrapper #content .post .notecontainer ol.notes li.note blockquote {
   border-left: 2px solid #666;
   padding: 4px 10px;
   margin: 10px 0px 0px 25px;
 }
-.post .notecontainer ol.notes li.note blockquote a {
+#wrapper #content .post .notecontainer ol.notes li.note blockquote a {
   text-decoration: none;
 }
-.post #disqus_thread {
+#wrapper #content .post #disqus_thread {
   border-top: 1px solid #E6E6E6;
   margin: 20px 0 0 0;
   padding: 25px 0 0 0;
 }
-.post .post .caption a.disquscomments {
+#wrapper #content .post .post .caption a.disquscomments {
   font-size: 12px;
   font-family: 'Times New Roman', Times, serif;
   letter-spacing: 2px;
