@@ -241,44 +241,46 @@
         
         {block:Posts}
             <div class="post panel panel-default">
-                <div class="post-controls btn-group-vertical">
-                    <a href='{ShortURL}' class="btn">
-                        <span class="icon perm"></span>
-                        <font size=2>Permalink</font>
-                    </a>  
-                    <a href="{ReblogURL}" class="btn">
-                        <span class="icon reblog"></span>
-                        <font size=2>Reblog</font>
-                    </a>
-                    {block:IfDisqusShortname} 
-                    <a href="{Permalink}#disqus_thread" class="btn">
-                        <span class="icon comment"></span>
-                        <font size=2>Disqus Comments</font>
-                    </a>
-                    {/block:IfDisqusShortname}
-                </div>
+                {block:Date}
+                    <div class="post-controls btn-group-vertical">
+                        <a href='{ShortURL}' class="btn">
+                            <span class="icon perm"></span>
+                            <font size=2>Permalink</font>
+                        </a>  
+                        <a href="{ReblogURL}" class="btn">
+                            <span class="icon reblog"></span>
+                            <font size=2>Reblog</font>
+                        </a>
+                        {block:IfDisqusShortname} 
+                        <a href="{Permalink}#disqus_thread" class="btn">
+                            <span class="icon comment"></span>
+                            <font size=2>Disqus Comments</font>
+                        </a>
+                        {/block:IfDisqusShortname}
+                    </div>
 
-                <div class="panel-heading">
-                    {block:NoteCount}
-                    <a href="{Permalink}#notes">
-                        <div class="notecount">
-                            <b>
-                                <font size=2>{NoteCount} Notes</font>
-                            </b>
-                        </div>
-                    </a>
-                    {/block:NoteCount}
-                    
-                    <b>
-                        {Month} {DayOfMonth}, {Year}
-                    </b>
-                    <br/>
-                    <font size=1>
-                        <i>({TimeAgo})</i>
-                    </font>
-                    <p/>
-                    <span class="divider"></span>
-                </div>
+                    <div class="panel-heading">
+                        {block:NoteCount}
+                        <a href="{Permalink}#notes">
+                            <div class="notecount">
+                                <b>
+                                    <font size=2>{NoteCount} Notes</font>
+                                </b>
+                            </div>
+                        </a>
+                        {/block:NoteCount}
+                        
+                        <b>
+                            {Month} {DayOfMonth}, {Year}
+                        </b>
+                        <br/>
+                        <font size=1>
+                            <i>({TimeAgo})</i>
+                        </font>
+                        <p/>
+                        <span class="divider"></span>
+                    </div>
+                {/block:Date}
 
                 <div class="panel-body">
 
